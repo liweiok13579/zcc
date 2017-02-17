@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>HXD3C型机车列车供电柜（武汉征原）控制箱试验记录单</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        .HXD3C {
+            width: 100%;
+            padding:20px;
+            min-width: 900px;
+        }
+        .HXD3C ul{
+            width: 100%;
+            height: 40px;
+            border:2px solid #ccc;
+            border-radius:5px 5px 0 0;
+        }
+        ul li{
+            float: left;
+            width: 20%;
+            line-height: 40px;
+            border:2px solid #fff;
+            background-color: #eee;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        li.active{
+            background-color: #deedf7;
+        }
+        .HXD3C table{
+            width: 100%;
+            text-align: center;
+        }
+        table td{
+            height:20px;
+            padding:5px 15px;
+        }
+        table .titel td{
+            padding:15px 0px;
+            background-color: #deedf7;
+        }
+        table .titel td h3{
+            font-weight:bold;
+        }
+        table input{
+            width: 100%;
+            outline: none;
+            border:0;
+            padding-left:10px;
+        }
+        /*提交*/
+        .HXD3C .submit{
+            width: 100%;
+            text-align: center;
+            margin:10px;
+        }
+        .submit button{
+            width: 80px;
+            background-color: #428bca;
+            color: #fff;
+            border-radius: 5px;
+            font: 700 16px/22px "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+<div class="HXD3C">
+    <ul>
+        <li class="active"><a href="javascript:void(0);">(武汉征原)供电柜控制箱</a></li>
+        <li onclick="javascript:location.href='HXD3C(充电机C5).html'"><a href="javascript:void(0);"> 充电机</a></li>
+        <li onclick="javascript:location.href='HXD3C(时代电气TGF60B)C5.html'"><a href="javascript:void(0);"> (时代电气)供电柜</a></li>
+        <li onclick="javascript:location.href='HXD3C(时代电气TGF60B)C5控制箱.html'"><a href="javascript:void(0);"> (时代电气)供电柜控制箱</a></li>
+        <li onclick="javascript:location.href='HXD3C(武汉征原)C5.html'"><a href="javascript:void(0);"> (武汉征原)供电柜</a></li>
+    </ul>
+    <form action="提交给后台地址">
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tbody>
+        <!--rowspan=""行 colspan=""列-->
+        <tr class="titel">
+            <td rowspan="2" colspan="6">
+                <h3>HXD3C型机车列车供电柜（武汉征原）控制箱试验记录单</h3>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td width="120px">检修单位</td>
+            <td >上海中车轨道交通科技有限公司</td>
+            <td>车号</td>
+            <td><input type="text"/></td>
+            <td>试验日期</td>
+            <td width="120px"><input type="text" /></td>
+        </tr>
+        <tr>
+            <td>产品序号</td>
+            <td><input type="text"/></td>
+            <td>修程</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text" /></td>
+        </tr>
+        <tr>
+            <td>试验项目</td>
+            <td colspan="4">试验要求</td>
+            <td>结果</td>
+        </tr>
+        <tr>
+            <td>上电状态检查</td>
+            <td colspan="4">电子控制转换开关分别置A、B组，数字入出插件上12A灯应闪烁；供电控制插件上1B、6A灯均应闪烁</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <!--外观检查 模块-->
+        <tr>
+            <td rowspan="2">外观检查</td>
+            <td colspan="4">供电控制箱插件位置正确。</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">供电控制箱扁平插座和X1、X2标记正确。</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <!--电源检查 模块-->
+        <tr>
+            <td rowspan="7">电源检查</td>
+            <td>项目</td>
+            <td>标准值(V)</td>
+            <td>A组</td>
+            <td>B组</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5V电源检查</td>
+            <td>4.9～5.1</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td>15V电源检查</td>
+            <td>14.85～15.15</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td>-15V电源检查</td>
+            <td>-14.85～-15.15</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td>24V电源检查</td>
+            <td>22.8～26.4</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td>-24V电源检查</td>
+            <td>-22.8～-26.4</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">检查背部风扇在A、B组时风向是否正确（向机箱外抽风）</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <!--闭环调试 模块-->
+        <tr>
+            <td>闭环调试</td>
+            <td colspan="4">给定相应的输入工况信号，检查A、B组直流输出电压是否正常，稳压精度应为600V±5％，电流显示为200A±5％，状态信息栏显示“供电允许”、“合接触器”、“合风机接触器”。</td>
+            <td>
+               电压: <input type="text" class="voltage"/> V <br/>
+                电流:<input type="text" class="voltage"/> m/s
+            </td>
+        </tr>
+        <!--开放角测试 模块-->
+        <tr>
+            <td rowspan="2">开放角测试</td>
+            <td colspan="4">在开环调试中，当直流电压表显为0V时，开放角应为满开放；</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">在开环调试中，当直流电压表显>600V时，开放角不开放。</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+
+        </tr>
+        <!--保护测试 模块-->
+        <tr>
+            <td rowspan="6">保护测试</td>
+            <td colspan="4">
+                过压保护试验：当直流电压输出＞720V时，供电控制箱报“03”故障代码，当直流电压退回到600V，“03”故障代码消失。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="4">
+                过流保护试验：“当直流电流输出＞750A时，供电控制箱报“06”故障代码。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="4">
+                接地保护试验：调节“半电压”电压为0V或600V，输出电压正常(600V±5％)；“半电压”电压仍为0V或600V，给定“接地隔离”信号，供电控制箱报“13”或“14”故障代码。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                集控器保护试验：给定输入工况信号，给定“集控器隔离”信号，将“客车电源正”或“供电请求”断开，
+                输出电压正常(600V±5％)；当撤销“集控器隔离”信号，无电压输出，供电控制箱报“32”故障代码；将“客车电源正”或“供电请求”恢复（给定），输出电压正常(600V±5％)，故障代码消失。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                辅变保护试验：给定输入工况信号，撤销“辅变正常”信号，无电压输出，供电控制箱报“15”故障代码；将“辅变正常”恢复（给定），输出电压正常(600V±5％) ，故障代码消失。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                风机连锁试验：给定输入工况信号，撤销“风机接触器”信号，无电压输出，供电控制箱报“11”故障代码；将“风机接触器”恢复（给定），输出电压正常(600V±5％)，故障代码消失。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+            </td>
+        </tr>
+        <!--保护测试 模块-->
+        <tr>
+            <td rowspan="2">保护测试</td>
+            <td colspan="4">
+                快熔保护试验：给定输入工况信号，撤销“快熔”信号，供电控制箱报“07”故障代码；将“快熔”恢复（给定），输出电压正常(600V±5％) ，故障代码消失。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                温继保护试验：给定输入工况信号，给定开环电流400A；撤销“电感温度”信号，11s后无电压输出，供电控制箱报“09”故障代码；将“电感温度”恢复（给定），撤销开环电流，45s后输出电压正常(600V±5％) ，故障代码消失。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                温继保护试验：将温继1或温继2断开时，17号或41号插件的2B或4A灯灭，21号或37号插件的3B灯亮；同时断开时，13A灯灭，交流接触器断开，无电压输出
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified" class="qualified">不合格
+            </td>
+        </tr>
+        <!--调试员-->
+        <tr style="height:50px">
+            <td colspan="2">
+                调试员:
+                <input class="voltage" type="text"/>
+            </td>
+            <td colspan="2">
+                出厂检查员:
+                <input class="voltage" type="text"/>
+            </td>
+            <td colspan="3">
+                验收员:
+                <input class="voltage" type="text"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+        <div class="submit">
+            <button>提交</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

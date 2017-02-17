@@ -1,0 +1,220 @@
+
+/*调试单点击按钮——详情模块*/
+.debug_fault{
+    width:800px;
+    box-sizing: border-box;
+    font:700 14px/20px "Microsoft YaHei";
+    margin:15px auto;
+}
+.debug_fault .debug_fault_box{
+    border:1px solid #cccccc;
+    border-radius: 5px;
+    padding:5px;
+}
+.debug_fault_box .item span{
+    text-align: right;
+}
+.debug_fault_box .item input,
+.debug_fault_box .item select{
+    width: 100px;
+    height: 30px;
+    line-height: 25px;
+    border-radius: 3px;
+    padding-left:15px;
+    border:0;
+    border-bottom:1px solid #ccc;
+}
+.debug_fault_box .item select{
+    width: 60px;
+}
+/*车型、跟踪者、配属段、修程*/
+.debug_fault_box .box_one{
+    border-radius: 5px;
+}
+.box_one .item{
+    float: left;
+}
+.box_one .item_one{
+    padding-left:25px;
+}
+.box_one .item span{
+    display: inline-block;
+    width: 80px;
+}
+.box_one .item_three input,
+.box_one .item_four input{
+    width: 45px;
+}
+/*报告阶段 发生、完成日期*/
+.debug_fault_box .box_two{
+    border-radius: 5px;
+}
+.box_two .item{
+    float: left;
+}
+.box_two .item_one{
+    padding-left:25px;
+}
+.box_two .item span{
+    display: inline-block;
+    width: 80px;
+}
+/*故障现象描述*/
+.debug_fault_box .box_three{
+    margin-top:10px;
+    border-radius: 5px;
+}
+.box_three .item span{
+    display: inline-block;
+    width: 106px;
+}
+.box_three .item textarea{
+    width: 78%;
+    vertical-align: middle;
+}
+/*处理过程*/
+.debug_fault_box .box_four{
+    margin-top:10px;
+    border-radius: 5px;
+}
+.box_four .item span{
+    display: inline-block;
+    width: 106px;
+}
+.box_four .item textarea{
+    width: 78%;
+    vertical-align: middle;
+}
+/*更换原因、所属系统*/
+.debug_fault_box .box_five{
+    border-radius: 5px;
+    margin-top:10px;
+}
+.box_five .item{
+    float: left;
+}
+.box_five .item_two{
+    padding-left: 25px;
+}
+.box_five .item_one span{
+    display: inline-block;
+    width: 106px;
+}
+.box_five .item_three span{
+    display: inline-block;
+    width: 80px;
+}
+/*更换部件分类、更换部件名称*/
+.debug_fault_box .box_six{
+    border-radius: 5px;
+    margin-top:10px;
+}
+.box_six .item{
+    float: left;
+    padding-right:43px;
+}
+.box_six .item span{
+    display: inline-block;
+    width: 106px;
+}
+
+/*型号/图号、单位、数量*/
+.debug_fault_box .box_seven{
+    width: 100%;
+    border-radius: 5px;
+    margin-top:10px;
+}
+.box_seven .item{
+    float: left;
+}
+.box_seven .item_one span{
+    display: inline-block;
+    width: 106px;
+}
+.box_seven .item_two span,
+.box_seven .item_three span{
+    display: inline-block;
+    width: 60px;
+}
+.box_seven .item_two{
+   padding-left:89px;
+}
+.box_seven .item_three{
+   padding-left:20px;
+}
+/*原配件编号、新配件编号 操作人*/
+.debug_fault_box .box_eight{
+    border-radius: 5px;
+    margin-top:10px;
+}
+.box_eight .item{
+    float: left;
+}
+.box_eight .item span{
+    display: inline-block;
+    width: 106px;
+}
+.box_eight .item_two{
+   padding-left:43px;
+}
+.box_eight .item_three span{
+    width: 80px;
+}
+/*领料人、领料单号 状态、性质*/
+.debug_fault_box .box_nine{
+    width: 100%;
+    border-radius: 5px;
+    margin-top:10px;
+}
+.box_nine .item{
+    float: left;
+}
+.box_nine .item span{
+    display: inline-block;
+    width: 106px;
+}
+.box_nine .item_two{
+   padding-left:43px;
+}
+/*状态、性质*/
+.debug_fault_box .box_ten{
+    border-radius: 5px;
+    margin-top:10px;
+}
+.box_ten .item{
+    float: left;
+}
+.box_ten .item span{
+    display: inline-block;
+    width: 106px;
+}
+.box_ten .item_two{
+    padding-left:43px;
+}
+/*备注*/
+.debug_fault_box .box_eleven{
+    margin-top:10px;
+    border-radius: 5px;
+}
+.box_eleven .item span{
+    display: inline-block;
+    width: 106px;
+}
+.box_eleven .item textarea{
+    width: 78%;
+    vertical-align: middle;
+}
+/*提交、关闭*/
+.debug_fault_box .box_twelve{
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius: 5px;
+}
+.box_twelve button{
+    width: 80px;
+    background-color: #428bca;
+    color:#fff;
+    border-radius:5px;
+    font:700 16px/25px "Microsoft YaHei";
+}

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>HXD3C网络控制系统C5修记录（检修段版）</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        .HXD3C {
+            width: 100%;
+            padding:20px;
+            min-width: 900px;
+        }
+        .HXD3C table{
+            width: 100%;
+            text-align: center;
+        }
+        table td{
+            height:20px;
+            padding:5px 15px;
+        }
+        table .titel td{
+            padding:15px 0px;
+            background-color: #deedf7;
+        }
+        table .titel td h3{
+            font-weight:bold;
+        }
+        table input{
+            width: 100%;
+            outline: none;
+            border:0;
+            padding-left:10px;
+        }
+        table tr textarea {
+            width: 100%;
+        }
+            /*提交*/
+        .HXD3C .submit{
+            width: 100%;
+            text-align: center;
+            margin:10px;
+        }
+        .submit button{
+            width: 80px;
+            background-color: #428bca;
+            color: #fff;
+            border-radius: 5px;
+            font: 700 16px/22px "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+<div class="HXD3C">
+    <form action="后台提交地址">
+        <table border="1" cellpadding="0" cellspacing="0">
+            <tbody>
+            <!--rowspan=""行 colspan=""列-->
+            <tr class="titel">
+                <td rowspan="2" colspan="9">
+                    <h3>HXD3C网络控制系统C5修记录（检修段版）</h3>
+                </td>
+            </tr>
+            <tr></tr>
+            <!--使用部门-->
+            <tr>
+                <td width="100px">使用部门</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td>检修班组</td>
+                <td  colspan="2"><input type="text" name=""/></td>
+                <td>检修日期</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <!--检修车号-->
+            <tr>
+                <td>检修车号</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td>部件编号</td>
+                <td><input type="text" name=""/></td>
+                <td>所装车号</td>
+                <td><input type="text" name=""/></td>
+                <td width="120px">交付日期</td>
+                <td width="120px"><input type="text" name=""/></td>
+            </tr>
+            <!--检修记录内容-->
+            <tr>
+                <td colspan="9">检   修   记   录   内   容</td>
+            </tr>
+            <tr>
+                <td>检测/检修项目</td>
+                <td colspan="4">检修标准</td>
+                <td>检修结果</td>
+                <td>处理意见</td>
+                <td>自检</td>
+                <td>互检员</td>
+            </tr>
+            <tr>
+                <td>下车检查</td>
+                <td colspan="4">检查控制箱、辅变风机、柜体、门板、三相接触器、断路器、各电容、电阻、变压器、传感器、绝缘子和导线无严重损伤等异常现象，并对各接头做好防护。</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>电器组件拆卸及清洁</td>
+                <td colspan="4">晶闸管、整流管、控制箱、交流接触器清洁无尘，各部无损伤或过热等异常现象；散热片无异物；触头无严重烧损或接触不良；安装螺丝按标准力矩安装牢固并打好防缓标记。</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>柜体检查清洁</td>
+                <td colspan="4">柜内各电容、电阻、传感器、铜排、控制箱、导线对外连接状态良好、表面清洁、接线无松动；柜内、柜外表面、柜门清洁无尘。</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <!--★测量-->
+            <tr>
+                <td rowspan="11">★测量</td>
+                <td colspan="6">确认电阻符合要求</td>
+                <td rowspan="7"><input type="text" name=""/></td>
+                <td rowspan="7"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="2">位置</td>
+                <td colspan="2">标准值(Ω)</td>
+                <td colspan="2">测量结果(Ω)</td>
+            </tr>
+            <tr>
+                <td colspan="2">空载电阻5R1</td>
+                <td colspan="2">540～600～660</td>
+                <td colspan="2">实测值:<input type="text" class="voltage"/>Ω</td>
+            </tr>
+            <tr>
+                <td colspan="2">空载电阻5R2</td>
+                <td colspan="2">540～600～660</td>
+                <td colspan="2">实测值:<input type="text" class="voltage"/>Ω</td>
+            </tr>
+            <tr>
+                <td colspan="2">接地电阻1R1、1R2并联阻值</td>
+                <td colspan="2">675～750～825</td>
+                <td colspan="2">实测值:<input type="text" class="voltage"/>Ω</td>
+            </tr>
+            <tr>
+                <td colspan="2">接地电阻1R3</td>
+                <td colspan="2">18～20～22</td>
+                <td colspan="2">实测值:<input type="text" class="voltage"/>Ω</td>
+            </tr>
+            <tr>
+                <td colspan="2">风机接地电阻3R</td>
+                <td colspan="2">27000～30000～33000</td>
+                <td colspan="2">实测值:<input type="text" class="voltage"/>Ω</td>
+            </tr>
+            <tr>
+                <td colspan="6">确认电容容值符合要求</td>
+                <td rowspan="4"><input type="text" name=""/></td>
+                <td rowspan="4"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="2">位置</td>
+                <td colspan="2">标准值(μF)</td>
+                <td colspan="2">测量结果(μF)</td>
+            </tr>
+            <tr>
+                <td colspan="2">直流支撑电容19C1</td>
+                <td colspan="2">4689～5210～5731</td>
+                <td colspan="2">实测值:<input type="text" class="voltage"/>μF</td>
+            </tr>
+            <tr>
+                <td colspan="2">直流支撑电容19C2</td>
+                <td colspan="2">4689～5210～5731</td>
+                <td colspan="2">实测值:<input type="text" class="voltage"/>μF</td>
+            </tr>
+            <!--★绝缘检测-->
+            <tr>
+                <td rowspan="5">★绝缘检测</td>
+                <td colspan="6">绝缘阻值符合要求</td>
+                <td rowspan="5"><input type="text" name=""/></td>
+                <td rowspan="5"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="2">测量位置</td>
+                <td colspan="2">标准值（MΩ</td>
+                <td colspan="2">测量结果（MΩ）</td>
+            </tr>
+            <tr>
+                <td colspan="2">高压电路－柜体（结点A与结点D之间，节点B、C、D短接）</td>
+                <td colspan="2">10MΩ以上</td>
+                <td colspan="2">实测值:<input type="text" class="voltage"/>MΩ</td>
+            </tr>
+            <tr>
+                <td colspan="2">控制电路－柜体（结点B与结点D，节点A、C、D短接）</td>
+                <td colspan="2">5MΩ以上</td>
+                <td colspan="2">实测值:<input type="text" class="voltage"/>MΩ</td>
+            </tr>
+            <tr>
+                <td colspan="2">辅助电路－柜体（结点C与结点D，节点A、B、D短接）</td>
+                <td colspan="2">10MΩ以上</td>
+                <td colspan="2">实测值:<input type="text" class="voltage"/>MΩ</td>
+            </tr>
+            <!--★风机三相平衡试验-->
+            <tr>
+                <td rowspan="5">★风机三相平衡试验</td>
+                <td colspan="6">风机三相绕组电阻符合要求</td>
+                <td rowspan="5"><input type="text" name=""/></td>
+                <td rowspan="5"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="2">测量位置（Ω）</td>
+                <td colspan="2">实测值（Ω）</td>
+                <td >R平均=（RUV + RUW + RVW) /3）</td>
+                <td width="150px">标准值</td>
+            </tr>
+            <tr>
+                <td colspan="2">RUV</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td ><input type="text" name=""/></td>
+                <td>︱RUV-R平均︱/ R平均＜10%</td>
+            </tr>
+            <tr>
+                <td colspan="2">RUW</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td ><input type="text" name=""/></td>
+                <td>︱RUW-R平均︱/ R平均＜10%</td>
+            </tr>
+            <tr>
+                <td colspan="2">RVW</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td ><input type="text" name=""/></td>
+                <td>︱RVW-R平均︱/ R平均＜10%</td>
+            </tr>
+            <!--控制箱试验-->
+            <tr>
+                <td rowspan="22">控箱制试验</td>
+                <td width="100px">试验项目</td>
+                <td colspan="4">检测内容</td>
+                <td>检测结果</td>
+                <td rowspan="22"><input type="text" name=""/></td>
+                <td rowspan="22"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>上电状态检查</td>
+                <td colspan="4">电子控制转换开关分别置A、B组，数字入出插件上12A灯应闪烁；供电控制插件上1B、6A灯均应闪烁</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="7">电源检查</td>
+                <td>项目</td>
+                <td>标准值(V)</td>
+                <td>A组</td>
+                <td>B组</td>
+                <td>/////////</td>
+            </tr>
+            <tr>
+                <td>5V电源检查</td>
+                <td>4.9～5～5.1</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td>15V电源检查</td>
+                <td>14.85～15～15.15</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td>-15V电源检查</td>
+                <td>-14.85～-15～-15.15</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td>24V电源检查</td>
+                <td>22.8～24～26.4</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td>-24V电源检查</td>
+                <td>-22.8～-24～-26.4</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">检查背部风扇在A、B组时风向是否正确（向机箱外抽风）</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td>状态输入检查</td>
+                <td  colspan="4">电子控制转换开关分别置A、B组依次检查17号、41号数字入出板对应的指示灯是否点亮</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td>闭环调试</td>
+                <td  colspan="4">17号或41号插件的13A灯亮，架合1闭合，检查A、B组直流输出电压是否正常，稳压精度应为600V±3％</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">开放角测试</td>
+                <td  colspan="4">在开环调试中，当电压反馈为0V时，开放角应为满开放；</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="4">在开环调试中，当电压反馈>600V时，开放角不开放。</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="9">保护测试</td>
+                <td  colspan="4">过电压保护试验：直流电压输出超过750V，21号或37号供电控制插件的8B灯亮；当直流电压退回到600V，21号或37号供电控制插件的8B灯灭</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="4">
+                    过电流保护试验：直流电流超过800A，21号或37号供电控制插件的9B灯亮，17号或41号插件的13A灯灭，交流接触器断开；
+                    当直流电流退回到600A，21号或37号供电控制插件的9B灯仍保持亮。
+                </td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="4">
+                    接地保护试验：接地隔离钮子开关置于隔离位（17号或41号插件的1A灯亮），接地电压为0V或600V时，输出电压正常(DC600V±5％)；当把两个钮子开关置于投入位（17号或41号插件的1A灯灭），
+                    接地电压仍保持为0V或600V时，21号或37号供电控制插件的9A灯亮, 17号或41号插件的13A灯灭，交流接触器断开，无电压输出。
+                </td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="4">
+                    集控器保护试验：将把集控隔离钮子开关置于隔离位（17号或41号插件的1B灯亮），将申请或客电断开（17号或41号插件的8A或8B灯灭、13B灯常亮），输出电压正常(DC600V±5％)；
+                    当把钮子开关置于投入位（17号或41号插件的1B灯灭、13B灯灭；21号或37号插件的7A灯灭），无电压输出；将申请或客电恢复（合上），输出电压正常(DC600V±5％)
+                </td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="4">
+                    隔离保护试验：将隔离1或隔离2断开时，17号或41号插件的4B或5A灯灭、13A灯灭，交流接触器断开，无电压输出；合隔离1或隔离2时，
+                    17号或41号插件的4B或5A灯亮、13A灯亮，交流接触器合，输出电压正常(DC600V±5％)
+                </td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="4">
+                    辅变保护试验：将辅变断开时，17号或41号插件的6A灯灭、13A灯灭，交流接触器断开，无电压输出；合辅变时，17号或41号插件的6A灯亮、13A灯亮，交流接触器合，输出电压正常(DC600V±5％)
+                </td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="4">
+                    风机连锁试验：将风机断开时，17号或41号插件的6B灯灭、13A灯灭，交流接触器断开，无电压输出；合上风机时，17号或41号插件的6B灯亮、13A灯亮，交流接触器合，输出电压正常(DC600V±5％)
+                </td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="4">
+                    快熔保护试验：将快熔断合上时，17号或41号插件的5B灯亮、13A灯灭，交流接触器断开，无电压输出
+                </td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="4">
+                    温继保护试验：将温继1或温继2断开时，17号或41号插件的2B或4A灯灭，21号或37号插件的3B灯亮；同时断开时，13A灯灭，交流接触器断开，无电压输出
+                </td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+            </tr>
+            <!--装车检查-->
+            <tr>
+                <td>装车检查</td>
+                <td colspan="6">确认柜内清洁良好, 无异物残留、电气线路绑扎良好，无碰磨、柜内电气连接及部件紧固标识线清晰、铭牌安装及日期、位置正确、柜门及盖板安装可靠。</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>质检</td>
+                <td colspan="4"><input type="text" name=""/></td>
+                <td>验收员</td>
+                <td colspan="3"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>备注：</td>
+                <td colspan="8"><textarea name="" id="" cols="30" rows="5"></textarea></td>
+            </tr>
+            </tbody>
+        </table>
+        <p>注：1.“★”为关键项点（质检员必检项）；2.“☆”为特殊过程；3.“※”处为质检人员复测，并填写，测量结果以质检为准。</p>
+        <div class="submit">
+            <button>提交</button>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

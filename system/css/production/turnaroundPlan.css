@@ -1,0 +1,240 @@
+.planBox{
+    min-width: 1170px;
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+    padding:15px;
+}
+/*待办事项部分样式*/
+.planBox>.schedule{
+    border-radius:5px;
+    border: 1px solid #ccc;
+}
+.schedule>.schedule_title{
+    height: 40px;
+    line-height: 40px;
+    font-size:20px;
+    color:#000;
+    padding-left:30px;
+    background-color: #deedf7;
+    border-bottom:1px solid #ccc;
+}
+.schedule>.schedule_content{
+    padding:0px 10px;
+    background-color: #fff;
+}
+.schedule>.schedule_content>table{
+    margin:0 10px;
+}
+.schedule_content>table>thead>tr>th{
+    padding-left:30px;
+    font:700 16px/20px "微软雅黑";
+}
+.schedule_content>table>tbody>tr>td{
+    padding-left:30px;
+}
+
+/*检修计划部分样式*/
+.planBox>.plan{
+    border:1px solid #ccc;
+    border-top: 0 none;
+    border-radius:5px;
+    display: none;
+    margin-bottom:30px;
+}
+.plan_title{
+    height: 40px;
+    line-height: 40px;
+    font-size:20px;
+    color:#000;
+    padding-left:30px;
+    background-color: #deedf7;
+    border:1px solid #ccc;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.plan>.plan_content{
+    padding:8px 8px;
+    text-align: center;
+    background-color: #eee;
+}
+.plan_content>.plan_content_left>table{
+    margin-bottom:10px;
+}
+.plan_content_left>table>thead>tr>th{
+    font-weight: bold;
+    font-size:16px;
+    text-align: center;
+}
+.plan_content_left>table>tbody>tr>td{
+    text-align: left;
+    padding:3px;!important;
+}
+.plan_content_left>table .th_one,
+.plan_content_left>table .td_one{
+    width: 35px;
+    text-align: center;
+}
+.plan_content_left>table .td_one{
+    line-height: 34px;
+}
+.plan_content_left>table .th_two,
+.plan_content_left>table .td_two{
+    min-width: 75px;
+}
+.plan_content_left>table .th_four,
+.plan_content_left>table .td_four{
+    min-width: 65px;
+}
+.plan_content_left>table .th_five,
+.plan_content_left>table .td_five{
+    min-width: 80px;
+}
+.plan_content_left>table .th_three,
+.plan_content_left>table .td_three,
+.plan_content_left>table .th_six,
+.plan_content_left>table .td_six,
+.plan_content_left>table .th_seven,
+.plan_content_left>table .td_seven,
+.plan_content_left>table .th_eight,
+.plan_content_left>table .td_eight,
+.plan_content_left>table .th_nine,
+.plan_content_left>table .td_nine,
+.plan_content_left>table .th_ten,
+.plan_content_left>table .td_ten{
+    min-width: 110px;
+}
+.plan_content_left>table .td_eleven{
+    padding:5px;
+}
+.plan_content_left>table .td_eleven>button{
+    padding:3px;
+}
+.plan_content_left>table .td_eleven>button.amend{
+    background-color: #428bca;
+    color:#fff;
+}
+.plan_content_left>table .td_eleven>button.delete{
+    background-color: #d9534f;
+    color:#fff;
+}
+.plan_content_left>table .td_two>.form-control {
+    display: block;
+    width: 75px;
+    height: 34px;
+    padding:6px 12px ;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+}
+.plan_content_left>table .td_four>.form-control {
+    display: block;
+    width: 65px;
+    height: 34px;
+    padding:6px 12px ;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+}
+.plan_content_left>table .td_three>input[type="text"].form-control{
+    width:113px;
+}
+.plan_content_left>table .td_five>input[type="text"].form-control{
+    width:70px;
+}
+.plan_content_left>table .td_six>input,
+.plan_content_left>table .td_seven>input,
+.plan_content_left>table .td_eight>input,
+.plan_content_left>table .td_nine>input,
+.plan_content_left>table .td_ten>input{
+    height:34px;
+    line-height: 34px;
+    border-radius:5px;
+    color:#555;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    background:#eee;
+    width: 100%;
+    min-width: 112px;
+    padding:0px 5px ;
+}
+.plan_content_left>table .td_ten>input{
+    width: 100%;
+    min-width: 155px;
+}
+.plan_content_left>table input.active{
+    background:#fff;
+}
+/*图标切换*/
+.planBox>.switch{
+    border-radius:5px;
+    margin-top:20px;
+}
+.switch>button{
+    margin-top:6px;
+    float: right;
+    border:1px solid #428bca;
+    margin-right:70px;
+    background-color: #428bca;
+    color: #fff;
+}
+/*甘特图部分样式*/
+.gante {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-top:0 none;
+    border-radius: 5px;
+}
+#gante{
+    color:#ccc;
+    height:470px;
+    border-radius:5px;
+    margin-bottom:30px;
+}
+
+/*上传文件*/
+.plan_content_left .plan_import{
+    height: 35px;
+    text-align: right;
+    border-bottom:1px solid #ccc;
+    vertical-align: middle;
+}
+.plan_import>form{
+    padding-right:55px;
+}
+.plan_import>form>input{
+    display: inline-block;
+    line-height:20px;
+    margin-top:3px;
+    outline: none !important;
+}
+.plan_import>form>input:nth-child(1){
+    width: 200px;
+}
+
+/*时间下拉选项*/
+.plan_content_left  .checkFlow_drop{
+    float: left;
+}
+.checkFlow_drop span{
+    display: inline-block;
+    margin-left:30px;
+    font:700 16px/20px "Microsoft YaHei";
+}
+.checkFlow_drop select{
+    display: inline-block;
+    width: 150px;
+    padding-left:30px;
+    background-color: #eee;
+    outline: none;
+}
+
+/*分页*/
+.plan_content_left .paging{
+    height: 35px;
+    width: 750px;
+    margin:0px auto;
+}
+
+

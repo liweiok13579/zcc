@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "bureau": "2016-12-10",
+      "locamotivetype": "HXD2B",
+      "locamotivenum": "0222",
+      "process": "C4",
+      "planstopnum": 18,
+      "planarrivaltime": "2016-01-15",
+      "plandeliverytime": "2016-02-01",
+      "realarrivaltime": "2016-01-15",
+      "realdeliverytime": "2016-02-01"
+    }
+  ]
+}

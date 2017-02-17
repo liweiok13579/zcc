@@ -1,0 +1,122 @@
+﻿.box{
+    padding: 15px;
+    min-width: 1170px;
+}
+th,tr,td{
+    text-align: center;
+}
+td{
+    vertical-align:inherit !important ;
+}
+.iconsize{
+    font-size: 40px;
+    color:  #6699FF;
+}
+.iconsize2{
+    font-size: 40px;
+    color:  #6699FF;
+    color:  #6699FF;
+}
+.process{
+    width:100%;
+    height:100%;
+}
+.process_one{
+    width:128px;
+    display:inline-block;
+    position: relative;
+    height:49px;
+}
+/*第一个完成流程图*/
+.process_one_a{
+    position: absolute;
+    top:9px;
+    left:0;
+    width:128px;
+    height:100%;
+    background: #00CC00;
+    text-align: center;
+    color: #fff;
+    line-height: 49px;
+    border-radius:30px ;
+}
+.process_one_a:hover{
+    text-decoration: none;
+    color: #eee;
+}
+/*第二个进行中流程图*/
+.process_one_b{
+    position: absolute;
+    top:9px;
+    left:0;
+    width:128px;
+    height:100%;
+    background:  #FF6633;;
+    text-align: center;
+    color: #fff;
+    line-height: 49px;
+    border-radius:30px ;
+}
+.process_one_b:hover{
+    text-decoration: none;
+    color: #eee;
+}
+/*第三个未开始流程图*/
+.process_one_c{
+    position: absolute;
+    top:9px;
+    left:0;
+    width:128px;
+    height:100%;
+    text-align: center;
+    color: #6699FF;
+    line-height: 49px;
+    border-radius:30px ;
+    border: 1px solid  #6699FF;
+}
+.process_one_c:hover{
+    text-decoration: none;
+}
+.Prompt{
+    width:100%;
+    height: 80px;
+}
+.Prompt_right{
+    width: 300px;
+    height:80px;
+    float: right;
+    padding-top: 50px ;
+    text-align: center;
+}
+.Prompt_right i{
+    width:15px;
+    height:15px;
+    background:#999999;
+    display: inline-block;
+    border-radius: 15px;
+}
+.paging{
+    width:100%;
+    height:34px;
+    margin: auto;
+}
+.paging1{
+    margin: 0;
+}
+.sousuo{
+    width: 400px;
+    height: 34px;
+    float: left;
+    padding-top: 15px;
+}
+.control-label{
+    margin-top: 7px ;
+}
+.sousuo .sj{
+    width: 100px;
+    border-radius: 6px;
+}
+.sousuo .sj2{
+    width: 200px;
+    border-radius: 6px;
+}

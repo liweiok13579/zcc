@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>HXD2B机车主变模块自主修试验记录单</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        .HXD2B {
+            width: 100%;
+            padding:20px;
+            min-width: 900px;
+        }
+        .HXD2B ul{
+            width: 100%;
+            height: 40px;
+            border:2px solid #ccc;
+            border-radius:5px 5px 0 0;
+        }
+        ul li{
+            float: left;
+            width: 50%;
+            line-height: 40px;
+            border:2px solid #fff;
+            background-color: #eee;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        li.active{
+            background-color: #deedf7;
+        }
+        .HXD2B table{
+            width: 100%;
+            text-align: center;
+        }
+        table td{
+            height:20px;
+            padding:5px 15px;
+        }
+        table .titel td{
+            padding:15px 0px;
+            background-color: #deedf7;
+        }
+        table .titel td h3{
+            font-weight:bold;
+        }
+        table input{
+            width: 100%;
+            outline: none;
+            border:0;
+            padding-left:10px;
+        }
+        table tbody .tr_seven td.td_three{
+            text-align: left;
+        }
+        /*提交*/
+        .HXD2B .submit{
+            width: 100%;
+            text-align: center;
+            margin:10px;
+        }
+        .submit button{
+            width: 80px;
+            background-color: #428bca;
+            color: #fff;
+            border-radius: 5px;
+            font: 700 16px/22px "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+<div class="HXD2B">
+    <ul>
+        <li class="active"><a href="javascript:void(0);">主变模块</a></li>
+        <li onclick="javascript:location.href='HXD2B(Alstom).html'"><a href="javascript:void(0);"> Alstom</a></li>
+    </ul>
+    <form action="提交给后台地址">
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tbody>
+        <!--rowspan=""行 colspan=""列-->
+        <tr class="titel">
+            <td colspan="6">
+                <h3>HXD2B机车主变模块自主修试验记录单</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>检修单位</td>
+            <td>上海中车轨道交通科技有限公司</td>
+            <td>产品序号</td>
+            <td><input type="text"/></td>
+            <td>试验日期</td>
+            <td><input type="text" /></td>
+        </tr>
+        <tr>
+            <td>试验项目</td>
+            <td colspan="4">试验要求</td>
+            <td>结果</td>
+        </tr>
+        <!--一般性检查 模块-->
+        <tr>
+            <td rowspan="2">一般性检查</td>
+            <td colspan="4">确认产品外观是否损坏</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4">确认产品配件是否缺失</td>
+            <td></td>
+        </tr>
+        <!--逻辑调试-->
+        <tr>
+            <td>逻辑调试</td>
+            <td colspan="4">逻辑试验正常、器件正常开关</td>
+            <td></td>
+        </tr>
+
+        <!--斩波试验 模块-->
+        <tr class="tr_seven">
+            <td rowspan="8">斩波试验</td>
+            <td>判断标准</td>
+            <td class="td_three" colspan="4">
+                1）充电1500V±50V时，波形正常；<br/>
+                2）充电3800V±50V时，变流器模块第2个脉冲开通电流应大于1800A。最大关断电流不超过2300A。
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">元件标号</td>
+            <td rowspan="2">充电1500V±50V测试结果</td>
+            <td colspan="2">充电3800V±50V</td>
+            <td rowspan="2">基准值</td>
+        </tr>
+        <tr>
+            <td>VDM（V）</td>
+            <td>第2脉冲开通电流（A）</td>
+        </tr>
+        <tr>
+            <td>A相上管</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td width="100px" rowspan="4">
+                充电3800V±50V：
+                1）VDM≤5000V；
+                2）3750V≤VD≤3850V；
+                3）开通电流＞1800A；
+                4）关断电流≤2300A。
+                注：不发生过流保护，元件能正常关断，说明元件未损坏。
+            </td>
+        </tr>
+        <tr>
+            <td>A 相下管</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+        </tr>
+        <tr>
+            <td>B 相上管</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+        </tr>
+        <tr>
+            <td>B 相下管</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: left;height:100px; vertical-align: top;">
+                过流保护试验未发生保护波形如下：
+            </td>
+            <td>
+                <input type="text"/>
+            </td>
+        </tr>
+        <!--调试员-->
+        <tr style="height:50px">
+            <td colspan="2">
+                调试员:
+                <input class="voltage" type="text"/>
+            </td>
+            <td colspan="2">
+               出厂检查员:
+                <input class="voltage" type="text"/>
+            </td>
+            <td colspan="3">
+                验收员:
+                <input class="voltage" type="text"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="submit">
+        <button>提交</button>
+    </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+h3 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+table td {
+    height: 20px;
+
+}
+
+table .titel td h3 {
+    font-weight: bold;
+}
+
+input {
+    width: 50%;
+    outline: none;
+    border: 0;
+    padding-left: 10px;
+    text-align: center;
+}
+.btn {
+    padding: 3px 3px !important;;
+}
+.radioInp input {
+    width: 10%;
+    outline: none;
+    border: 0;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.hehe {
+    width: 150px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis; /* Opera */
+    text-overflow: ellipsis; /* IE, Safari (WebKit) */
+}
+
+.table-condensed > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    vertical-align: middle !important;
+}
+
+ul {
+    width: 100%;
+    height: 48px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+ul li {
+    float: left;
+    width: 33%;
+    line-height: 40px;
+    border: 2px solid #fff;
+    background-color: #eee;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    list-style: none;
+}
+
+.active {
+    background-color: #deedf7;
+}
+
+ul li a {
+    width: 100%;
+    height: 40px;
+}
+
+.maintenance {
+    min-width: 1170px;
+    padding: 10px;
+}
+
+.tl {
+    text-align: left;
+}

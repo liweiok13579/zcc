@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网络控制系统检修记录</title>
+    <link rel="stylesheet" href="../../lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/production/tableStyleK.css">
+    <style>
+        .tableStyle {
+            padding: 0 !important;
+        }
+
+        .tableStyle > div {
+            float: left;
+            width: 25%;
+            border-right: 1px solid #000;
+            height: 100%;
+        }
+
+        .tableStyle > div > input {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="maintenance">
+    <ul>
+        <li onclick="javascript:location.href='110V电源装置检修记录.html'"><a href="javascript:void(0);"> 110V电源装置检修记录</a></li>
+        <li onclick="javascript:location.href='变流柜检修记录.html'"><a href="javascript:void(0);"> 变流柜检修记录</a></li>
+        <li class="active"><a href="javascript:void(0);"> 网络控制系统检修记录</a></li>
+    </ul>
+    <table border="1" cellpadding="0" cellspacing="0" class="table">
+        <tbody>
+        <!-- rowspan=""行 colspan=""列 -->
+        <tr class="titel info">
+            <td colspan="8">
+                <h3>HXD1B型机车充电机C4修</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>检修单位</td>
+            <td>上海机车检修段</td>
+            <td colspan="2">检修车号</td>
+            <td><input type="text"/></td>
+            <td colspan="2">试验日期</td>
+            <td><input type="text"/></td>
+        </tr>
+        <tr>
+            <td>部件编号</td>
+            <td><input type="text"></td>
+            <td colspan="2">所装车号</td>
+            <td><input type="text"></td>
+            <td colspan="2">交付日期</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>检修/检测项目</td>
+            <td colspan="3">检修/检测标准</td>
+            <td>检修结果</td>
+            <td>处理意见</td>
+            <td>自检</td>
+            <td>互检员</td>
+        </tr>
+        <tr>
+            <td rowspan="5">入场检查</td>
+            <td colspan="3">
+                <div class="hehe displayText">
+                    检查CCU、SKS3、CIO、显示屏并记录编号，检查插头插座无变形、破损现象，配件齐全，线束连接牢靠。
+                </div>
+                <button class="btn">详细信息</button>
+
+            </td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="tableStyle">
+                <div>CCU1编号</div>
+                <div><input type="text"></div>
+                <div>CCU2编号</div>
+                <div style="border-right: 0;"><input type="text"></div>
+            </td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="tableStyle">
+                <div>CIO1编号</div>
+                <div><input type="text"></div>
+                <div>CIO2编号</div>
+                <div style="border-right: 0;"><input type="text"></div>
+            </td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="tableStyle">
+                <div>显示屏1</div>
+                <div><input type="text"></div>
+                <div>显示屏2</div>
+                <div style="border-right: 0;"><input type="text"></div>
+            </td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="tableStyle">
+                <div>SKS3编号</div>
+                <div style="width: 75%;border-right: 0;"><input type="text"></div>
+            </td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>各部件清洁及检查</td>
+            <td colspan="3">
+                <div class="hehe displayText">
+                    CCU、SKS3、CIO、显示屏清洁无尘，各部无损伤或过热等异常现象；更换CCU电池；线束插头连接位置正确，连接牢靠，线束绑扎牢固、无破损现象；部件紧固状态标识清晰。
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>质检</td>
+            <td colspan="7"></td>
+        </tr>
+        <tr>
+            <td>备注</td>
+            <td colspan="7"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div style="text-align: center">注：1.“★”为关键项点（质检员必检项）；2.“☆”为特殊过程；3.“※”处为质检人员复测，并填写，测量结果以质检为准。</div>
+</div>
+<script src="../../lib/jquery-1.11.3/jquery.min.js"></script>
+<script src="../../lib/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+            var btn = $('.btn');
+            btn.on("click", function () {
+                $(this).prev().toggleClass('hehe')
+            })
+        }
+    )
+</script>
+</body>
+</html>
+
+<!--
+
+<div class="hehe displayText">
+</div>
+<button class="btn">详细信息</button>
+
+-->

@@ -1,0 +1,163 @@
+html,body{
+    width:100%;
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width:100%;
+    height:100%;
+    padding: 15px;
+    min-width: 800px;
+}
+
+.centent{
+    border: 1px solid #eee;
+    /*min-width: 1170px;*/
+}
+.detaileds {
+    text-align: center;
+    background-color:#deedf7;
+    letter-spacing: 3px;
+    padding: 5px;
+}
+
+.detaileds > h2 {
+    margin: 10px 0;
+    font-weight: 700;
+}
+table > thead > tr > th {
+    font: 700 16px/20px "微软雅黑";
+}
+.schedule_content > table > tbody > tr > td {
+    padding-left: 0;
+    margin: 0;
+}
+.repair_con {
+    margin: 15px;
+    border-radius: 5px;
+}
+.logistics{
+    padding-top:15px ;
+    padding-left:20px ;
+    border-radius: 5px;
+    margin-bottom:15px ;
+    border-top:1px solid #ddd ;
+}
+.logistics input{
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.repair_con > select {
+    display: inline-block;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.repair_con > input {
+    width:168px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* 送修页的物料表格 */
+.table-hover > thead > tr > th,
+.table-hover > tbody > tr > th,
+.table-hover > tfoot > tr > th,
+.table-hover > thead > tr > td,
+.table-hover > tbody > tr > td,
+.table-hover > tfoot > tr > td {
+    vertical-align: middle !important;
+    border-top: 1px solid #ddd !important;
+    padding: 7px;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    vertical-align: middle !important;
+}
+.Additional > table tr td{
+    width:30%;
+}
+.widHei {
+    width: 168px;
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 5px;
+}
+
+.col {
+    background-color: #deedf7;
+    font-weight: 700;
+}
+form{
+    overflow: hidden;
+}
+input{
+    text-align: center;
+}
+.spacing{
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 90%;
+    margin-left: 3%;
+}
+.zengjia{
+    margin-left: 3%;
+    width: 90%;
+    margin-bottom: 10px;
+}
+.Apply{
+    float: left;
+    width:100%;
+    position: relative;
+}
+.tijiaof{
+    width:8%;
+    position: absolute;
+    bottom:0;
+    right:3%;
+}
+.tijiaoe{
+    right:13%;
+}
+.tijiao{
+    width: 100%;
+
+}
+.Photograph{
+    width:100%;
+    height: 258px;
+    padding-left: 23px;
+    border-top: 1px solid #eee;
+}
+.Photograph_con{
+    width:57%;
+    height:200px;
+    margin-left:167px ;
+}
+.Photograph_con img{
+    width:100%;
+    height:100%;
+}
+.Photograph_con input{
+    float: left;
+}
+.Apply_right{
+    width:100%;
+    margin: auto;
+}
+.dingwei{
+    float: left;
+}

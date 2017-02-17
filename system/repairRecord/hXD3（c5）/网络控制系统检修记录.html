@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网络控制系统检修记录</title>
+    <link rel="stylesheet" href="../../lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/production/jianxiu.css">
+</head>
+<body>
+<div class="c4-maintenance box">
+    <ul>
+        <li onclick="javascript:location.href='110V电源装置检修记录.html'" style="width: 33.33%;"><a href="javascript:void(0);">110V电源装置检修记录</a></li>
+        <li onclick="javascript:location.href='变流器装置检修记录.html'" style="width: 33.33%;"><a href="javascript:void(0);">变流器装置检修记录</a></li>
+        <li class="active" style="width: 33.33%;"><a href="javascript:void(0);">网络控制系统检修记录</a></li>
+    </ul>
+    <table border="1" cellpadding="0" cellspacing="0" class="table table-bordered">
+        <tbody>
+        <!-- rowspan=""行 colspan=""列 -->
+        <tr class="titel info">
+            <td colspan="8">
+                <h3>网络控制系统检修记录</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>使用部门</td>
+            <td colspan="2">上海机车检修段</td>
+            <td>检修班组</td>
+            <td><input type="text"></td>
+            <td colspan="2">检修日期</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>检修车号</td>
+            <td><input type="text"></td>
+            <td>部件编号</td>
+            <td><input type="text"></td>
+            <td>所装车号</td>
+            <td><input type="text"></td>
+            <td>交付日期</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="8" class="teshu2">检 查 记 录 内 容</td>
+        </tr>
+        <tr>
+            <td>检测/检修项目</td>
+            <td colspan="3">检修标准</td>
+            <td>检修结果</td>
+            <td>处理意见</td>
+            <td>自检</td>
+            <td>互检员</td>
+        </tr>
+        <tr>
+            <td rowspan="3">下车检查</td>
+            <td colspan="3"><div class="hehe displayText">
+                记录M-CPU、显示屏编号；检查M-CPU、显示屏、接触器盘无严重损伤等异常现象，并对各接头做好防护。
+            </div>
+                <button class="btn">详细信息</button></td>
+            <td rowspan="3"><input type="text"></td>
+            <td rowspan="3"><input type="text"></td>
+            <td rowspan="3"><input type="text"></td>
+            <td rowspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="1">M-CPU编号</td>
+            <td colspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="3" style="padding: 0;">
+                <div class="fourtb">显示屏1编号</div>
+                <div class="fourtb"><input type="text"></div>
+                <div class="fourtb">显示屏2编号</div>
+                <div class="fourtb fourtb1"><input type="text"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>电器组件拆卸及清洁</td>
+            <td colspan="3"><div class="hehe displayText">
+                M-CPU、显示屏、接触器盘清洁无尘，各部无损伤或过热等异常现象，安装螺丝按标准力矩安装牢固并打好防缓标记。
+            </div>
+                <button class="btn">详细信息</button></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>装车检查</td>
+            <td colspan="3"><div class="hehe displayText">
+                确认柜内清洁良好, 无异物残留、电气线路绑扎良好，无碰磨、部件紧固标识线清晰、软件程序升级、铭牌安装及日期、位置正确、柜门及盖板安装可靠。
+                更换电池并登记。
+            </div>
+                <button class="btn">详细信息</button></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <td>质检</td>
+        <td colspan="7"><input type="text"></td>
+        </tr>
+        <tr>
+        <td>备注</td>
+        <td colspan="7"><input type="text"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div style="text-align: center">注：1.“★”为关键项点（质检员必检项）；2.“☆”为特殊过程；3.“※”处为质检人员复测，并填写，测量结果以质检为准。</div>
+</div>
+<script src="../../lib/jquery-1.11.3/jquery.min.js"></script>
+<script src="../../lib/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+            var btn = $('.btn');
+            btn.on("click", function () {
+                $(this).prev().toggleClass('hehe')
+            })
+        }
+    )
+</script>
+</body>
+</html>

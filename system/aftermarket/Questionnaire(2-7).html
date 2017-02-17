@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>调查问卷管理</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../js/paging-master/src/paging.css"/>
+    <link rel="stylesheet" href="../lib/jquery.dataTables/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" href="../css/aftermarket/Questionnaire.css"/>
+</head>
+<body>
+<div class="Questionnaire">
+    <div class="Questionnaire_box">
+        <!--上传调查问卷管理信息-->
+        <div class="show">
+           <div class="show_title">
+               <h3>调查问卷管理</h3>
+               <button class="show_add">添加</button>
+           </div>
+            <table id="example" class="display" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>问卷时间</th>
+                    <th>问卷区段</th>
+                    <th>附件</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<script src='../lib/jquery-1.11.3/jquery.min.js'></script>
+<script src="../lib/bootstrap-3.2.0/js/bootstrap.js"></script>
+<script src="../lib/jquery.dataTables/jquery.dataTables.min.js"></script>
+<script src="../lib/layer-v3.0.1/layer/layer.js"></script>
+<script>
+    $(function () {
+        // 点击添加
+        $(".Questionnaire .show_add").on('click', function () {
+            layer.ready(function(){
+                layer.open({
+                    type: 2,
+                    title: '调查问卷',
+                    fix: false,
+                    maxmin: true,
+                    shadeClose: true,
+                    area: ['750px', '600px'],
+                    content: 'Questionnaire_add.html'
+                });
+            });
+        })
+
+        //table模块
+        $('#example').DataTable({
+            "ajax": "./Questionnaire(2-7).txt",
+            "oLanguage": { // 国际化配置
+                "sProcessing": "正在获取数据，请稍后...",
+                "sLengthMenu": "显示 _MENU_ 条",
+                "sZeroRecords": "没有找到数据",
+                "sInfo": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                "sInfoEmpty": "记录数为0",
+                "sInfoFiltered": "(全部记录数 _MAX_ 条)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "第一页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "最后一页"
+                }
+            },
+            "columns": [{
+                "data": "name"
+            }, {
+                "data": "position"
+            }, {
+                "data": "salary"
+            }, {
+                "data": null
+            }],
+            columnDefs: [{
+                "targets": -1,
+                "data": null,
+                "defaultContent": "<a href='#'>查看</a>"
+            }]
+        });
+        $('#example tbody').on('click', 'a', function () {
+            //留着  "<a href='#'>查看</a>" 链接 做跳转操作
+        });
+    })
+</script>
+</body>
+</html>

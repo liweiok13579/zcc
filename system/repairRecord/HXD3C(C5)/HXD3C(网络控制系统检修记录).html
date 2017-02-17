@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>HXD3C网络控制系统C5修记录（检修段版）</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        .HXD3C {
+            width: 100%;
+            padding:20px;
+            min-width: 900px;
+        }
+        .HXD3C table{
+            width: 100%;
+            text-align: center;
+        }
+        table td{
+            height:20px;
+            padding:5px 15px;
+        }
+        table .titel td{
+            padding:15px 0px;
+            background-color: #deedf7;
+        }
+        table .titel td h3{
+            font-weight:bold;
+        }
+        table input{
+            width: 100%;
+            outline: none;
+            border:0;
+            padding-left:10px;
+        }
+        table tr textarea {
+            width: 100%;
+        }
+            /*提交*/
+        .HXD3C .submit{
+            width: 100%;
+            text-align: center;
+            margin:10px;
+        }
+        .submit button{
+            width: 80px;
+            background-color: #428bca;
+            color: #fff;
+            border-radius: 5px;
+            font: 700 16px/22px "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+<div class="HXD3C">
+    <form action="后台提交地址">
+        <table border="1" cellpadding="0" cellspacing="0">
+            <tbody>
+            <!--rowspan=""行 colspan=""列-->
+            <tr class="titel">
+                <td rowspan="2" colspan="9">
+                    <h3>HXD3C网络控制系统C5修记录（检修段版）</h3>
+                </td>
+            </tr>
+            <tr></tr>
+
+            <!--使用部门-->
+            <tr>
+                <td>使用部门</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td>检修班组</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td>检修日期</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <!--检修车号-->
+            <tr>
+                <td>检修车号</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td>部件编号</td>
+                <td><input type="text" name=""/></td>
+                <td>所装车号</td>
+                <td><input type="text" name=""/></td>
+                <td>交付日期</td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <!--检修记录内容-->
+            <tr>
+                <td colspan="9">检   修   记   录   内   容</td>
+            </tr>
+            <tr>
+                <td>检测/检修项目</td>
+                <td colspan="4">检修标准</td>
+                <td>检修结果</td>
+                <td>处理意见</td>
+                <td>自检</td>
+                <td>互检员</td>
+            </tr>
+            <tr>
+                <td rowspan="3">下车检查</td>
+                <td colspan="4">记录M-CPU、显示屏编号；检查M-CPU、显示屏、接触器盘无严重损伤等异常现象，并对各接头做好防护。</td>
+                <td rowspan="3"><input type="text" name=""/></td>
+                <td rowspan="3"><input type="text" name=""/></td>
+                <td rowspan="3"><input type="text" name=""/></td>
+                <td rowspan="3"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>M-CPU编号</td>
+                <td colspan="3"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>显示屏1编号</td>
+                <td><input type="text" name=""/></td>
+                <td>显示屏2编号</td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <!--电器组件拆卸及清洁-->
+            <tr>
+                <td>电器组件拆卸及清洁</td>
+                <td colspan="4">M-CPU、显示屏、接触器盘清洁无尘，各部无损伤或过热等异常现象，安装螺丝按标准力矩安装牢固并打好防缓标记。</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <!--装车检查-->
+            <tr>
+                <td>装车检查</td>
+                <td colspan="4">确认柜内清洁良好, 无异物残留、电气线路绑扎良好，无碰磨、部件紧固标识线清晰、软件程序不升级、铭牌安装及日期、位置正确、柜门及盖板安装可靠。
+                    更换电池并登记。</td>
+                <td  colspan="2"><input type="text" name=""/></td>
+                <td ><input type="text" name=""/></td>
+                <td ><input type="text" name=""/></td>
+            </tr>
+            <!--质检  验收员-->
+            <tr>
+                <td>质检</td>
+                <td colspan="8"><input type="text" name=""/></td>
+            </tr>
+            <!--备注-->
+            <tr>
+                <td>备注：</td>
+                <td colspan="8"><textarea name="" id="" cols="30" rows="5"></textarea></td>
+            </tr>
+            </tbody>
+        </table>
+        <p>注：1.“★”为关键项点（质检员必检项）；2.“☆”为特殊过程；3.“※”处为质检人员复测，并填写，测量结果以质检为准。</p>
+        <div class="submit">
+            <button>提交</button>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

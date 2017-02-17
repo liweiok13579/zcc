@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>HXD3C变流器装置（辅变模块风冷）C5修记录（检修段版）</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        .HXD3C {
+            width: 100%;
+            padding:20px;
+            min-width: 900px;
+        }
+        .HXD3C table{
+            width: 100%;
+            text-align: center;
+        }
+        table td{
+            height:20px;
+            padding:5px 15px;
+        }
+        table .titel td{
+            padding:15px 0px;
+            background-color: #deedf7;
+        }
+        table .titel td h3{
+            font-weight:bold;
+        }
+        table input{
+            width: 100%;
+            outline: none;
+            border:0;
+            padding-left:10px;
+        }
+        table tr textarea {
+            width: 100%;
+        }
+            /*提交*/
+        .HXD3C .submit{
+            width: 100%;
+            text-align: center;
+            margin:10px;
+        }
+        .submit button{
+            width: 80px;
+            background-color: #428bca;
+            color: #fff;
+            border-radius: 5px;
+            font: 700 16px/22px "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+<div class="HXD3C">
+    <form action="后台提交地址">
+        <table border="1" cellpadding="0" cellspacing="0">
+            <tbody>
+            <!--rowspan=""行 colspan=""列-->
+            <tr class="titel">
+                <td rowspan="2" colspan="12">
+                    <h3>HXD3C变流器装置（辅变模块风冷）C5修记录（检修段版）</h3>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td rowspan="3" colspan="2">上海机车检修段</td>
+                <td rowspan="3" colspan="2">变流器装置检修记录</td>
+                <td rowspan="3" colspan="2">适用范围</td>
+                <td rowspan="3" colspan="2">HXD3C型机车C5修</td>
+                <td colspan="2">版本</td>
+                <td colspan="2">V_0.2</td>
+            </tr>
+            <tr>
+                <td colspan="2">编号</td>
+                <td colspan="2">HXD3C-JL-DY-30</td>
+            </tr>
+            <tr>
+                <td colspan="2">替代</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <!--使用部门-->
+            <tr>
+                <td colspan="2">使用部门</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td colspan="2">检修班组</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td colspan="2">检修日期</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <!--检修车号-->
+            <tr>
+                <td>检修车号</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td>部件编号</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td>所装车号</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td>交付日期</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <!--检修记录内容-->
+            <tr>
+                <td colspan="12">检   修   记   录   内   容</td>
+            </tr>
+            <tr>
+                <td>检测/检修项目</td>
+                <td colspan="7">检修标准</td>
+                <td>检修结果</td>
+                <td>处理意见</td>
+                <td>自检</td>
+                <td>互检员</td>
+            </tr>
+            <tr>
+                <td>下车检查</td>
+                <td colspan="7">检查并记录变流器装置、APU风机、柜体、门板、接触器、断路器、各电容、电阻、变压器、传感器、绝缘子、高压指示灯和导线无严重损伤等异常现象，并对各接头做好防护。</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>电器组件拆装及清洁</td>
+                <td colspan="7">整流模块、逆变模块、CI/APU控制单元、DCPT单元、OVTR单元清洁无尘，各部无损伤或过热等异常现象；散热片无异物；安装螺丝按标准力矩安装牢固并打好防缓标记。
+                    CI/APU控制单元更换电池并登记。</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>柜体检查清洁</td>
+                <td colspan="7">柜内各电容、电阻、传感器、铜排、导线对外连接状态良好、表面清洁、接线无松动；柜内、柜外表面、柜门清洁无严重积尘。</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>柜体清洁</td>
+                <td colspan="7">柜内各电容、电阻、铜排、电缆、导线及对外连接插座状态良好、表面清洁、接线无松动；各接头连接良好，无漏液现象；柜内、柜外表面、柜门清洁无尘。</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <!--★测量-->
+            <tr>
+                <td rowspan="43">★测量</td>
+                <td colspan="9">确认CI滤波电容器容值需合要求（≥1000µF）【▲】</td>
+                <td rowspan="5"><input type="text" name=""/></td>
+                <td rowspan="5"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">名称</td>
+                <td>FC13</td>
+                <td>FC12</td>
+                <td>FCG1</td>
+                <td>FC11</td>
+                <td>FC23</td>
+                <td>FC22</td>
+            </tr>
+            <tr>
+                <td colspan="3">测量值(µF)</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">名称</td>
+                <td>FCG2</td>
+                <td>FC21</td>
+                <td>FC33</td>
+                <td>FC32</td>
+                <td>FCG3</td>
+                <td>FC31</td>
+            </tr>
+            <tr>
+                <td colspan="3">测量值(µF)</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="9">接触器线圈阻值为46.0（1±5%）Ω【▲】</td>
+                <td rowspan="10"><input type="text" name=""/></td>
+                <td rowspan="10"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="3">名称</td>
+                <td rowspan="2" colspan="3">型号</td>
+                <td colspan="3">线圈电阻（Ω）</td>
+            </tr>
+            <tr>
+                <td>规定值</td>
+                <td colspan="2">测量值</td>
+            </tr>
+            <tr>
+                <td colspan="3">K</td>
+                <td rowspan="4" colspan="3">CM79-A1</td>
+                <td rowspan="7">46.0(43.7-48.3)</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">K1</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">K2</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">K3</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AK1</td>
+                <td rowspan="3" colspan="3">CM75-A2</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AK2</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AK3</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <!--AVR电源单元输出值符合要求-->
+            <tr>
+                <td colspan="9">AVR电源单元输出值符合要求</td>
+                <td rowspan="17"><input type="text" name=""/></td>
+                <td rowspan="17"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="9">（1）DC24V（标准值22.8V～25.2V）</td>
+            </tr>
+            <tr>
+                <td colspan="3">部位</td>
+                <td colspan="3">插针号</td>
+                <td>插针号</td>
+                <td colspan="2">测量值</td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR1</td>
+                <td colspan="3">6</td>
+                <td>7</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR2</td>
+                <td colspan="3">6</td>
+                <td>7</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR3</td>
+                <td colspan="3">6</td>
+                <td>7</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR4</td>
+                <td colspan="3">6</td>
+                <td>7</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="9">（2）AC50V（标准值47.5V～52.5V）</td>
+            </tr>
+            <tr>
+                <td colspan="3">部位</td>
+                <td colspan="3">插针号</td>
+                <td>插针号</td>
+                <td colspan="2">测量值</td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR1</td>
+                <td colspan="3">10</td>
+                <td>12</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR1</td>
+                <td colspan="3">11</td>
+                <td>13</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR2</td>
+                <td colspan="3">10</td>
+                <td>12</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR2</td>
+                <td colspan="3">11</td>
+                <td>13</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR3</td>
+                <td colspan="3">10</td>
+                <td>12</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR3</td>
+                <td colspan="3">11</td>
+                <td>13</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR4</td>
+                <td colspan="3">10</td>
+                <td>12</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">AVR4</td>
+                <td colspan="3">11</td>
+                <td>13</td>
+                <td colspan="2"><input type="text" name=""/></td>
+            </tr>
+            <!--电阻单元测量，阻值符合要求-->
+            <tr>
+                <td colspan="9">电阻单元测量，阻值符合要求</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="3">名称</td>
+                <td colspan="2">电阻阻值（Ω)</td>
+                <td rowspan="2" colspan="2">装置</td>
+                <td colspan="2">电阻阻值（Ω）</td>
+                <td rowspan="10"><input type="text" name=""/></td>
+                <td rowspan="10"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>标准</td>
+                <td>测量值</td>
+                <td>标准</td>
+                <td>测量值</td>
+            </tr>
+            <tr>
+                <td colspan="3">CHRe1</td>
+                <td rowspan="3">4.81(4.57-5.06)</td>
+                <td><input type="text" name=""/></td>
+                <td colspan="2">GR1</td>
+                <td rowspan="4">20.0(19.0 - 21.0)</td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">CHRe2</td>
+                <td><input type="text" name=""/></td>
+                <td colspan="2">GR2</td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">CHRe3</td>
+                <td><input type="text" name=""/></td>
+                <td colspan="2">GR3</td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">CHR</td>
+                <td>50.0(47.5-52.5)</td>
+                <td><input type="text" name=""/></td>
+                <td colspan="2">GR4</td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">OVR1</td>
+                <td rowspan="3">7.80(7.41-8.19)</td>
+                <td><input type="text" name=""/></td>
+                <td colspan="2">GR12</td>
+                <td rowspan="3">51k(48.5 - 53.5)</td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">OVR2</td>
+                <td><input type="text" name=""/></td>
+                <td colspan="2">GR22</td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">OVR3</td>
+                <td><input type="text" name=""/></td>
+                <td colspan="2">GR32</td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">Heater</td>
+                <td>7.5(7.0-8.0)</td>
+                <td><input type="text" name=""/></td>
+                <td colspan="2">////////</td>
+                <td><input type="text" name=""/></td>
+                <td>////////</td>
+            </tr>
+            <!--光纤检测-->
+            <tr>
+                <td rowspan="21">光纤检测</td>
+                <td colspan="9">光纤衰减符合要求</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="5">CI：整流器</td>
+                <td colspan="4">测量值(dB)</td>
+                <td rowspan="8"><input type="text" name=""/></td>
+                <td rowspan="8"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">单元体</td>
+                <td>测量部位</td>
+                <td>规定值(dB)</td>
+                <td>U</td>
+                <td>X</td>
+                <td>V</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="3">CTR1⇔ COV1</td>
+                <td>CTR1</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>COV1</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="3">CTR2⇔ COV2</td>
+                <td>CTR2</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>COV2</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="3">CTR3⇔ COV3</td>
+                <td>CTR3</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>COV3</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">CI：逆变器</td>
+                <td colspan="6">测量值(dB)</td>
+                <td rowspan="8"><input type="text" name=""/></td>
+                <td rowspan="8"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>单元体</td>
+                <td>测量部位</td>
+                <td>规定值(dB)</td>
+                <td>U</td>
+                <td>X</td>
+                <td>V</td>
+                <td>Y</td>
+                <td>W</td>
+                <td>Z</td>
+            </tr>
+            <tr>
+                <td rowspan="2">CTR1⇔ INV1</td>
+                <td>CTR1</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>INV1</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td rowspan="2">CTR2⇔ INV2</td>
+                <td>CTR2</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>INV2</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td rowspan="2">CTR3⇔ INV3</td>
+                <td>CTR3</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td>INV3</td>
+                <td>-23.0以上</td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="5">CI：OVTR</td>
+                <td colspan="4">测量值(dB)</td>
+                <td rowspan="4"><input type="text" name=""/></td>
+                <td rowspan="4"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">单元体</td>
+                <td>测量部位</td>
+                <td>规定值(dB)</td>
+                <td colspan="2">OV1</td>
+                <td>OV2</td>
+                <td>OV3</td>
+            </tr>
+            <tr>
+                <td colspan="3">CTR</td>
+                <td>CTR</td>
+                <td>-23.0以上</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="3">OVT</td>
+                <td>OVT</td>
+                <td>-23.0以上</td>
+                <td colspan="2"><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <!--水冷系统检查-->
+            <tr>
+                <td rowspan="3">水冷系统检查</td>
+                <td colspan="7">冷却液中乙二醇溶液浓度在51%~55%之内，液位必须在“灌注后水位”之上。</td>
+                <td colspan="2">
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格
+                </td>
+                <td rowspan="3"><input type="text" name=""/></td>
+                <td rowspan="3"><input type="text" name=""/></td>
+            </tr>
+            <tr>
+                <td colspan="9">
+                    使用乙二醇浓度测试仪测量，确认冷却液冰点值需符合要求（要求冰点值在-44℃～-38℃正常）。【▲】<br/>
+                    测量值(℃):<input type="text" name="" class="voltage"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="9">流量须在200L/min~220L/min之间（气温5℃以上时确认）:<input type="text" name="" class="voltage"/>L/min</td>
+            </tr>
+            <!--★绝缘检测-->
+            <tr>
+                <td>★绝缘检测</td>
+                <td colspan="9">
+                    使用500V绝缘表测量水泵电源线对地绝缘值不小于10MΩ<br/>
+                    测量值(MΩ):<input type="text" name="" class="voltage"/>
+                </td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <!--装车检查-->
+            <tr>
+                <td>装车检查</td>
+                <td colspan="9">
+                    确认柜内清洁良好, 无异物残留、电气线路绑扎良好，无碰磨、水泵无漏液现象、水冷系统阀门状态正确、
+                    柜内电气连接及部件紧固标识线清晰、铭牌安装及日期、位置正确、柜门及盖板安装可靠。
+                </td>
+                <td><input type="text" name=""/></td>
+                <td><input type="text" name=""/></td>
+            </tr>
+            <!--质检  验收员-->
+            <tr>
+                <td>质检</td>
+                <td colspan="5"><input type="text" name=""/></td>
+                <td>验收员</td>
+                <td colspan="5"><input type="text" name=""/></td>
+            </tr>
+            <!--备注-->
+            <tr>
+                <td>备注：</td>
+                <td colspan="11"><textarea name="" id="" cols="30" rows="5"></textarea></td>
+            </tr>
+            </tbody>
+        </table>
+        <p>注：1.“★”为关键项点（质检员必检项）；2.“☆”为特殊过程；3.“※”处为质检人员复测，并填写，测量结果以质检为准。</p>
+        <div class="submit">
+            <button>提交</button>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

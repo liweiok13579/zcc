@@ -1,0 +1,79 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1484275081263'); /* IE9*/
+  src: url('iconfont.eot?t=1484275081263#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1484275081263') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1484275081263') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1484275081263#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    color: #428bca;
+}
+
+/* 一 ：生产检修管理 */
+.icon-svg11:before { content: "\e832"; }
+/* 1.1 机车检修计划 */
+.icon-weixiujihuaguanli:before { content: "\e6a5"; }
+/* 1.2 入库检查记录单*/
+.icon-jiancha:before { content: "\e6a6"; }
+/* 1.3 派工单 */
+.icon-fix_sent:before { content: "\e610"; }
+/* 1.4 调试单 */
+.icon-baobiao:before { content: "\e619"; }
+/* 1.5 检修日报 */
+.icon-shebeijianxiu:before { content: "\e609"; }
+
+/* 二 ：售后服务管理 */
+.icon-shouhou:before { content: "\e65c"; }
+/* 2.1 走行信息 */
+.icon-xinxicaiji:before { content: "\e618"; }
+/* 2.2 维修方案查询 */
+.icon-fix_search:before { content: "\e613"; }
+/* 2.3 故障信息输入 */
+.icon-guzhangtongji:before { content: "\e7af"; }
+/* 2.4 一车一档日报*/
+.icon-mianbanyidang:before { content: "\e6e4"; }
+/* 2.5 故障分析报告 */
+.icon-icon1:before { content: "\e6bb"; }
+/* 2.6 库房配件管理 */
+.icon-icon:before { content: "\e636"; }
+/* 2.7 调查问卷 */
+.icon-iconfonticyitichuwenti:before { content: "\e60c"; }
+
+
+/* 三 ： 配件修管理 */
+.icon-iconfontguanli:before { content: "\e623"; }
+/* 3.1 配件修流程 */
+.icon-liucheng:before { content: "\e6a7"; }
+/* 3.2 配件修信息跟踪 */
+.icon-genzong:before { content: "\e70b"; }
+/* 3.3 配件修月度报告 */
+.icon-dingdanjilu:before { content: "\e644"; }
+
+/* 四 ：仓库管理 */
+.icon-warehouse:before { content: "\e63b"; }
+
+/* 打开箭头 */
+.icon-jiantouarrow483:before { content: "\e695"; }
+/* 闭合箭头 */
+.icon-jiantouarrow487:before { content: "\e6ab"; }
+/* 日历 */
+.icon-rili:before { content: "\e702"; }
+/* 火车头 */
+.icon-iconfonthuoche:before { content: "\e67d"; }
+/* 消息 */
+.icon-xiaoxi:before { content: "\e640"; }
+/* 文件 */
+.icon-wenjianjia:before { content: "\e8ea"; }
+/* 箭头 */
+.icon-jiantouyou:before { content: "\e63f"; }
+/* 开始 */
+.icon-kaishi:before { content: "\e607"; }
+/* 结束  */
+.icon-jieshu:before { content: "\e665"; }

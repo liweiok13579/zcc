@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加检修计划模块</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap-datepicker-master/css/bootstrap-datepicker.min.css"/>
+</head>
+<style>
+    .addPlan {
+        width: 100%;
+        height: 100%;
+        font-family: "Microsoft YaHei";
+        font-size: 15px;
+    }
+
+    .addPlan_box {
+        width: 700px;
+        border: 1px solid #ccc;
+        text-align: center;
+        margin: 30px auto;
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 2px 0 0;
+        font-size: 12px;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: 4px;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    }
+    .table-condensed > thead > tr > th,
+    .table-condensed > tbody > tr > th,
+    .table-condensed > tfoot > tr > th,
+    .table-condensed > thead > tr > td,
+    .table-condensed > tbody > tr > td,
+    .table-condensed > tfoot > tr > td {
+        padding: 3px;
+    }
+
+    .addPlan_box form h3 {
+        margin: 5px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #deedf7;
+    }
+
+    .addPlan_box form table {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .table>tbody>tr>td{
+        padding:5px;!important;
+    }
+
+    .table tr td span {
+        width: 165px;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        background-color: #deedf7;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .table tr td select,
+    .table tr td input{
+        width: 165px;
+        height: 32px;
+        line-height: 32px;
+        display: inline-block;
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    .table tr td button {
+        width: 80px;
+        height: 35px;
+        line-height: 30px;
+        border-radius: 5px;
+        background-color: #428bca;
+        color: #fff;
+    }
+</style>
+<body>
+<!--添加检修计划模块-->
+<div class="addPlan">
+    <div class="addPlan_box" id="">
+        <form action="提交给后台地址">
+            <h3>添加检修计划</h3>
+            <table class="table table-hover">
+                <tr>
+                    <td>
+                        <span>支配段 :</span>
+                        <input type="text"/>
+                    </td>
+                    <td>
+                        <span>机车型号 :</span>
+                        <input type="text"/>
+                    </td>
+                    <td>
+                        <span>修程 :</span>
+                        <select class="">
+                            <option>C4</option>
+                            <option>C3</option>
+                            <option>C2</option>
+                            <option>C1</option>
+                            <option>C5</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>计划到段日期 :</span>
+                        <input type="text" class="datepicker planstart"/>
+                    </td>
+                    <td>
+                        <span>计划交验日期 :</span>
+                        <input type="text" class="datepicker planend"/>
+                    </td>
+                    <td>
+                        <span>计划停时 :</span>
+                        <input type="text" class=" stopTime"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>实际到段日期 :</span>
+                        <input type="text" class="datepicker factstart"/>
+                    </td>
+                    <td>
+                        <span>实际交验日期 :</span>
+                        <input type="text" class="datepicker factend"/>
+                    </td>
+                    <td>
+                        <span>上传人 :</span>
+                        <input type="text"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <button class="item_add">添加</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="../lib/jquery-1.11.3/jquery.min.js"></script>
+<script src="../lib/bootstrap-datepicker-master/js/bootstrap-datepicker.js"></script>
+<script src="../lib/bootstrap-datepicker-master/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script>
+    $(function () {
+        setdatepicker();
+        //维修计划 日期选择
+        function setdatepicker() {
+            $(".datepicker").datepicker({
+                language: "zh-CN",
+                autoclose: true,//选中之后自动隐藏日期选择框
+                clearBtn: true,//清除按钮
+                format: "yyyy-mm-dd"//日期格式
+            });
+        }
+        //点击关闭
+        $(".addPlan .item_add").on("click", function () {
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.layer.close(index);
+        })
+
+        // 计划停时
+        $(".planend").on("blur", function () {
+            var startday, endday, start, end, day;
+            $("input").on("change", function () {
+                startday = $(".planstart").val().split("-");
+                endday = $(".planend").val().split("-");
+                start = new Date(startday[0], startday[1] - 1, startday[2]);
+                end = new Date(endday[0], endday[1] - 1, endday[2]);
+                day = parseInt(Math.abs(start - end) / 1000 / 60 / 60 / 24)
+                day += 1;
+                $(".stopTime").val(day);
+            })
+        })
+    })
+</script>
+</body>
+</html>

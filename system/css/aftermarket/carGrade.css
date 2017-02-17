@@ -1,0 +1,41 @@
+.carGrade {
+    /*width: 100%;*/
+    width: 1735px;
+    min-width: 1170px;
+    padding: 15px;
+    margin-bottom:50px;
+}
+.carGrade_box {
+    border: 1px solid #ccc;
+    border-radius:5px;
+    padding:5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.carGrade_box table{
+    /*width: 100%;*/
+    border:1px solid #ccc;
+}
+table > thead > tr > th,
+table > tbody > tr > td{
+    padding:0;
+    text-align: center;
+    border-bottom:1px solid #ccc !important;
+    vertical-align: middle !important;
+}
+table > thead > tr > th{
+    font-weight: bold;
+    background-color: #deedf7;
+}
+
+table > thead > tr > th> input,
+table > tbody > tr > td> input{
+    width: 100%;
+    outline: none;
+    text-align: center;
+}
+/*分页*/
+.carGrade_box .pageToolbar{
+    margin-bottom:15px;!important;
+}

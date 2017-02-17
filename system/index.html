@@ -1,0 +1,113 @@
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>中车质量管理系统</title>
+    <link rel="stylesheet" href="./lib/bootstrap-3.2.0/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./fonts/iconfont.css"/>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <!--[if lt IE 9]>
+    <script src="./lib/html5shiv/html5shiv.js"></script>
+    <script src="./lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--nav部分start-->
+<div class="nav">
+    <!-- 标题 -->
+    <h3 class="nav_left fl">中国中车质量管理系统V1.0.6</h3>
+    <!-- 右侧时间 -->
+    <div class="nav_right fr">
+        <div class="time" id="time">日历</div>
+        <!-- 用户按钮 -->
+        <div class="control">
+            <button type="button" class="btn">
+                Admin
+                <span class="iconfont icon-jiantouarrow487 icon-ll"></span>
+            </button>
+            <ul class="dropdown">
+                <li><a href="javascript:void(0);">个人资料</a></li>
+                <li><a href="javascript:void(0);">设置</a></li>
+                <li><a href="../index.html">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--nav部分end-->
+
+<!--左侧导航 start-->
+<div id="wrapper">
+    <div class="container-fluid">
+        <div class="box_left">
+            <div class="item">
+                <div class="item_title">
+                    <i class="iconfont icon-svg11"></i>
+                    <a href="javascript:void(0);">生产检修</a>
+                    <span class=""></span>
+                </div>
+                <ul class="box_left_item">
+                    <li class="" id="one_one"><i class="iconfont icon-weixiujihuaguanli"></i><a href="javascript:void(0);">机车检修计划</a></li>
+                    <li class="" id="one_two"><i class="iconfont icon-jiancha"></i><a href="javascript:void(0);">入库检查流程</a></li>
+                    <!--<li class="" id="one_three"><i class="iconfont icon-fix_sent"></i><a href="javascript:void(0);">派工单</a></li>-->
+                    <!--<li class="" id="one_four" ><i class="iconfont icon-baobiao"></i><a href="javascript:void(0);">调试单</a></li>-->
+                    <li class="" id="one_five" ><i class="iconfont icon-shebeijianxiu"></i><a href="javascript:void(0);">检修日报</a></li>
+                </ul>
+            </div>
+            <div class="item ">
+                <div class="item_title">
+                    <i class="iconfont icon-shouhou"></i>
+                    <a href="javascript:void(0);">售后服务</a>
+                    <span class=""></span>
+                </div>
+                <ul class="box_left_item ">
+                    <li id="two_one"  ><i class="iconfont icon-xinxicaiji"></i><a href="javascript:void(0);">走行信息采集</a></li>
+                    <li id="two_two"  ><i class="iconfont icon-fix_search"></i><a href="javascript:void(0);">维修方案查询</a></li>
+                    <li id="two_three"><i class="iconfont icon-guzhangtongji"></i><a href="javascript:void(0);">故障信息输入</a></li>
+                    <li id="two_four" ><i class="iconfont icon-mianbanyidang"></i><a href="javascript:void(0);">一车一档日报</a></li>
+                    <li id="two_five" ><i class="iconfont icon-icon"></i><a href="javascript:void(0);">售后退库管理</a></li>
+                    <li id="two_six"  ><i class="iconfont icon-icon"></i><a href="javascript:void(0);">库房配件管理</a></li>
+                    <li id="two_seven"><i class="iconfont icon-iconfonticyitichuwenti"></i><a href="javascript:void(0);">调查问卷管理</a></li>
+                </ul>
+            </div>
+            <div class="item ">
+                <div class="item_title">
+                    <i class="iconfont icon-iconfontguanli"></i>
+                    <a href="javascript:void(0);">配件修管理</a>
+                    <span class=""></span>
+                </div>
+                <ul class="box_left_item">
+                    <li id="three_one"><i class="iconfont icon-liucheng"></i><a href="javascript:void(0);">配件修流程</a></li>
+                    <li id="three_two"><i class="iconfont icon-genzong"></i><a href="javascript:void(0);">配件修信息跟踪表</a></li>
+                    <li id="three_three"><i class="iconfont icon-dingdanjilu"></i><a href="javascript:void(0);">配件修月度报告</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <div class="item_title">
+                    <i class="iconfont icon-warehouse"></i>
+                    <a href="javascript:void(0);">仓库管理</a>
+                    <span class=""></span>
+                </div>
+                <ul class="box_left_item">
+                    <li id="four_one"><i class="iconfont"></i><a href="javascript:void(0);">物料信息采购</a></li>
+                    <li><i class="iconfont"></i><a href="javascript:void(0);">子仓库二</a></li>
+                    <li><i class="iconfont"></i><a href="javascript:void(0);">子仓库三</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box_right">
+            <iframe id="zc_iframe" class="zc_iframe"  style="overflow-x:hidden;overflow-y:hidden;" width="100%" height="100%" src="production/turnaroundPlan.html" frameborder="0" data-id="turnaroundPlan.html" seamless></iframe>
+        </div>
+
+    </div>
+</div>
+<!--左侧导航end-->
+<script src='./lib/jquery-1.11.3/jquery.min.js'></script>
+<script src="./lib/bootstrap-3.2.0/js/bootstrap.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

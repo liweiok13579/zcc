@@ -1,0 +1,123 @@
+.Daily{
+    width: 100%;
+    padding:15px;
+    min-width: 1157px;
+    overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis; /*当对象内文本溢出时显示省略标记*/
+}
+/*标题公共部分*/
+table > thead > tr > th{
+    text-align: center;
+}
+table > thead > tr > th,
+table > tbody > tr > td{
+    padding-left:0px !important;
+    padding-right: 0px !important;
+    text-align: center;
+    border:1px solid #ccc !important;
+    vertical-align: middle !important;
+}
+.Daily h3 {
+    font:700 18px/20px "Microsoft YaHei";
+    background-color: #deedf7;
+    padding:10px 0px 10px 20px;
+    border-radius:5px;
+}
+table > tbody > tr > td> input{
+    width: 100%;
+    outline: none;
+    border:0;!important;
+    text-align: center;
+}
+/*需要关注的信息*/
+.Daily .information{
+    width: 100%;
+    border:1px solid #ccc;
+    padding:5px 5px;
+    border-radius:8px;
+}
+.Daily .information h3 input{
+    float: right;
+    background-color: #428bca;
+    font:400 16px/20px "Microsoft YaHei";
+    color:#fff;
+    margin-right:50px;
+    vertical-align: middle;
+    margin-top:-3px;
+}
+.information .info_content{
+    width: 100%;
+    margin-top:5px;
+}
+.info_content textarea{
+    width: 100%;
+    overflow: auto;
+    outline: none;
+}
+/*模块检修进度*/
+.Daily .moduleRepair{
+    width: 100%;
+    margin-top:20px;
+    border:1px solid #ccc;
+    padding:5px 5px;
+    border-radius:8px;
+}
+.moduleRepair .module_content{
+    width: 100%;
+    margin-top:5px;
+}
+.module_content table{
+   border:1px solid #ccc;
+    text-align: center;
+}
+/*检修进度*/
+.Daily .repair{
+    width: 100%;
+    margin-top:20px;
+    border:1px solid #ccc;
+    padding:5px 5px;
+    border-radius:8px;
+}
+.repair .repair_content{
+    width: 100%;
+    margin-top:5px;
+}
+.repair_content table{
+   border:1px solid #ccc;
+    text-align: center;
+}
+/*现场周转件检修状态*/
+.Daily .turnover{
+    width: 100%;
+    margin-top:20px;
+    border:1px solid #ccc;
+    padding:5px 5px;
+    border-radius:8px;
+}
+.turnover .turnover_content{
+    width: 100%;
+    margin-top:5px;
+}
+.turnover_content table{
+   border:1px solid #ccc;
+    text-align: center;
+}
+/*年度检修信息统计*/
+.Daily .statistics{
+    width: 100%;
+    margin-top:20px;
+    border:1px solid #ccc;
+    padding:5px 5px;
+    border-radius:8px;
+}
+.statistics .statistics_content{
+    width: 100%;
+    margin-top:5px;
+}
+.statistics_content table{
+   border:1px solid #ccc;
+    text-align: center;
+}
+.statistics_content table .th_width{
+    width: 113px;
+}

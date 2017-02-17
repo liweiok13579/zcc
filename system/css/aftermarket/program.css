@@ -1,0 +1,246 @@
+/* 维修方案查询 Program Start */
+.program_center > .center_table td {
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.program_center > .center_table th {
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.program_center .center_table th {
+    background-color: #deedf7 !important;
+}
+
+.center_table th:hover {
+    background-color: #ccc !important;
+}
+
+/*#deedf7*/
+.program_center {
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 15px;
+}
+
+.program_center_title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: left;
+    background-color: #deedf7;
+    border: 1px solid #ccc;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    color: #444141;
+}
+
+.program_title {
+    width: 100%;
+    height: 40px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.program_title1 {
+    font-size: 16px;
+}
+
+.program_title > form {
+    display: inline;
+}
+
+.center_table {
+    height: 300px;
+    overflow: auto;
+}
+
+.program_tab > tr > th {
+    background-color: #deedf7;
+    text-align: center !important;
+}
+
+.textLeft {
+    text-align: left;
+}
+
+/* 维修方案查询 Program End */
+
+/* 故障信息输入 Fault Start */
+
+.fault {
+    margin: 15px;
+    border: 1px solid #ccc;
+}
+
+.fault .program_center_title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: left;
+    background-color: #deedf7;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-left: 50px;
+    margin-bottom: 0px;
+    color: #444141;
+}
+
+.fault_titles {
+    /*background-color: #deedf7;*/
+    padding: 10px 10px 10px 50px;
+}
+
+.fault_color {
+    color: #ccc;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+}
+
+/*  */
+.fault_con {
+    margin: 10px 20px;
+}
+
+.fault_bgc {
+    background-color: #eee;
+    padding: 10px;
+}
+
+.fault_border {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.fault_con .fault_data {
+    width: 85%;
+    margin: 10px auto;
+    border: 1px solid #eee;
+    padding: 0 50px;
+}
+
+.fault_con .fault_data1 {
+    display: inline-block;
+    width: 34%;
+    margin: 10px 35px;
+    border: 1px solid #eee;
+    padding: 0 20px;
+}
+
+.fault_con .fault_data1 .fault_d {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fault_con .fault_data1:hover {
+    background-color: #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.fault_con .fault_data:hover {
+    background-color: #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.fault_con .fault_data span {
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+}
+
+.fault_con .fault_data input {
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    width: 84%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.fault_con .fault_data select {
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    width: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.fault_con .fault_data select > option {
+    text-align: center;
+}
+
+.fault_con .fault_data1 span {
+    display: inline-block;
+    width: 115px;
+}
+
+.fault_con .fault_data1 input, select {
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.fault_b {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.originals {
+    border: 1px solid #ccc;
+}
+
+.originals > .fault_data1 {
+    width: 50%;
+}
+
+.checked {
+    margin: 20px 0 20px 10px;
+}
+
+#checked > .checed {
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.fault_d {
+    margin: 10px 10px;
+}
+
+textarea {
+    margin-left: 40px;
+}
+
+.fault_sub {
+    width: 50px;
+    margin: 0 0 10px 80%;
+}
+
+.fault_submit {
+    padding: 5px 10px;
+    background-color: #deedf7;
+    font-size: 24px;
+}
+
+/* 故障信息输入 Fault End */

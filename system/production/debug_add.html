@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>详情</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/production/debug_add.css"/>
+    <script src='../lib/jquery-1.11.3/jquery.min.js'></script>
+</head>
+<body>
+<div class="debug_fault">
+    <div class="debug_fault_box">
+        <!--车型、跟踪者、配属段、修程-->
+        <div class="box_one clearfix">
+            <div class="item item_one">
+                <span>车型 :</span>
+                <input type="text" disabled value="HXD1B0519"/>
+            </div>
+            <div class="item item_two">
+                <span>跟踪者 :</span>
+                <input type="text" disabled value="孙凯强"/>
+            </div>
+            <div class="item item_three">
+                <span>配属段 :</span>
+                <input type="text" disabled value="上海"/>
+            </div>
+            <div class="item item_four">
+                <span>车型 :</span>
+                <input type="text" disabled value="C4"/>
+            </div>
+        </div>
+
+        <!--报告阶段 发生、完成日期-->
+        <div class="box_two clearfix">
+            <div class="item item_one   " >
+                <span>报告阶段 :</span>
+                <input type="text" value="入库检查阶段"/>
+            </div>
+            <div class="item startDate">
+                <span>发生日期 :</span>
+                <input type="text" value="2016-12-01"/>
+            </div>
+            <div class="item endDate">
+                <span>完成日期 :</span>
+                <input type="text" value="2016-12-28"/>
+            </div>
+            <div class="item">
+            </div>
+        </div>
+
+        <!--故障现象描述-->
+        <div class="box_three clearfix">
+            <div class="item">
+                <span>故障现象描述 :</span>
+                <textarea name=""  cols="20" rows="3"></textarea>
+            </div>
+        </div>
+
+        <!--处理过程-->
+        <div class="box_four clearfix">
+            <div class="item">
+                <span>处理过程 :</span>
+                <textarea name="" cols="20" rows="3"></textarea>
+            </div>
+        </div>
+
+        <!--更换原因、所属系统-->
+        <div class="box_five clearfix">
+            <div class="item item_one">
+                <span>是否更换 :</span>
+                <select class="form-control">
+                    <option>是</option>
+                    <option>否</option>
+                    <option>/</option>
+                </select>
+            </div>
+            <div class="item item_two">
+                <span>更换原因（必换件/故障件）:</span>
+                <input type="text" value="  "/>
+            </div>
+            <div class="item item_three">
+                <span>所属系统 :</span>
+                <input type="text" value="  "/>
+            </div>
+        </div>
+
+        <!--更换部件分类、更换部件名称-->
+        <div class="box_six clearfix">
+            <div class="item ">
+                <span>更换部件分类 :</span>
+                <input  type="text" value=""/>
+            </div>
+            <div class="item ">
+                <span>更换部件名称 :</span>
+                <input  type="text" value=""/>
+            </div>
+        </div>
+
+        <!--型号/图号、单位、数量-->
+        <div class="box_seven clearfix">
+            <div class="item item_one">
+                <span>型号/图号 :</span>
+                <input type="text" value=""/>
+            </div>
+            <div class="item item_two">
+                <span>单位 :</span>
+                <input type="text" value=""/>
+            </div>
+            <div class="item item_three">
+                <span>数量 :</span>
+                <input  type="text" value=""/>
+            </div>
+        </div>
+
+        <!--原配件编号、新配件编号 操作人-->
+        <div class="box_eight clearfix">
+            <div class="item item_one">
+                <span>原配件编号 :</span>
+                <input type="text" value=""/>
+            </div>
+            <div class="item item_two">
+                <span>新配件编号 :</span>
+                <input type="text" value=""/>
+            </div>
+            <div class="item item_three">
+                <span>操作人 :</span>
+                <input type="text" value=""/>
+            </div>
+        </div>
+
+        <!--领料人、领料单号 -->
+        <div class="box_nine clearfix">
+            <div class="item item_one">
+                <span>领料人 :</span>
+                <input class="change_w" type="text" value=""/>
+            </div>
+            <div class="item item_two">
+                <span>领料单号 :</span>
+                <input class="change_w" type="text" value=""/>
+            </div>
+        </div>
+        <!--状态、性质-->
+        <div class='box_ten clearfix'>
+            <div class="item item_one">
+                <span>状态 :</span>
+                <input class="change_w" type="text" value=""/>
+            </div>
+            <div class="item item_two">
+                <span>性质 :</span>
+                <input class="change_w" type="text" value=""/>
+            </div>
+        </div>
+        <!--备注-->
+        <div class="box_eleven clearfix">
+            <div class="item">
+                <span>备注 :</span>
+                <textarea name=""  cols="20" rows="3"></textarea>
+            </div>
+        </div>
+        <!--提交、关闭-->
+        <div class="box_twelve clearfix">
+            <button class="submit">提交</button>
+        </div>
+    </div>
+</div>
+<script src="../lib/layer-v3.0.1/layer/layer.js"></script>
+<script>
+    $(function () {
+        //点击关闭
+        $(".debug_fault .submit").on("click", function () {
+            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+            parent.layer.close(index); //再执行关闭
+        })
+    })
+</script>
+</body>
+</html>

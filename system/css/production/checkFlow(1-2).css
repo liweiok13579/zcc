@@ -1,0 +1,91 @@
+.checkFlow{
+    width: 100%;
+    min-width: 1200px;
+    padding:15px;
+}
+.checkFlow_box{
+
+}
+/*时间下拉选项*/
+.checkFlow_box .checkFlow_drop{
+    width: 100%;
+    margin-bottom:20px;
+}
+.checkFlow_drop span{
+    display: inline-block;
+    margin-left:30px;
+    font:700 16px/20px "Microsoft YaHei";
+}
+.checkFlow_drop select{
+    display: inline-block;
+    width: 150px;
+    padding-left:30px;
+}
+/*颜色标识*/
+.checkFlow_box .checkbox_color{
+    float: right;
+    padding-right:20px;
+}
+.checkbox_color i{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+.checkbox_color span{
+    padding:0px 3px;
+    vertical-align: top !important;
+}
+.span_blue{
+    border:1px solid #6699FF;
+    color:#6699FF;
+}
+.span_green{
+    background-color:#00CC00;/*已完成*/
+    color:#fff;
+}
+.span_orange{
+    background-color:#FF6633;/*进行中*/
+    color:#fff;
+}
+.span_gray{
+    background-color:#CCCCCC;/*SAP*/
+    color:#fff;
+}
+.span_white{
+    background-color: #e4eef3;/*不检查*/
+    color:#6699FF;
+}
+/*入库检查流程*/
+.checkFlow_box table{
+    width: 100%;
+    text-align: center;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
+ table thead tr th,
+ table tbody tr td{
+     text-align: center;
+     vertical-align:middle !important;
+ }
+table thead tr th{
+    font: 700 16px/20px "Microsoft YaHei";
+}
+table tbody tr td span{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    border-radius:8px;
+    cursor:pointer;
+}
+table tbody tr td i.iconsize2{
+    font-size: 22px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+table tbody tr td span.span_four{
+    width:100px;
+}
+
+

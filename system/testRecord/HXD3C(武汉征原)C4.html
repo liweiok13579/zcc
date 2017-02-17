@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>HXD3C型机车列车供电柜（武汉征原）C4修试验记录单</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        .HXD3C {
+            width: 100%;
+            padding:20px;
+            min-width: 900px;
+        }
+        .HXD3C ul{
+            width: 100%;
+            height: 40px;
+            border:2px solid #ccc;
+            border-radius:5px 5px 0 0;
+        }
+        ul li{
+            float: left;
+            width: 20%;
+            line-height: 40px;
+            border:2px solid #fff;
+            background-color: #eee;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        li.active{
+            background-color: #deedf7;
+        }
+        .HXD3C table{
+            width: 100%;
+            text-align: center;
+        }
+        table td{
+            height:20px;
+            padding:5px 15px;
+        }
+        table .titel td{
+            padding:15px 0px;
+            background-color: #deedf7;
+        }
+        table .titel td h3{
+            font-weight:bold;
+        }
+        table input{
+            width: 100%;
+            outline: none;
+            border:0;
+            padding-left:10px;
+        }
+        /*提交*/
+        .HXD3C .submit{
+            width: 100%;
+            text-align: center;
+            margin:10px;
+        }
+        .submit button{
+            width: 80px;
+            background-color: #428bca;
+            color: #fff;
+            border-radius: 5px;
+            font: 700 16px/22px "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+<div class="HXD3C">
+    <ul>
+        <li class="active"><a href="javascript:void(0);">(武汉征原)供电柜</a></li>
+        <li onclick="javascript:location.href='HXD3C(充电机C4).html'"><a href="javascript:void(0);"> 充电机</a></li>
+        <li onclick="javascript:location.href='HXD3C(时代电气TGF60B)C4.html'"><a href="javascript:void(0);"> (时代电气)供电柜</a></li>
+        <li onclick="javascript:location.href='HXD3C(时代电气TGF60B)C4控制箱.html'"><a href="javascript:void(0);"> (时代电气)供电柜控制箱</a></li>
+        <li onclick="javascript:location.href='HXD3C(武汉征原)C4控制箱.html'"><a href="javascript:void(0);"> (武汉征原)供电柜控制箱</a></li>
+    </ul>
+    <form action="提交给后台地址">
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tbody>
+        <!--rowspan=""行 colspan=""列-->
+        <tr class="titel">
+            <td rowspan="2" colspan="6">
+                <h3>HXD3C型机车列车供电柜（武汉征原）C4修试验记录单</h3>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>检修单位</td>
+            <td >上海中车轨道交通科技有限公司</td>
+            <td>车号</td>
+            <td><input type="text"/></td>
+            <td>试验日期</td>
+            <td >
+                <input type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>产品序号</td>
+            <td ><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td >
+                <input type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>试验项目</td>
+            <td colspan="4">试验要求</td>
+            <td>结果</td>
+        </tr>
+        <!--软件版本 模块-->
+        <tr>
+            <td rowspan="2">软件版本</td>
+            <td colspan="2">名称</td>
+            <td colspan="2">DSP</td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">版本</td>
+            <td colspan="2"><input type="text"/></td>
+        </tr>
+
+        <!--电压轻载试验 模块-->
+        <tr>
+            <td rowspan="6">电压轻载试验</td>
+            <td rowspan="3">A组</td>
+            <td colspan="3">
+                打开110V直流电源，供电控制箱A组得电工作；此时电源板PSU：L1A\L2A\L3A\L1B\L2B\L3B灯亮; DSP控制母板：L1、L2灯闪烁，数码管显示程序版本（如E8）后出现02、08交替闪烁。
+                HDLC板：L1、L2灯闪烁
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                为风机给定AC380V，50Hz的电源，供电柜风机正常工作后，确认风机风向：由整流单元下方进风，从电抗器下方出风。 要求出风口风速不小于3m/s。
+            </td>
+            <td>
+                <input type="text" class="voltage"/> m/s
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                启动列车供电柜试验台，调节试验台的输入电压为AC900V±50V，列供正常运行。试验过程中，观察测试台输出电压为DC600V±30V.
+            </td>
+            <td>
+                <input type="text" class="voltage"/> V
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="3">B组</td>
+            <td colspan="3">
+                打开110V直流电源，供电控制箱A组得电工作；此时电源板PSU：L1A\L2A\L3A\L1B\L2B\L3B灯亮; DSP控制母板：L1、L2灯闪烁，数码管显示程序版本（如E8）后出现02、08交替闪烁。
+                HDLC板：L1、L2灯闪烁
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                为风机给定AC380V，50Hz的电源，供电柜风机正常工作后，确认风机风向：由整流单元下方进风，从电抗器下方出风。 要求出风口风速不小于3m/s。
+            </td>
+            <td>
+                <input type="text" class="voltage"/> m/s
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                启动列车供电柜试验台，调节试验台的输入电压为AC900V±50V，列供正常运行。试验过程中，观察测试台输出电压为DC600V±30V.
+            </td>
+            <td>
+                <input type="text" class="voltage"/> V
+            </td>
+        </tr>
+        <!--接地保护试验  模块-->
+        <tr>
+            <td rowspan="2">接地保护试验</td>
+            <td>A组</td>
+            <td colspan="3">供电控制板接地故障灯9A亮，供电柜能将交流接触器断开、故障锁存</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <tr>
+            <td>B组</td>
+            <td colspan="3">供电控制板接地故障灯9A亮，供电柜能将交流接触器断开、故障锁存</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <!--电阻负载功率试验  模块-->
+        <tr>
+            <td rowspan="8">电阻负载功率试验</td>
+            <td rowspan="4">A组</td>
+            <td >输入值</td>
+            <td >电度表</td>
+            <td >测试台</td>
+            <td >∣两者之差∣≤50</td>
+        </tr>
+        <tr>
+            <td >电压</td>
+            <td >
+                <input type="text" class="voltage"/> V
+            </td>
+            <td >
+                <input type="text" class="voltage"/> V
+            </td>
+            <td >
+                <input type="text" class="voltage"/>
+            </td>
+        </tr>
+        <tr>
+            <td >电流</td>
+            <td >
+                <input type="text" class="voltage"/> A
+            </td>
+            <td >
+                <input type="text" class="voltage"/> A
+            </td>
+            <td >
+                <input type="text" class="voltage"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                启动列车供电柜试验台，调节试验台的输入电压为AC900V±50V，列供正常运行。试验过程中，观察测试台输出电压为DC600V±30V.
+            </td>
+            <td>
+                <input type="text" class="voltage"/> V
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="4">B组</td>
+            <td >输入值</td>
+            <td >电度表</td>
+            <td >测试台</td>
+            <td >∣两者之差∣≤50</td>
+        </tr>
+        <tr>
+            <td >电压</td>
+            <td >
+                <input type="text" class="voltage"/> V
+            </td>
+            <td >
+                <input type="text" class="voltage"/> V
+            </td>
+            <td >
+                <input type="text" class="voltage"/>
+            </td>
+        </tr>
+        <tr>
+            <td >电流</td>
+            <td >
+                <input type="text" class="voltage"/> A
+            </td>
+            <td >
+                <input type="text" class="voltage"/> A
+            </td>
+            <td >
+                <input type="text" class="voltage"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                启动列车供电柜试验台，调节试验台的输入电压为AC900V±50V，列供正常运行。试验过程中，观察测试台输出电压为DC600V±30V.
+            </td>
+            <td>
+                <input type="text" class="voltage"/> V
+            </td>
+        </tr>
+        <!--调试员-->
+        <tr style="height:50px">
+            <td colspan="2">
+                调试员:
+                <input class="voltage" type="text"/>
+            </td>
+            <td colspan="2">
+               出厂检查员:
+                <input class="voltage" type="text"/>
+            </td>
+            <td colspan="2">
+                验收员:
+                <input class="voltage" type="text"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+        <div class="submit">
+            <button>提交</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

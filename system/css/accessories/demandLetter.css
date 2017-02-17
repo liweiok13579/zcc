@@ -1,0 +1,297 @@
+/* 本页的待办事项 */
+.deta {
+    padding: 15px;
+}
+
+.detas {
+    border: 1px solid #ccc;
+}
+
+.schedule_tit {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    padding-left: 30px;
+    background-color: #deedf7;
+    border-bottom: 1px solid #ccc;
+}
+
+.schedule_title1 {
+    padding: 0 30px;
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+
+.schedule_tit > .detailed {
+    display: inline-block;
+    text-align: inherit;
+    line-height: 1;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #428bca;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    float: right;
+    margin: 7px 110px 0 0;
+}
+
+.detailed:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.schedule > .schedule_content {
+    padding: 0px 10px;
+    background-color: #fff;
+    height: 300px;
+    overflow: auto;
+}
+
+.schedule > .schedule_content > table {
+    margin: 0 10px;
+}
+
+.schedule_content > table > thead > tr > th {
+    padding-left: 30px;
+    font: 700 16px/20px "微软雅黑";
+}
+
+.schedule_content > table > tbody > tr > td {
+    padding-left: 30px;
+}
+
+.detaileds {
+    text-align: center;
+    background-color: #eee;
+    letter-spacing: 3px;
+    padding: 5px;
+}
+
+.detaileds > h2 {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+/* 表格样式 */
+
+.entry > thead > tr > th,
+.entry > tbody > tr > th,
+.entry > tfoot > tr > th,
+.entry > thead > tr > td,
+.entry > tbody > tr > td,
+.entry > tfoot > tr > td {
+    vertical-align: middle ! important
+}
+
+/* 内容 */
+
+.entry {
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.entry th {
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 700;
+}
+
+[type=number] {
+    text-align: center;
+}
+
+.demandBtn {
+    margin-bottom: 20px;
+    padding: 5px 46%;
+}
+
+/*产品需求函*/
+
+.demand {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 15px;
+    min-width: 1170px;
+}
+
+.demands {
+    border: 1px solid #ccc;
+}
+
+.demands > .letter {
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    padding: 10px 10px 10px 20px;
+    margin: 0;
+    background-color: #deedf7;
+    border-bottom: 1px solid #ccc;
+}
+
+.demands > .top > form > div {
+    padding: 0 15px;
+}
+
+.demands > .top > form > div > .clear {
+    width: 20%;
+    float: left;
+    margin: 20px 5px;
+}
+
+.demands > .top > form > div > .clear > .selects {
+    padding: 3px 0;
+}
+
+.solid {
+    margin-top: 150px;
+    border-top: 1px solid #ccc;
+    padding: 0 25px;
+}
+
+.tit {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid #000;
+    margin: 20px 0;
+}
+
+.tits {
+    margin: 10px 0;
+    text-indent: 2em;
+}
+
+p {
+    font-size: 16px;
+    text-indent: 4em;
+}
+
+/*  其他说明样式 */
+
+.solid textarea {
+    margin-left: 90px;
+    margin-bottom: 50px;
+}
+
+.sub {
+    position: relative;
+    left: 45%;
+    padding: 10px 20px ! important;
+    margin-top: 20px;
+    margin-bottom: 20px ! important;
+}
+
+/* 3-1的送修页 */
+
+.schedule {
+    margin-top: 10px;
+}
+
+.recording tr > td {
+    line-height: 30px !important;
+}
+
+.widHei {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
+
+.col {
+    background-color: #deedf7;
+}
+
+/* 详情页的展示页面 css */
+
+.repair {
+    padding: 15px;
+}
+
+.repair_title {
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.repair_title > .repair_title1 {
+    margin: 10px 0;
+}
+
+/* 送修单内容 */
+
+.repair_con {
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.repair_con > select {
+    display: inline-block;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.repair_con > input {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* 送修页的物料表格 */
+.table-hover > thead > tr > th,
+.table-hover > tbody > tr > th,
+.table-hover > tfoot > tr > th,
+.table-hover > thead > tr > td,
+.table-hover > tbody > tr > td,
+.table-hover > tfoot > tr > td {
+    vertical-align: middle !important;
+    border-top: 1px solid #ddd !important;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    vertical-align: middle !important;
+}
+/*  */
+.repair-table > thead > tr > th,
+.repair-table > tbody > tr > th,
+.repair-table > tfoot > tr > th,
+.repair-table > thead > tr > td,
+.repair-table > tbody > tr > td,
+.repair-table > tfoot > tr > td {
+    vertical-align: middle !important;
+    border: 1px solid #ddd !important;
+}
+      /* 送修物品详细信息 */
+.olc {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.repair_cons > input {
+    width:100%;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+}

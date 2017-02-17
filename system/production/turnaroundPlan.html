@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>生产检修</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.css" />
+    <link rel="stylesheet" href="../lib/bootstrap-datepicker-master/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/production/turnaroundPlan.css" />
+    <link rel="stylesheet" href="../js/kkpager/kkpager_blue.css" />
+    <!--[if lt IE 9]>
+    <script src="../lib/html5shiv/html5shiv.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <![endif]-->
+    <script src='../lib/jquery-1.11.3/jquery.min.js'></script>
+    <script src="../lib/artTemplate/template.js"></script>
+</head>
+
+<body>
+    <div class="planBox container-fluid ">
+        <!--待办事项-->
+        <div class="schedule ">
+            <div class="schedule_title ">
+                <i></i> 待办事项
+            </div>
+            <div class="schedule_content ">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>事项</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2016-10-10</td>
+                            <td>故障分析报告未填写</td>
+                        </tr>
+                        <tr>
+                            <td>2016-10-12</td>
+                            <td>坏件181件，错件22件</td>
+                        </tr>
+                        <tr>
+                            <td>2016-10-14</td>
+                            <td>故障分析报告未填写</td>
+                        </tr>
+                        <tr>
+                            <td>2016-10-16</td>
+                            <td>坏件181件，错件22件</td>
+                        </tr>
+                        <tr>
+                            <td>2016-10-22</td>
+                            <td>故障分析报告未填写</td>
+                        </tr>
+                        <tr>
+                            <td>2016-10-28</td>
+                            <td>机车XD-32未完成维修</td>
+                        </tr>
+                        <tr>
+                            <td>2016-11-30</td>
+                            <td>32件带XD-oip未完成维修工作</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="switch">
+            <button>切换至编辑页</button>
+        </div>
+        <!--甘特图-->
+        <div class="plan_title">
+            <i></i> 检修计划
+        </div>
+        <div class="gante">
+            <div id="gante"></div>
+        </div>
+
+        <!--检修计划-->
+        <div class="plan">
+            <div class=" plan_content ">
+                <div class="plan_content_left ">
+                    <!--时间下拉选项-->
+                    <div class="checkFlow_drop">
+                        <span>查询 :</span>
+                        <select  class="form-control">
+                            <option>2017-01</option>
+                            <option>2017-02</option>
+                            <option>2017-03</option>
+                            <option>2017-04</option>
+                            <option>2017-05</option>
+                            <option>2017-06</option>
+                            <option>2017-07</option>
+                            <option>2017-08</option>
+                            <option>2017-09</option>
+                            <option>2017-10</option>
+                            <option>2017-11</option>
+                            <option>2017-12</option>
+                            <option>2018-01</option>
+                            <option>2018-02</option>
+                            <option>2018-03</option>
+                            <option>2018-04</option>
+                            <option>2018-05</option>
+                            <option>2018-06</option>
+                            <option>2018-07</option>
+                            <option>2018-08</option>
+                            <option>2018-09</option>
+                            <option>2018-10</option>
+                            <option>2018-11</option>
+                            <option>2018-12</option>
+                        </select>
+                    </div>
+                    <!--上传文件-->
+                    <div class="plan_import">
+                        <form name="form" enctype="multipart/form-data" method='post' action='提交后台地址'>
+                            <span>附件上传 :</span>
+                            <input class="file" type="file" name="file" value='导入文件' />
+                            <input disabled class="submit" type="submit" value="导入" />
+                            <input disabled type="reset" value="重置" />
+                        </form>
+                    </div>
+                    <!--检修计划列表-->
+                    <table border="0" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="th_one">序号</th>
+                                <th class="th_two">配属段</th>
+                                <th class="th_three">机车型号</th>
+                                <th class="th_four">修程</th>
+                                <th class="th_five">计划停时</th>
+                                <th class="th_six">计划到段日期</th>
+                                <th class="th_seven">计划交验日期</th>
+                                <th class="th_eight">实际到段日期</th>
+                                <th class="th_nine">实际交验日期</th>
+                                <th class="th_ten">上传日期</th>
+                                <th class="th_eleven">
+                                    <input type="button" value="+ 添加" />
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbodyHtml">
+                            <tr>
+                                <td class="td_one"></td>
+                                <td class="td_two">
+                                    <select disabled class="form-control">
+                                        <option></option>
+                                        <option></option>
+                                        <option></option>
+                                        <option></option>
+                                        <option></option>
+                                    </select>
+                                </td>
+                                <td class="td_three">
+                                    <input type="text" disabled class="form-control" value=''>
+                                </td>
+                                <td class="td_four">
+                                    <select disabled class="form-control">
+                                        <option></option>
+                                        <option></option>
+                                        <option></option>
+                                        <option></option>
+                                        <option></option>
+                                    </select>
+                                </td>
+                                <td class="td_five">
+                                    <input type="text" disabled class="form-control stopTime" value=''>
+                                </td>
+                                <td class="td_six">
+                                    <input type="text" disabled class="datepicker planstart" value="" />
+                                </td>
+                                <td class="td_seven">
+                                    <input type="text" disabled class="datepicker planend" value="" />
+                                </td>
+                                <td class="td_eight">
+                                    <input type="text" disabled class="datepicker factstart" value="" />
+                                </td>
+                                <td class="td_nine">
+                                    <input type="text" disabled class="datepicker factend" value="" />
+                                </td>
+                                <td class="td_ten">
+                                    <input type="text" disabled value="" />
+                                </td>
+                                <td class="td_eleven">
+                                    <button class="amend"></button>
+                                    <button class="delete"></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--分页-->
+                    <div class="paging">
+                        <div id="kkpager"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template" id="tbodyTemplate">
+        {{ each model }}
+        <tr>
+            <td class="td_one">{{$index+1}}</td>
+            <td class="td_two">
+                <select disabled class="form-control">
+                    <option>{{$value.bureau}}</option>
+                    <option>杭州</option>
+                    <option>徐州</option>
+                    <option>南京</option>
+                    <option>合肥</option>
+                </select>
+            </td>
+            <td class="td_three">
+                <input type="text" disabled class="form-control" value='{{$value.locamotivetype}}-{{$value.locamotivenum}}'>
+            </td>
+            <td class="td_four">
+                <select disabled class="form-control">
+                    <option>{{$value.process}}</option>
+                    <option>C3</option>
+                    <option>C2</option>
+                    <option>C1</option>
+                    <option>C5</option>
+                </select>
+            </td>
+            <td class="td_five">
+                <input type="text" disabled class="form-control stopTime" value='{{$value.planstopnum}}'>
+            </td>
+            <td class="td_six">
+                <input type="text" disabled class="form-control datepicker planstart" placeholder="计划到段日期" value="{{$value.planarrivaltime}}" />
+            </td>
+            <td class="td_seven">
+                <input type="text" disabled class="form-control datepicker planend" placeholder="计划交验日期" value="{{$value.plandeliverytime}}" />
+            </td>
+            <td class="td_eight">
+                <input type="text" disabled class="form-control datepicker factstart" placeholder="实际到段日期" value="{{$value.realarrivaltime}}" />
+            </td>
+            <td class="td_nine">
+                <input type="text" disabled class="form-control datepicker factend" placeholder="实际交验日期" value="{{$value.realdeliverytime}}" />
+            </td>
+            <td class="td_ten">
+                <input type="text" disabled  class="form-control" value="{{$value.uploadtime}}" />
+            </td>
+            <td class="td_eleven">
+                <button class="amend">修改</button>
+                <button class="delete">删除</button>
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+    <script>
+    var tabList = [{
+        "id": "78a0518b-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "上海",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0210",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-25",
+        "plandeliverytime": "2016-02-11",
+        "realarrivaltime": "2016-01-25",
+        "realdeliverytime": "2016-02-11",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78a8d0e4-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "上海",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0213",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-25",
+        "plandeliverytime": "2016-02-11",
+        "realarrivaltime": "2016-01-25",
+        "realdeliverytime": "2016-02-11",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78b13717-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "上海",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0224",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-26",
+        "plandeliverytime": "2016-01-30",
+        "realarrivaltime": "2016-01-26",
+        "realdeliverytime": "2016-01-30",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78b94188-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "上海",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0223",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-27",
+        "plandeliverytime": "2016-02-01",
+        "realarrivaltime": "2016-01-27",
+        "realdeliverytime": "2016-02-01",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78c4352c-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "南京东",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0101",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-28",
+        "plandeliverytime": "2016-02-14",
+        "realarrivaltime": "2016-01-28",
+        "realdeliverytime": "2016-02-14",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78d16b2f-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "南京东",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0081",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-29",
+        "plandeliverytime": "2016-02-15",
+        "realarrivaltime": "2016-01-29",
+        "realdeliverytime": "2016-02-15",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78d16b2f-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "南京东",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0081",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-29",
+        "plandeliverytime": "2016-02-15",
+        "realarrivaltime": "2016-01-29",
+        "realdeliverytime": "2016-02-15",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78d16b2f-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "南京东",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0081",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-29",
+        "plandeliverytime": "2016-02-15",
+        "realarrivaltime": "2016-01-29",
+        "realdeliverytime": "2016-02-15",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }]
+    var tbodyHtml = template("tbodyTemplate", {
+        model: tabList
+    });
+    $(".tbodyHtml").html(tbodyHtml);
+    </script>
+    <script src="../lib/bootstrap-3.2.0/js/bootstrap.js"></script>
+    <script src="../lib/bootstrap-datepicker-master/js/bootstrap-datepicker.js"></script>
+    <script src="../lib/bootstrap-datepicker-master/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script src="../js/gante/highcharts.js"></script>
+    <script src="../js/gante/highcharts-more.js"></script>
+    <script src="../js/gante/exporting.js"></script>
+    <script src="../js/gante/grid-light.js"></script>
+    <script src="../lib/layer-v3.0.1/layer/layer.js"></script>
+    <script src="../js/kkpager/kkpager.js"></script>
+    <script src="../js/production/turnaroundPlan.js"></script>
+</body>
+
+</html>

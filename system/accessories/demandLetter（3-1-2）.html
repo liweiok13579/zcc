@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>(需求函)</title>
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <!-- 时间插件 -->
+    <link rel="stylesheet" href="../lib/jquery-data/daterangepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/accessories/demandLetter.css">
+</head>
+
+<body>
+<div class="demand">
+    <div class="demands">
+        <h2 class="letter">产品需求函</h2>
+        <div class="top">
+            <form action="./accessories（3-1）.html" class="clearfix" method="get">
+                <div class="demandtop">
+                    <div class="clear">
+                        <span class="col widHei">收货单位:</span>
+                        <select class="selects">
+                            <option selected="selected" name="单位" value="永济电机有限公司">永济电机有限公司</option>
+                            <option value="宋体">宋体</option>
+                            <option value="幼圆">幼圆</option>
+                            <option value="黑体">黑体</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Impact">Impact</option>
+                        </select>
+                    </div>
+                    <div class="clear">
+                        <span class="col widHei">收货人:</span>
+                        <input type="text" name="收货人" value="">
+                    </div>
+                    <div class="clear">
+                        <span class="col widHei">传真:</span>
+                        <input type="text" name="传真" value="">
+                    </div>
+                    <div class="clear">
+                        <span class="col widHei">电话:</span>
+                        <input type="text" name="电话" value="">
+                    </div>
+                    <div class="clear">
+                        <span class="col widHei">发货单位:</span>
+                        <select class="selects">
+                            <option selected="selected" name="单位" value="上海南车轨道交通科技有限公司">上海南车轨道交通</option>
+                        </select>
+                    </div>
+                    <div class="clear">
+                        <span class="col widHei">发货人:</span>
+                        <input type="text" name="发货人" value="">
+                    </div>
+                    <div class="clear">
+                        <span class="col widHei">传真:</span>
+                        <input type="text" name="传真" value="02151242552">
+                    </div>
+                    <div class="clear">
+                        <span class="col widHei">电话:</span>
+                        <input type="text" name="电话" value="12345678900">
+                    </div>
+                </div>
+                <!-- 需求函内容 -->
+                <div class="solid clearfix">
+                    <div class="tit">永济电机有限公司:</div>
+                    <div class="tits">根据双方达成的产品检修协议和我公司因生产需求，现有以下产品发往贵公司进行检修，具体内容如下 :</div>
+                    <p>1、检修产品明细</p>
+                    <table class="table table-hover entry">
+                        <tr>
+                            <th>序号</th>
+                            <th>名称</th>
+                            <th>车型</th>
+                            <th>类别</th>
+                            <th>数量</th>
+                            <th>编号</th>
+                        </tr>
+                        <!--故障件的详细-->
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                <span>OND</span>
+                            </td>
+                            <td>
+                                <span>HXD28</span>
+                            </td>
+                            <td>
+                                <span>故障修</span>
+                            </td>
+                            <td>
+                                <input type="number" disabled="disabled" value="2">
+                            </td>
+                            <td>
+                                <input type="number" disabled="disabled" value="254344464654466">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                <span>OND</span>
+                            </td>
+                            <td>
+                                <span>HXD28</span>
+                            </td>
+                            <td>
+                                <span>故障修</span>
+                            </td>
+                            <td>
+                                <input type="number" disabled="disabled" value="2">
+                            </td>
+                            <td>
+                                <input type="number" disabled="disabled" value="2">
+                            </td>
+                        </tr>
+                    </table>
+                    <p>2、检修标准 : 按照双方签订的技术协议进行。</p>
+                    <p>3、要求返回时间。
+                        <input style="width: 100px" id="date-range" size="40" value="2016-12-01">（如不能按时返回，请提前说明。）</p>
+                    <p>4、其他说明：</p>
+                    <textarea placeholder="如有其他说明请在此填写..." name="" id="" cols="110" rows="5"></textarea>
+                    <div class="" style="text-align: right;padding-right: 100px">
+                        上海南车轨道交通科技有限公司
+                        <br>
+                        <!-- 时间获取 -->
+                        <input style="width: 90px;margin-right: 55px; margin: 20px 50px;" id="date-range13-2" size="40"
+                               value="2016-12-01">
+                    </div>
+                </div>
+                <!-- 卢志刚 ：这里生成 word 文档-->
+                <input class="sub btn btn-primary" type="submit" value="确定生成需求函">
+                <!--<input type="submit" name="submit">-->
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../lib/jquery-data/moment.min.js"></script>
+<script type="text/javascript" src="../lib/jquery-1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="../lib/jquery-data/jquery.daterangepicker.min.js"></script>
+<script type="text/javascript" src="../js/accessories/demandletter.js"></script>
+</body>
+
+</html>

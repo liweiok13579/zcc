@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列车供电柜检修记录</title>
+    <link rel="stylesheet" href="../../lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/production/tableStyleK.css">
+    <style>
+        ul li {
+            float: left;
+            width: 25%;
+            line-height: 40px;
+            border: 2px solid #fff;
+            background-color: #eee;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        .zu {
+            padding: 0 !important;
+        }
+
+        .zu > div {
+            width: 50%;
+            height: 100%;
+            line-height: 35px;
+            float: left;
+            border-right: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="maintenance">
+    <ul>
+        <li onclick="javascript:location.href='./110V电源装置检修记录.html'"><a href="javascript:void(0);">110V电源装置检修记录</a></li>
+        <li class="active"><a href="javascript:void(0);">列车供电柜检修记录</a></li>
+        <li onclick="javascript:location.href='./变流柜检修记录.html'"><a href="javascript:void(0);">变流柜检修记录</a></li>
+        <li onclick="javascript:location.href='./网络控制系统检修记录.html'"><a href="javascript:void(0);">网络控制系统检修记录</a></li>
+    </ul>
+    <table border="1" cellpadding="0" cellspacing="0" class="table">
+        <tbody>
+        <!-- rowspan=""行 colspan=""列 -->
+        <tr class="titel info">
+            <td colspan="9">
+                <h3>HXD3C型充电机车C4修</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>检修单位</td>
+            <td>上海机车检修段</td>
+            <td colspan="2">检修车号</td>
+            <td><input type="text"/></td>
+            <td colspan="2">试验日期</td>
+            <td colspan="2"><input type="text"/></td>
+        </tr>
+        <tr>
+            <td>部件编号</td>
+            <td><input type="text"></td>
+            <td colspan="2">所装车号</td>
+            <td><input type="text"></td>
+            <td colspan="2">交付日期</td>
+            <td colspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+            <td>检修/检测项目</td>
+            <td colspan="4">检修/检测标准</td>
+            <td>检修结果</td>
+            <td>处理意见</td>
+            <td>自检</td>
+            <td>互检员</td>
+        </tr>
+        <tr>
+            <td>下车检查</td>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    检查控制箱、辅变风机、柜体、门板、三相接触器、断路器、各电容、电阻、变压器、传感器、绝缘子和导线无严重损伤等异常现象，并对各接头做好防护。
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>电器组件拆卸及清洁</td>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    晶闸管、整流管、控制箱、交流接触器清洁无尘，各部无损伤或过热等异常现象；散热片无异物；触头无严重烧损或接触不良；安装螺丝按标准力矩安装牢固并打好防缓标记。
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>柜体检查清洁</td>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    柜内各电容、电阻、传感器、铜排、控制箱、导线对外连接状态良好、表面清洁、接线无松动；柜内、柜外表面、柜门清洁无尘。
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td rowspan="11">测量</td>
+            <td colspan="6">确认电阻符合要求</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">位置</td>
+            <td colspan="2">标准值(Ω)</td>
+            <td colspan="2">测量值</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">空载电阻5R1</td>
+            <td colspan="2">540～600～660</td>
+            <td colspan="2">实测值：<input type="text">Ω</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">空载电阻5R2</td>
+            <td colspan="2">540～600～660</td>
+            <td colspan="2">实测值：<input type="text">Ω</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">接地电阻1R1、1R2并联阻值</td>
+            <td colspan="2">675～750～825</td>
+            <td colspan="2">实测值：<input type="text">Ω</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">接地电阻1R3</td>
+            <td colspan="2">18～20～22</td>
+            <td colspan="2">实测值：<input type="text">Ω</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">风机接地电阻3R</td>
+            <td colspan="2">27000～30000～33000</td>
+            <td colspan="2">实测值：<input type="text">Ω</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="6">确认电容容值符合要求</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">位置</td>
+            <td colspan="2">标准值(μF)</td>
+            <td colspan="2">测量结果(μF)</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">直流支撑电容19C1</td>
+            <td colspan="2">4689～5210～5731</td>
+            <td colspan="2">实测值: <input type="text"> μF</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">直流支撑电容19C2</td>
+            <td colspan="2">4689～5210～5731</td>
+            <td colspan="2">实测值: <input type="text"> μF</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="5">★绝缘检测</td>
+            <td colspan="6">绝缘阻值符合要求</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">测量位置</td>
+            <td colspan="2">标准值（MΩ）</td>
+            <td colspan="2">测量结果（MΩ）</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">高压电路－柜体（结点A与结点D之间，节点B、C、D短接）</td>
+            <td colspan="2">10MΩ以上</td>
+            <td colspan="2">实测值: <input type="text">MΩ</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">控制电路－柜体（结点B与结点D，节点A、C、D短接）</td>
+            <td colspan="2">5 MΩ以上</td>
+            <td colspan="2">实测值: <input type="text">MΩ</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">辅助电路－柜体（结点C与结点D，节点A、B、D短接）</td>
+            <td colspan="2">10 MΩ以上</td>
+            <td colspan="2">实测值: <input type="text">MΩ</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="6">★风机三相平衡试验</td>
+        </tr>
+        <tr>
+            <td colspan="6">风机三相绕组电阻符合要求</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>测量位置（Ω）</td>
+            <td>实测值（Ω）</td>
+            <td colspan="2">R平均=（RUV + RUW + RVW) /3）</td>
+            <td colspan="2">标准值</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>RUV</td>
+            <td></td>
+            <td colspan="2"></td>
+            <td colspan="2">︱RUV-R平均︱/ R平均＜10%</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>RUW</td>
+            <td></td>
+            <td colspan="2"></td>
+            <td colspan="2">︱RUW-R平均︱/ R平均＜10%</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>RVW</td>
+            <td></td>
+            <td colspan="2"></td>
+            <td colspan="2">︱RVW-R平均︱/ R平均＜10%</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="22">控制箱试验</td>
+            <td>试验项目</td>
+            <td colspan="4">检测内容</td>
+            <td>检测结果</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>上电状态检查</td>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    电子控制转换开关分别置A、B组，数字入出插件上12A灯应闪烁；供电控制插件上1B、6A灯均应闪烁
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="7">电源检查</td>
+            <td>项目</td>
+            <td>标准值(V)</td>
+            <td>A组</td>
+            <td>B组</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5V电源检查</td>
+            <td>4.9～5～5.1</td>
+            <td></td>
+            <td></td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>15V电源检查</td>
+            <td>14.85～15～15.15</td>
+            <td></td>
+            <td></td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>-15V电源检查</td>
+            <td>-14.85～-15～-15.15</td>
+            <td></td>
+            <td></td>
+
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>24V电源检查</td>
+            <td>22.8～24～26.4</td>
+            <td></td>
+            <td></td>
+
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>-24V电源检查</td>
+            <td>-22.8～-24～-26.4</td>
+            <td></td>
+            <td></td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    检查背部风扇在A、B组时风向是否正确（向机箱外抽风）
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>状态输入检查</td>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    电子控制转换开关分别置A、B组依次检查17号、41号数字入出板对应的指示灯是否点亮
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>闭环调试</td>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    17号或41号插件的13A灯亮，架合1闭合，检查A、B组直流输出电压是否正常，稳压精度应为600V±3％
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">开放角测试</td>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    在开环调试中，当电压反馈>600V时，开放角应为满开放。
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    在开环调试中，当电压反馈>600V时，开放角不开放。
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="9">保护测试</td>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    过电压保护试验：直流电压输出超过750V，21号或37号供电控制插件的8B灯亮；当直流电压退回到600V，21号或37号供电控制插件的8B灯灭
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    过过电流保护试验：直流电流超过800A，21号或37号供电控制插件的9B灯亮，17号或41号插件的13A灯灭，交流接触器断开；当直流电流退回到600A，21号或37号供电控制插件的9B灯仍保持亮。
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    接地保护试验：接地隔离钮子开关置于隔离位（17号或41号插件的1A灯亮），接地电压为0V或600V时，输出电压正常(DC600V±5％)；当把两个钮子开关置于投入位（17号或41号插件的1A灯灭），接地电压仍保持为0V或600V时，21号或37号供电控制插件的9A灯亮,
+                    17号或41号插件的13A灯灭，交流接触器断开，无电压输出。
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+
+            <td colspan="4">
+                <div class="hehe displayText">
+                    集控器保护试验：将把集控隔离钮子开关置于隔离位（17号或41号插件的1B灯亮），将申请或客电断开（17号或41号插件的8A或8B灯灭、13B灯常亮），输出电压正常(DC600V±5％)；当把钮子开关置于投入位（17号或41号插件的1B灯灭、13B灯灭；21号或37号插件的7A灯灭），无电压输出；将申请或客电恢复（合上），输出电压正常(DC600V±5％)
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    隔离保护试验：将隔离1或隔离2断开时，17号或41号插件的4B或5A灯灭、13A灯灭，交流接触器断开，无电压输出；合隔离1或隔离2时，17号或41号插件的4B或5A灯亮、13A灯亮，交流接触器合，输出电压正常(DC600V±5％)
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    辅变保护试验：将辅变断开时，17号或41号插件的6A灯灭、13A灯灭，交流接触器断开，无电压输出；合辅变时，17号或41号插件的6A灯亮、13A灯亮，交流接触器合，输出电压正常(DC600V±5％)
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    风机连锁试验：将风机断开时，17号或41号插件的6B灯灭、13A灯灭，交流接触器断开，无电压输出；合上风机时，17号或41号插件的6B灯亮、13A灯亮，交流接触器合，输出电压正常(DC600V±5％)
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    快熔保护试验：将快熔断合上时，17号或41号插件的5B灯亮、13A灯灭，交流接触器断开，无电压输出
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="hehe displayText">
+                    温继保护试验：将温继1或温继2断开时，17号或41号插件的2B或4A灯灭，21号或37号插件的3B灯亮；同时断开时，13A灯灭，交流接触器断开，无电压输出
+                </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td>
+                <div class="radioInp">
+                    <span>合格</span><input type="radio" name="true" class="qualified">
+                    /
+                    <span>不合格</span><input type="radio" name="qualified" class="qualified">
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>质检</td>
+            <td colspan="8"></td>
+        </tr>
+        <tr>
+            <td>备注</td>
+            <td colspan="8"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div style="text-align: center">注：1.“★”为关键项点（质检员必检项）；2.“☆”为特殊过程；3.“※”处为质检人员复测，并填写，测量结果以质检为准。</div>
+</div>
+<script src="../../lib/jquery-1.11.3/jquery.min.js"></script>
+<script src="../../lib/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+            var btn = $('.btn');
+            btn.on("click", function () {
+                $(this).prev().toggleClass('hehe')
+            })
+        }
+    )
+</script>
+</body>
+</html>
+
+<!--
+
+<div class="hehe displayText">
+
+</div>
+<button class="btn">详细信息</button>
+
+-->

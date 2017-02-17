@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>故障件详情</title>
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap-3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/accessories/demandLetter.css">
+</head>
+
+<body>
+<div class="deta">
+    <div class="detas">
+        <div class="detaileds">
+            <h2>故障件详情信息及需求函生成</h2>
+        </div>
+        <div class="schedule">
+            <div class="schedule_title1">
+                <form role="form" name="demand" action="demandLetter（3-1-2）.html" method="get">
+                    <table class="table table-hover entry">
+                        <tr>
+                            <th>是否维修</th>
+                            <th>名称</th>
+                            <th>车型</th>
+                            <th>类别</th>
+                            <th>数量</th>
+                            <th>编号</th>
+                        </tr>
+                        <!-- 故障件的详细 -->
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="chacked" id="">生成邀请函
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                OND
+                            </td>
+                            <td>
+                                HXD28
+                            </td>
+                            <td>
+                                故障修
+                            </td>
+                            <td>
+                                <input type="number" disabled="disabled" value="2">
+                            </td>
+                            <td>
+                                <input type="number" disabled="disabled" value="254344464654466">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="chacked">生成邀请函
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                OND
+                            </td>
+                            <td>
+                                HXD28
+                            </td>
+                            <td>
+                                故障修
+                            </td>
+                            <td>
+                                <input type="number" disabled="disabled" value="2">
+                            </td>
+                            <td>
+                                <input type="number" disabled="disabled" value="254344464654466">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="chacked" id="kong">生成邀请函
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                OND
+                            </td>
+                            <td>
+                                HXD28
+                            </td>
+                            <td>
+                                故障修
+                            </td>
+                            <td>
+                                <input type="number" disabled="disabled" value="2">
+                            </td>
+                            <td>
+                                <input type="number" disabled="disabled" value="2">
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" id="demandBtn" class="btn btn-primary demandBtn">生成需求函</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../lib/jquery-1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $('#demandBtn').on('click', function () {
+        $('form').submit();
+    });
+</script>
+</body>
+
+</html>

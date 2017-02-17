@@ -1,0 +1,67 @@
+.carGrade {
+    width: 100%;
+    padding: 15px;
+}
+.carGrade_box {
+    /*overflow: hidden; */
+    /*text-overflow: ellipsis; */
+    font: 700 16px/20px "Microsoft YaHei";
+}
+.carGrade_box h3 {
+    font: 700 18px/20px "Microsoft YaHei";
+    background-color: #deedf7;
+    padding: 10px 0px 10px 20px;
+    border-radius: 5px;
+}
+.carGrade_box table{
+    width: 100%;
+}
+table tr td span{
+    width: 165px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: #deedf7;
+    padding: 5px;
+    border-radius: 5px;
+}
+table tr td input{
+    width: 165px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+    /*公共样式*/
+.carGrade_box .influence,
+.carGrade_box .Inspection,
+.carGrade_box .cause,
+.carGrade_box .dispose,
+.carGrade_box .correct{
+    width: 100%;
+    border:1px solid #ccc;
+    padding:5px 5px;
+    border-radius:8px;
+    margin-bottom: 15px
+}
+.procedure .info_content,
+.influence .info_content,
+.Inspection .info_content,
+.cause .info_content,
+.dispose .info_content,
+.correct .info_content{
+    width: 100%;
+}
+/*textarea 模块部分*/
+/*.info_content textarea{*/
+    /*width: 100%;*/
+    /*overflow: auto;*/
+    /*outline: none;*/
+/*}*/
+.info_content textarea{
+    width: 100%;
+    overflow: auto;
+    outline: none;
+}

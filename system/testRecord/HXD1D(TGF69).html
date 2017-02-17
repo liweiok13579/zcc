@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>HXD3C型机车列车供电柜（时代电气）控制箱 试验记录单</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        .HXD1D {
+            width: 100%;
+            padding:20px;
+            min-width: 900px;
+        }
+        .HXD1D table{
+            width: 100%;
+            text-align: center;
+        }
+        table td{
+            height:20px;
+            padding:5px 15px;
+        }
+        table .titel td{
+            padding:15px 0px;
+            background-color: #deedf7;
+        }
+        table .titel td h3{
+            font-weight:bold;
+
+        }
+        table input{
+            width: 100%;
+            outline: none;
+            border:0;
+            padding-left:10px;
+        }
+        /*提交*/
+        .HXD1D .submit{
+            width: 100%;
+            text-align: center;
+            margin:10px;
+        }
+        .submit button{
+            width: 80px;
+            background-color: #428bca;
+            color: #fff;
+            border-radius: 5px;
+            font: 700 16px/22px "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+<div class="HXD1D">
+    <form action="后台提交地址">
+        <table border="1" cellpadding="0" cellspacing="0">
+            <tbody>
+            <!--rowspan=""行 colspan=""列-->
+            <tr class="titel">
+                <td rowspan="2" colspan="7">
+                    <h3>HXD3C型机车列车供电柜（时代电气）控制箱 试验记录单</h3>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td width="100px">检修单位</td>
+                <td colspan="2">上海中车轨道交通科技有限公司</td>
+                <td>车号</td>
+                <td><input type="text"/></td>
+                <td>试验日期</td>
+                <td colspan="2">
+                    <input type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>产品序号</td>
+                <td colspan="2"><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td colspan="2">
+                    <input type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>试验项目</td>
+                <td colspan="5">试验要求</td>
+                <td>结果</td>
+            </tr>
+            <!--软件版本 模块-->
+            <tr>
+                <td rowspan="3">软件版本</td>
+                <td>名称</td>
+                <td>DSP</td>
+                <td>FPGA</td>
+                <td>PowerPC</td>
+                <td>SHCM</td>
+                <td rowspan="3"></td>
+            </tr>
+            <tr>
+                <td  width="110px">调试前版本</td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>调试前版本</td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+            </tr>
+            <!--轻载试验 模块-->
+            <tr>
+                <td rowspan="8">轻载试验</td>
+                <td rowspan="4">Ⅰ路</td>
+                <td rowspan="2">A组</td>
+                <td colspan="3">数字入出插件上12A灯应闪烁，供电控制插件上1B、6A灯均应闪烁；散热风机风向由下向上，供电柜13KM、14KM随后闭合。</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">用万用表检测供电控制插件的41A孔与开关电源板的地信号之间的电压应为6.0V±0.3V。</td>
+                <td>
+                    <input type="text" class="voltage"/> V
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">B组</td>
+                <td colspan="3">数字入出插件上12A灯应闪烁，供电控制插件上1B、6A灯均应闪烁；散热风机风向由下向上，供电柜13KM、14KM随后闭合。</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">用万用表检测供电控制插件的41A孔与开关电源板的地信号之间的电压应为6.0V±0.3V。</td>
+                <td>
+                    <input type="text" class="voltage"/> V
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4">Ⅱ路</td>
+                <td rowspan="2" >A组</td>
+                <td colspan="3">数字入出插件上12A灯应闪烁，供电控制插件上1B、6A灯均应闪烁；散热风机风向由下向上，供电柜13KM、14KM随后闭合。</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">用万用表检测供电控制插件的44A孔与开关电源板的地信号之间的电压应为6.0V±0.3V。</td>
+                <td>
+                    <input type="text" class="voltage"/> V
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" >B组</td>
+                <td colspan="3">数字入出插件上12A灯应闪烁，供电控制插件上1B、6A灯均应闪烁；散热风机风向由下向上，供电柜13KM、14KM随后闭合。</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">用万用表检测供电控制插件的44A孔与开关电源板的地信号之间的电压应为6.0V±0.3V。</td>
+                <td>
+                    <input type="text" class="voltage"/> V
+                </td>
+            </tr>
+            <!--接地保护试验  模块-->
+            <tr>
+                <td rowspan="4">接地保护试验</td>
+                <td rowspan="2">Ⅰ路</td>
+                <td>A组</td>
+                <td colspan="3">供电控制板接地故障灯5A亮，供电柜能将交流接触器13KM、14KM断开，故障锁存</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td>B组</td>
+                <td colspan="3">供电控制板接地故障灯5A亮，供电柜能将交流接触器13KM、14KM断开，故障锁存</td>
+                <td>
+                    <input type="text" class="voltage"/> V
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Ⅱ路</td>
+                <td>A组</td>
+                <td colspan="3">供电控制板接地故障灯5B亮，供电柜能将交流接触器13KM、14KM断开，故障锁存</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td>B组</td>
+                <td colspan="3">供电控制板接地故障灯5B亮，供电柜能将交流接触器13KM、14KM断开，故障锁存</td>
+                <td>
+                </td>
+            </tr>
+            <!--电阻负载  模块-->
+            <tr>
+                <td rowspan="4">电阻负载</td>
+                <td rowspan="2">Ⅰ路</td>
+                <td>A组</td>
+                <td colspan="3">用万用表检测供电控制插件的41A孔与开关电源板的地信号之间的电压为6.0V±0.3V。</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td>B组</td>
+                <td colspan="3">用万用表检测供电控制插件的41A孔与开关电源板的地信号之间的电压为6.0V±0.3V。</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Ⅱ路</td>
+                <td>A组</td>
+                <td colspan="3">用万用表检测供电控制插件的44A孔与开关电源板的地信号之间的电压为6.0V±0.3V。</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <tr>
+                <td>B组</td>
+                <td colspan="3">用万用表检测供电控制插件的44A孔与开关电源板的地信号之间的电压为6.0V±0.3V。</td>
+                <td>
+                    <input type="radio" name="qualified" class="qualified">合格
+                    <br>
+                    <input type="radio" name="qualified"  class="qualified">不合格</td>
+                </td>
+            </tr>
+            <!--调试员-->
+            <tr style="height:50px">
+                <td colspan="2">
+                    调试员:
+                    <input class="voltage" type="text"/>
+                </td>
+                <td colspan="2">
+                    出厂检查员:
+                    <input class="voltage" type="text"/>
+                </td>
+                <td colspan="3">
+                    验收员:
+                    <input class="voltage" type="text"/>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="submit">
+            <button>提交</button>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

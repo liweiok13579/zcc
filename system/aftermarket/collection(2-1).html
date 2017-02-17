@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>走行信息采集</title>
+    <link rel="stylesheet" href="../lib/jquery.dataTables/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../css/aftermarket/collection.css">
+    <script src="../lib/jquery-1.11.3/jquery.min.js"></script>
+    <script src="../lib/jquery.dataTables/jquery.dataTables.min.js"></script>
+</head>
+
+<body>
+<div class="collection1">
+    <div class="collection">
+        <!-- 上传走行信息的Excel -->
+        <form class="collection_form" action="" enctype="multipart/form-data">
+            <!--   选择按钮 -->
+            <div class="file">
+                <input type="file" class="files" id="file" multiple="multiple"
+                       accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"/>
+            </div>
+            <!-- 模板下载 -->
+            <a href="javascript:void(0);" class="templateDownload">模板下载</a>
+            <!-- 上传按钮 -->
+            <input type="submit" class="collection_sub" value="上传">
+        </form>
+        <!-- 展示走行信息的Excel内部分信息 -->
+        <div>
+            <h4 class="inform-title">2016 年 12 月 走行公里情况统计<span>情况如下 ：</span></h4>
+        </div>
+    </div>
+    <div class="displays"></div>
+    <div>
+        <table border="0" cellspacing="5" cellpadding="5" style="margin: auto;">
+            <tbody>
+            <tr style="float: left;width:  450px;">
+                <td>输入查询开始时间:
+                <td>
+                    <input type="text" id="min" name="min">
+                </td>
+            </tr>
+            <tr style="float: left;width:  450px;">
+                <td>输入查询结束时间:</td>
+                <td>
+                    <input type="text" id="max" name="max">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table id="example" class="display" cellspacing="0" width="100%">
+            <thead>
+            <tr style="background-color: #deedf7;">
+                <th>序号</th>
+                <th>车型</th>
+                <th>车号</th>
+                <th>配属段</th>
+                <th>修程</th>
+                <th>当月行走</th>
+                <th>总行走</th>
+                <th>备注</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<script>
+
+    /* 自定义过滤功能，将在第某列中搜索两个值之间的数据*/
+    $.fn.dataTable.ext.search.push(
+        function (settings, data, dataIndex) {
+            var min = parseInt($('#min').val());
+            var max = parseInt($('#max').val());
+            var age = parseFloat(data[3]) || 0; // 时间的列，下标 0 开始
+
+            if ((isNaN(min) && isNaN(max)) ||
+                (isNaN(min) && age <= max) ||
+                (min <= age && isNaN(max)) ||
+                (min <= age && age <= max)) {
+                return true;
+            }
+            return false;
+        }
+    );
+
+    $(document).ready(function () {
+        var table = $('#example').DataTable({
+            "ajax": "./objects.txt",
+            "oLanguage": { // 国际化配置
+                "sProcessing": "正在获取数据，请稍后...",
+                "sLengthMenu": "显示 _MENU_ 条",
+                "sZeroRecords": "没有找到数据",
+                "sInfo": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                "sInfoEmpty": "记录数为0",
+                "sInfoFiltered": "(全部记录数 _MAX_ 条)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "第一页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "最后一页"
+                }
+            },
+
+            "columns": [
+                {"data": "name"},
+                {"data": "position"},
+                {"data": "salary"},
+                {"data": "start_date"},
+                {"data": "start_da"},
+                {"data": "start_dat"},
+                {"data": "office"},
+                {"data": null}
+            ],
+            columnDefs: [{
+                "targets": -1,
+                "data": null,
+                "defaultContent": "<button>+</button>"
+            }
+            ],
+        });
+        $('#example tbody').on('click', 'button', function () {
+            var data = table.row($(this).parents('tr')).data();
+            alert(data[1] + "'你好: " + data[6]);
+        });
+        // 提示输入日期
+        $('#min, #max').val('请输入日期');
+        $('#min, #max').on('click', function () {
+            if($(this).val() != ''){
+                $(this).val('');
+                // 事件监听器对两个范围过滤输入重绘输入
+                $('#min, #max').keyup(function () {
+                    table.draw();
+                });
+            }else{
+                $(this).val('请输入日期');
+            }
+        })
+    });
+</script>
+</body>
+</html>

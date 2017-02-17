@@ -1,0 +1,127 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.lw_box{
+    min-width: 1170px;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 15px;
+}
+.waimian{
+    width:100%;
+    height: 178px;
+}
+.lw_top{
+    width:24%;
+    height: 163px;
+    margin-right:1% ;
+    float: left;
+    border-radius: 4px;
+    position: relative;
+}
+.lw_top1{
+    background: #428bca;
+    border: 1px solid #428bca;
+}
+.lw_top2{
+    background: #5cb85c;
+    border: 1px solid #5cb85c;
+}
+.lw_top3{
+    background: #f0ad4e;
+    border: 1px solid #f0ad4e;
+}
+.lw_top4{
+    background: #d9534f;
+    border: 1px solid #d9534f;
+    margin: 0;
+}
+.top_right{
+    background: #fff;
+    width:100% ;
+    height: 42px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.top_right span{
+    float: right;
+    margin-top:10px;
+    margin-right: 25px;
+}
+.top_top{
+    width: 100%;
+    height: 78px;
+    margin-top: 21px;
+}
+.top_top i{
+    width:75px;
+    height:76px;
+    color: #fff;
+    font-size: 74px;
+    margin-left:15px ;
+    float: left;
+}
+.right_two{
+    float: right;
+    width: 147px;
+    height:100%;
+    text-align: right;
+    color: #fff;
+    margin-right:23px ;
+}
+.text_top{
+    font-size: 40px;
+}
+.bottom{
+    width: 232px;
+    margin: auto;
+}
+.lw-centent{
+    width:100%;
+    padding-right: 17px;
+}
+.lw-centent table{
+    text-align: center;
+}
+.lw-centent table thead tr th{
+    text-align: center;
+}
+.lw-centent table tr td{
+    vertical-align: middle;
+}
+.asb{
+    width:82px;
+    height: 34px;
+    background-color: #428bca;
+    border-color: #357ebd;
+    padding: 6px 12px;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+}
+.asb:hover{
+    text-decoration:none;
+    color: #fff;
+    background-color: #3071a9;
+}
+.ruku a{
+    width:175px;
+    height: 34px;
+    background-color: #428bca;
+    border-color: #357ebd;
+    padding: 6px 12px;
+    color: #fff;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+.ruku a:hover{
+    text-decoration:none;
+    color: #fff;
+    background-color: #3071a9;
+}

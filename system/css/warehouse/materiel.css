@@ -1,0 +1,58 @@
+.Questionnaire{
+    width: 100%;
+    min-width: 1170px;
+    padding:15px;
+    font:400 16px/20px "Microsoft YaHei";
+    box-sizing:border-box;
+}
+.Questionnaire_box{
+    width: 100%;
+    padding:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+/*上传信息展示*/
+.Questionnaire_box .show{
+    width: 100%;
+}
+.show .show_title{
+    border-radius:5px;
+    background-color: #deedf7;
+    position: relative;
+}
+.show_title h3{
+    margin:0;
+    padding-left:20px;
+    height: 40px;
+    line-height:40px;
+}
+.show_title button{
+    width: 100px;
+    height: 30px;
+    background-color: #428bca;
+    color:#fff;
+    border-radius:5px;
+    position: absolute;
+    right:60px;
+    top:4px;
+}
+.show table{
+    width: 100%;
+    text-align: center;
+    margin-top:10px;
+    border-bottom:1px solid #ccc;
+}
+table>thead>tr>th{
+    font:700 16px/20px "Microsoft YaHei";
+    text-align: center;
+    border-top:1px solid #ccc;
+    background-color: #deedf7;
+}
+table>tbody>tr>td>a{
+    color:#428bca;!important;
+}
+table>tbody>tr>td a:hover{
+    text-decoration: none !important;
+}
+

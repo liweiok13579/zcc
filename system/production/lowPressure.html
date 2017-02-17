@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>调试单</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../lib/bootstrap-datepicker-master/css/bootstrap-datepicker.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/production/lowPressure.css"/>
+    <link rel="stylesheet" href="../js/paging-master/src/paging.css"/>
+
+    <!--[if lt IE 9]>
+    <script src="../lib/html5shiv/html5shiv.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <![endif]-->
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <script src="../lib/selectivizr.js"></script>
+    <![endif]-->
+    <script src='../lib/jquery-1.11.3/jquery.min.js'></script>
+    <script src="../lib/artTemplate/template.js"></script>
+</head>
+<body>
+<div class="debug">
+    <!--调试单模块-->
+   <div class="debug_box">
+       <!--<h3>一、调试进度跟踪</h3>-->
+       <table border="0" class="table table-hover">
+           <thead>
+           <tr>
+               <th>车型车号</th>
+               <th>跟踪者</th>
+               <th>发生日期</th>
+               <th>完成日期</th>
+               <th>配属段</th>
+               <th>修程</th>
+               <th>操作</th>
+           </tr>
+           </thead>
+           <tbody class="tbodyHtml" >
+
+           </tbody>
+       </table>
+       <!--分页-->
+       <div class="pageToolbar" id="pageToolbar"></div>
+   </div>
+</div>
+<script type="text/template" id="tbodyTemplate">
+    {{ each model }}
+    <tr>
+        <td>HXD2B0032</td>
+        <td>孙永林</td>
+        <td>{{$value.plandeliverytime}}</td>
+        <td>{{$value.planarrivaltime}}</td>
+        <td>{{$value.bureau}}</td>
+        <td>{{$value.process}}</td>
+        <td>
+            <button class="details">详情</button>
+            <button class="add">添加</button>
+            <button class="delete">删除</button>
+        </td>
+    </tr>
+    {{/each}}
+</script>
+<script>
+    var tabList = [{
+        "id": "78a0518b-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "上海",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0210",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-25",
+        "plandeliverytime": "2016-02-11",
+        "realarrivaltime": "2016-01-25",
+        "realdeliverytime": "2016-02-11",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78a8d0e4-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "上海",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0213",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-25",
+        "plandeliverytime": "2016-02-11",
+        "realarrivaltime": "2016-01-25",
+        "realdeliverytime": "2016-02-11",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78b13717-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "上海",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0224",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-26",
+        "plandeliverytime": "2016-01-30",
+        "realarrivaltime": "2016-01-26",
+        "realdeliverytime": "2016-01-30",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78b94188-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "上海",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0223",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-27",
+        "plandeliverytime": "2016-02-01",
+        "realarrivaltime": "2016-01-27",
+        "realdeliverytime": "2016-02-01",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78c4352c-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "南京东",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0101",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-28",
+        "plandeliverytime": "2016-02-14",
+        "realarrivaltime": "2016-01-28",
+        "realdeliverytime": "2016-02-14",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78d16b2f-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "南京东",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0081",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-29",
+        "plandeliverytime": "2016-02-15",
+        "realarrivaltime": "2016-01-29",
+        "realdeliverytime": "2016-02-15",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78d16b2f-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "南京东",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0081",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-29",
+        "plandeliverytime": "2016-02-15",
+        "realarrivaltime": "2016-01-29",
+        "realdeliverytime": "2016-02-15",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }, {
+        "id": "78d16b2f-c7f9-11e6-b0ca-005056a9d460",
+        "bureau": "南京东",
+        "locamotivetype": "HXD2B",
+        "locamotivenum": "0081",
+        "process": "C4",
+        "planstopnum": 18,
+        "planarrivaltime": "2016-01-29",
+        "plandeliverytime": "2016-02-15",
+        "realarrivaltime": "2016-01-29",
+        "realdeliverytime": "2016-02-15",
+        "uploadtime": "2016-01-11  15:11:09",
+        "uploaduserid": "32bf1720-0cb8-42b6-8dc6-e5450b886c17",
+        "uploadusername": "张三"
+    }]
+    var tbodyHtml = template("tbodyTemplate", {
+        model: tabList
+    });
+    $(".tbodyHtml").html(tbodyHtml);
+</script>
+<script src="../lib/bootstrap-3.2.0/js/bootstrap.js"></script>
+<script src="../lib/bootstrap-datepicker-master/js/bootstrap-datepicker.js"></script>
+<script src="../lib/bootstrap-datepicker-master/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="../js/paging-master/src/query.js"></script>
+<script src="../js/paging-master/src/paging.js"></script>
+<script src="../lib/layer-v3.0.1/layer/layer.js"></script>
+<script src="../js/production/lowPressure.js"></script>
+</body>
+</html>

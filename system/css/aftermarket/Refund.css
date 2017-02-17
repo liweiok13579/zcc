@@ -1,0 +1,58 @@
+html,body{
+    width:100%;
+    height:100%;
+}
+.box{
+    width:100%;
+    height:100%;
+    padding: 15px;
+    min-width: 1170px;
+}
+.asb{
+    width:82px;
+    height: 34px;
+    background-color: #428bca;
+    border-color: #357ebd;
+    padding: 6px 12px;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+}
+.asb:hover{
+    text-decoration:none;
+    color: #fff;
+    background-color: #3071a9;
+}
+th,tr,td{
+    text-align: center;
+}
+td{
+    vertical-align:inherit !important ;
+}
+.Prompt{
+    width:100%;
+    height: 80px;
+}
+.sousuo{
+    width: 450px;
+    height: 34px;
+    float: left;
+    padding-top: 15px;
+}
+.control-label{
+    margin-top: 7px ;
+}
+.paging{
+    height:34px;
+    margin: auto;
+}
+.paging1{
+    margin: 0;
+}
+.tuiku{
+    width:100%;
+}
+.tuiku1{
+    float: right;
+    margin-right: 2.5%;
+}

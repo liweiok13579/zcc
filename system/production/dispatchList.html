@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>派工单</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/production/dispatchList.css"/>
+</head>
+<body>
+<div class="dispatchList">
+    <!--派工单模块-->
+    <form action="后台提交地址">
+    <div class="dispatchList_box">
+        <!--标题部分-->
+        <h3>派工单</h3>
+       <ul class="box_title">
+           <li><span>下车车号:</span> <input type="text"></li>
+           <li><span>产品编号:</span> <input type="text"></li>
+           <li>
+               <span>I</span>&nbsp;&nbsp;<input name="name" type="radio"/>
+               <span>II</span>&nbsp;&nbsp;<input name="name" type="radio"/>
+           </li>
+           <li><span>下车日期:</span> <input type="text"></li>
+       </ul>
+        <!--内容部分-->
+        <table border="0" class="table table-hover">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>作业工序</th>
+                <th>操作者</th>
+                <th>互检员</th>
+                <th>质检员</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>入门鉴定</td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>拆卸</td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>除尘</td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>入门鉴定</td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>拆卸</td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>除尘</td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+                <td><input type="text" class="border"/></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        <div class="submit">
+            <button>提交</button>
+        </div>
+    </form>
+</div>
+<script src='../lib/jquery-1.11.3/jquery.min.js'></script>
+<script src="../lib/bootstrap-3.2.0/js/bootstrap.js"></script>
+</body>
+</html>

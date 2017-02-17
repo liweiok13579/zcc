@@ -1,0 +1,169 @@
+html,
+body,
+div,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h3,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+dl dt dd {
+    text-indent: 0;
+}
+
+img {
+    border: 0 none;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+ul li,
+ol li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    outline: none;
+}
+
+a:link {
+    /*color: #000;*/
+    text-decoration: none;
+    outline: none;
+}
+
+a:visited {
+    /*color: #000;*/
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    /*color: #000;*/
+    text-decoration: none;
+    outline: none;
+}
+
+a:active {
+    /*color: #000;*/
+    text-decoration: none;
+    outline: none;
+}
+
+input,
+button {
+    -webkit-appearance: normal;
+    appearance: none;
+    outline: none;
+    resize: none;
+}
+button:focus{
+    outline:none !important;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+}
+
+table th,
+table td {
+    font-weight: normal;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/*公用样式*/
+
+/*电压*/
+
+.voltage {
+    border-bottom: 1px solid #000;
+    width: 30%;
+}
+/*合格*/
+
+.qualified {
+    width: auto;
+}
+
+/*滑动开关样式*/
+div.slidePlay{
+    width: 30px;
+    height: 17px;
+    -webkit-border-radius:10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: #bbb;
+    border:1px solid #ccc;
+    margin:0px auto;
+    position: relative;
+}
+.slidePlay span{
+    display: inline-block;
+    height:15px;
+    width:15px;
+    border:1px solid #ccc;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #eeeeee;
+    position: absolute;
+    left: 0;
+}

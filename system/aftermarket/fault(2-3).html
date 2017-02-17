@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>故障信息录入</title>
+    <link rel="stylesheet" href="../css/aftermarket/collection.css">
+    <link rel="stylesheet" href="../lib/jquery-data/daterangepicker.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <script src='../lib/jquery-1.11.3/jquery.min.js'></script>
+    <script src="../lib/artTemplate/template.js"></script>
+</head>
+<body>
+<!-- 表头信息录入 -->
+<div class="fault">
+    <div class="program_center_title">
+        故障信息录入
+    </div>
+    <div class="fault_con">
+        <table class="table table-hover tablee">
+            <tr>
+                <!-- 故障发生日期 -->
+                <td>
+                    <div class="repair_con">
+                        <span style="margin-top: 10px;" class="col widHei">故障发生日期：</span>
+                        <input style='width: 125px;height: 30px;vertical-align: middle;' id="date-range" size="10">
+                    </div>
+                </td>
+                <!--车型-->
+                <td>
+                    <div class="repair_con">
+                        <span class="col widHei">车型：</span>
+                        <select class="selects">
+                            <option selected="selected" value="HXD1B">HXD1B</option>
+                            <option value="HXD1D">HXD1D</option>
+                            <option value="HXD3">HXD3</option>
+                            <option value="HXD3C">HXD3C</option>
+                            <option value="HXD2B">HXD2B</option>
+                        </select>
+                    </div>
+                </td>
+                <!--车号-->
+                <td>
+                    <div class="repair_con">
+                        <span class="col widHei">车号：</span>
+                        <select class="selects">
+                            <option selected="selected" value="24524">452545</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </td>
+                <!--配属局-->
+                <td>
+                    <div class="repair_con">
+                        <span class="col widHei">配属局：</span>
+                        <select class="selects">
+                            <option selected="selected" value="上海局">上海局</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </td>
+                <!--配属段-->
+                <td>
+                    <div class="repair_con">
+                        <span class="col widHei">配属段：</span>
+                        <select class="selects">
+                            <option selected="selected" value="上海机务段">上海机务段</option>
+                            <option value="杭州机务段">杭州机务段</option>
+                            <option value="徐州机务段">徐州机务段</option>
+                            <option value="南京机务段">南京机务段</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div>
+                        <button class="btn2" id="btn">提交</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div style="width: 1px;height: 1px;"></div>
+        <div class="tbodyHtml">
+        </div>
+    </div>
+</div>
+<!-- 修程等数据的遍历 -->
+<script type="text/template" id="tbodyTemplate">
+    {{each data as value index}}
+    <!--修程-->
+    <from action="./1.html">
+        <div class="repair_con">
+            <span class="col widHei">修程：</span>
+            <select class="selec">
+                <option selected="selected" value="C5">C5</option>
+                <option value="C4">C4</option>
+            </select>
+        </div>
+        <div class="repair_con">
+            <div class="col widHei">修程日期：</div>
+            <div class="wid">{{value.bureau}}</div>
+        </div>
+        <div class="repair_con">
+            <div class="col widHei">走行公里：</div>
+            <div class="wid">{{value.locamotivetype}}</div>
+        </div>
+        <div class="repair_con">
+            <div class="col widHei">总走行公里：</div>
+            <div class="wid">{{value.process}}</div>
+        </div>
+        <div class="repair_con">
+            <div class="col widHei">新车到段日期：</div>
+            <div class="wid"> {{value.planstopnum}}</div>
+        </div>
+        <div class="repair_con">
+            <div class="col widHei">承建单位：</div>
+            <div class="wid"> {{value.planarrivaltime}}</div>
+        </div>
+        <div class="repair_con">
+            <div class="col widHei">当月走行公里：</div>
+            <div class="wid"> {{value.plandeliverytime}}</div>
+        </div>
+        <div class="repair_con">
+            <div class="col widHei">所属系统：</div>
+            <div class="wid">{{value.plandeliverytime}}</div>
+        </div>
+        <div class="repair_con">
+            <div class="col widHei">更换部件分类：</div>
+            <div class="wid">{{value.plandeliverytime}}</div>
+        </div>
+        <div class="repair_con">
+            <div class="col widHei">跟换部件名称：</div>
+            <div class="wid">{{value.plandeliverytime}}</div>
+        </div>
+        <div class="repair_con">
+            <div class="col widHei">物料编码：</div>
+            <div class="wid">{{value.plandeliverytime}}</div>
+        </div>
+        <!-- 物料数量 -->
+        <div class="repair_con">
+            <span class="col widHei">物料数量：</span>
+            <select id="nn" class="selec" style="width:50px;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <input style="width: 50px;" type="button" name="button" value="添加" id="print-click"/>
+        </div>
+        <div class="originals">
+            <!-- 原配件编码 -->
+            <span class="repair_con original">
+               <span class="col widHei">原配件编码：</span>
+            <input type="text" style="height: 30px;">
+            </span>
+            <!-- 新配件编码 -->
+            <span class="repair_con original">
+           <span class="col widHei">新配件编码：</span>
+            <input type="text" style="height: 30px;">
+        </span>
+            <div class="repair_con original" id='checked'>
+                <span class="col widHei">是否更换：</span>
+                <span class="ced">
+              <select class='selectsa selec'>
+                    <option value="y">是</option>
+                     <option value="n">否</option>
+              </select>
+            </span>
+                <span class="ced">倒件(从其他机车)：<input type="checkbox" style="vertical-align: sub"></span>
+                <span class="ced">互倒(本级车内互换)：<input type="checkbox" style="vertical-align: sub"></span>
+            </div>
+        </div>
+        <div class=" textWid">
+            <div class="repair_con original  wids">
+                <span class="col widHei">故障描述：</span>
+                <br>
+                <br>
+                <textarea name="" id="x2"></textarea>
+            </div>
+            <!-- 处理过程 -->
+            <div class="repair_con original wids">
+                <span class="col widHei">处理过程：</span>
+                <br>
+                <br>
+                <textarea name="" id="x1"></textarea>
+            </div>
+        </div>
+        <!-- 操作人 -->
+        <table class="table table-hover tablee">
+            <tr>
+                <!-- 操作人 -->
+                <td>
+                    <div class="repair_con">
+                        <span class="col widHei">操作人：</span>
+                        <span class='adminPo'>admin</span>
+                    </div>
+                </td>
+                <!-- 领料人 -->
+                <td>
+                    <div class="repair_con">
+                        <span class="col widHei">领料人：</span>
+                        <select class="selects">
+                            <option selected="selected" value="HXD1B">HXD1B</option>
+                        </select>
+                    </div>
+                </td>
+                <!-- 故障性质 -->
+                <td>
+                    <div class="repair_con">
+                        <span class="col widHei">故障性质：</span>
+                        <select>
+                            <option selected="selected" value="质量问题">质量问题</option>
+                            <option value="人为问题">人为问题</option>
+                            <option value="故障级别">故障级别</option>
+
+                        </select>
+                    </div>
+                </td>
+                <!-- 故障级别机破 -->
+                <td>
+                    <div class="repair_con">
+                        <span class="col widHei">故障级别机破：</span>
+                        <select>
+                            <option selected="selected" value="机破">机破</option>
+                            <option value="临修">临修</option>
+                            <option value="碎修">碎修</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="repair_con">
+                        <span class="col widHei">状态：</span>
+                        <select>
+                            <option selected="selected" value="正在处理">正在处理</option>
+                            <option value="处理完成">处理完成</option>
+                            <option value="运用观察">运用观察</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="repair_con">
+                        <button style='margin-top: inherit;' type="submit">提交</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </from>
+    {{/each}}
+</script>
+<script src="../lib/jquery-data/moment.min.js"></script>
+<script src="../lib/jquery-data/jquery.daterangepicker.min.js"></script>
+<script src="../lib/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $("#btn").click(function (e) {
+            e.stopPropagation();
+            $.ajax({
+                type: "post",
+                url: "TabList.json",
+                data: "",
+                dataType: "json",
+                success: function (data) {
+                    var html = template("tbodyTemplate", data);
+                    $(".tbodyHtml").html(html);
+                    $('#btn').css('display', "none");
+                    // 点击成组增加输入框
+                    $('#print-click').on('click', function () {
+                        console.log(1)
+                        var num = parseInt($('#nn').val());
+                        console.log(num);
+                        var Len = $('.originals').length;
+                        console.log(Len);
+                        if (Len < num) {
+                            var number1 = num - Len;
+                            for (var i = 0; i < number1; i++) {
+                                var html = $('.originals:first').clone(true);
+                                $('.originals:last').after(html);
+                            }
+                        } else if (Len > num) {
+                            var number2 = Len - num;
+                            for (var i = 0; i < number2; i++) {
+                                $(".originals:last").remove();
+                            }
+                        }
+                    })
+                    // 点击选择是否更换按钮
+                    $('#checked').children().children('input[type=checkbox]').click(function () {
+                        if ($(this).is(':checked')) {
+                            $(this).attr('checked', true).parent().siblings().children().attr('checked', false);
+                        } else {
+                            $(this).attr('checked', false).parent().children().attr('checked', false);
+                        }
+                    });
+                },
+                error: function (error) {
+                    console.log("错误");
+                }
+            })
+        });
+    })
+</script>
+<script src='../js/aftermarket/aftermarket.js'></script>
+</body>
+</html>

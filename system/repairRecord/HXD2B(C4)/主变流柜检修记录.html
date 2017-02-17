@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主变流柜检修记录</title>
+    <link rel="stylesheet" href="../../lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/production/jianxiu.css">
+</head>
+<body>
+<div class="c4-maintenance box">
+    <ul>
+        <li class="active"><a href="javascript:void(0);">主变流柜检修记录</a></li>
+        <li onclick="javascript:location.href='辅助变流柜检修记录.html'"><a href="javascript:void(0);">辅助变流柜检修记录</a></li>
+        <li onclick="javascript:location.href='网络控制系统检修记录.html'"><a href="javascript:void(0);">网络控制系统检修记录</a></li>
+        <li onclick="javascript:location.href='主辅变流风机组安装记录.html'"><a href="javascript:void(0);">主辅变流风机组安装记录</a></li>
+    </ul>
+    <table border="1" cellpadding="0" cellspacing="0" class="table table-bordered">
+        <tbody>
+        <!-- rowspan=""行 colspan=""列 -->
+        <tr class="titel info">
+            <td colspan="8">
+                <h3>HXD2B型机车C4修</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>使用部门</td>
+            <td colspan="2">上海机车检修段</td>
+            <td>检修班组</td>
+            <td><input type="text"></td>
+            <td colspan="2">检修日期</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>检修车号</td>
+            <td><input type="text"></td>
+            <td>部件编号</td>
+            <td><input type="text"></td>
+            <td>所装车号</td>
+            <td><input type="text"></td>
+            <td>交付日期</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="8" class="teshu2">检   查   记   录   内   容</td>
+        </tr>
+        <tr>
+            <td>序号</td>
+            <td>检测/检修项目</td>
+            <td colspan="2">检修标准</td>
+            <td>检修结果</td>
+            <td>处理意见</td>
+            <td>自检</td>
+            <td>互检员</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>下车检查</td>
+            <td colspan="2"><div class="hehe displayText">
+                检查母排、接触器、功率模块、电容、TCU和主变风机；检查柜体、门板、母排、电阻、电容、传感器、水管及快速插头、水冷板是否存在严重损伤或漏液等异常现象，并对各接头做好防护。
+            </div>
+                <button class="btn">详细信息</button></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>电器组件拆卸及清洁</td>
+            <td colspan="2"><div class="hehe displayText">
+                TCU箱体、各低感母排、IGBT模块清洗无尘，各部无损伤或过热等异常现象，安装螺丝按标准力矩安装牢固并打好防缓标记。
+            </div>
+                <button class="btn">详细信息</button></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>散热器清洗</td>
+            <td colspan="2"><div class="hehe displayText">
+                散热器各部清洁、翅片无堵塞；风机门框密封条安装良好；风机周边无明显清洗液腐蚀现象。
+            </div>
+                <button class="btn">详细信息</button></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>柜体清洁</td>
+            <td colspan="2"><div class="hehe displayText">
+                柜内各电容、电阻、传感器、铜排、电缆、导线及对外连接插座状态良好、表面清洁、接线无松动；各管路、接头连接良好，无漏风或漏液现象；柜内、柜外表面、柜门清洁无尘。
+            </div>
+                <button class="btn">详细信息</button></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td rowspan="26">5</td>
+            <td rowspan="26">★测量</td>
+            <td colspan="4">一．充电电阻
+                （60Ω±5%）</td>
+            <td rowspan="3"><input type="text"></td>
+            <td rowspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2">左侧</td>
+            <td colspan="2">右侧</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text"></td>
+            <td colspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="4">二．削峰电阻
+                (2.52Ω±10%)</td>
+            <td rowspan="3"><input type="text"></td>
+            <td rowspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2">左侧（R-H1）</td>
+            <td colspan="2">右侧（R-H1）</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text"></td>
+            <td colspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="4">三．直流支撑电容（单电容总容值1000uF±10%,单个电容内每组容值500uF±10%）</td>
+            <td rowspan="4"><input type="text"></td>
+            <td rowspan="4"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2">左侧</td>
+            <td colspan="2">右侧</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding: 0">
+                <div class="xkf">
+                    <div class="xk">CAP-CVE</div>
+                    <div class="xk">CAP-OND-H</div>
+                    <div class="xk">CAP-OND</div>
+                    <div class="xk">CAP-CVE</div>
+                    <div class="xk">CAP-OND-H</div>
+                    <div class="xk" style="border: none">CAP-OND</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding: 0">
+                <div class="xkf">
+                    <div class="gxk"><input type="text"></div>
+                    <div class="gxk"><input type="text"></div>
+                    <div class="gxk"><input type="text"></div>
+                    <div class="gxk"><input type="text"></div>
+                    <div class="gxk"><input type="text"></div>
+                    <div class="gxk"><input type="text"></div>
+                    <div class="gxk"><input type="text"></div>
+                    <div class="gxk"><input type="text"></div>
+                    <div class="gxk"><input type="text"></div>
+                    <div class="gxk"><input type="text"></div>
+                    <div class="gxk"><input type="text"></div>
+                    <div class="gxk" style="border: none"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">四.电压传感器阻值
+                （□国产：1.59~1.65MΩ          □进口：22.31～23.69MΩ）</td>
+            <td rowspan="3"><input type="text"></td>
+            <td rowspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2">左侧</td>
+            <td colspan="2">右侧</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text"></td>
+            <td colspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="4">五．滤波电容（1330uF±5%）</td>
+            <td rowspan="4"><input type="text"></td>
+            <td rowspan="4"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2">左侧</td>
+            <td colspan="2">右侧</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding: 0">
+                <div class="xkf">
+                    <div class="xk">CAP1-2F</div>
+                    <div class="xk">CAP2-2F</div>
+                    <div class="xk">CAP3-2F</div>
+                    <div class="xk">CAP1-2F</div>
+                    <div class="xk">CAP2-2F</div>
+                    <div class="xk" style="border: none">CAP3-2F</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding: 0">
+                <div class="xkf">
+                    <div class="xk"><input type="text"></div>
+                    <div class="xk"><input type="text"></div>
+                    <div class="xk"><input type="text"></div>
+                    <div class="xk"><input type="text"></div>
+                    <div class="xk"><input type="text"></div>
+                    <div class="xk" style="border: none"><input type="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">五．预充电接触器接触电阻
+                （不大于0.6mΩ）</td>
+            <td rowspan="3"><input type="text"></td>
+            <td rowspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2">左侧</td>
+            <td colspan="2">右侧</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text"></td>
+            <td colspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="4">六．冷却液冰点值测试
+                (-36℃至-42℃间)</td>
+            <td rowspan="3"><input type="text"></td>
+            <td rowspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2">左侧</td>
+            <td colspan="2">右侧</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text"></td>
+            <td colspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="4">七．柜门接地电阻检测(小于50mΩ)</td>
+            <td rowspan="3"><input type="text"></td>
+            <td rowspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2">左侧</td>
+            <td colspan="2">右侧</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text"></td>
+            <td colspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+            <td rowspan="3">6</td>
+            <td rowspan="3">火警风管保压试验</td>
+            <td colspan="4">输入500kPa气压，关闭阀门，保压10min，差压值＜20kPa</td>
+            <td rowspan="3"><input type="text"></td>
+            <td rowspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2">左侧</td>
+            <td colspan="2">右侧</td>
+        </tr>
+        <tr>
+            <td colspan="2">差压值=<input type="text">kPa</td>
+            <td colspan="2">差压值= <input type="text">kPa</td>
+        </tr>
+        <tr>
+            <td rowspan="4">7</td>
+            <td rowspan="4">★绝缘检测</td>
+            <td rowspan="2">辅助回路</td>
+            <td>左侧水泵电机
+                （大于10MΩ）</td>
+            <td>右侧水泵电机
+                （大于10MΩ）</td>
+            <td>主变风机
+                （大于50MΩ）</td>
+            <td rowspan="4"><input type="text"></td>
+            <td rowspan="4"><input type="text"></td>
+        </tr>
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td rowspan="2">主回路</td>
+            <td colspan="2">左侧（大于20 MΩ）</td>
+            <td>右侧（大于20 MΩ）</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td rowspan="2">7</td>
+            <td rowspan="2">★淋雨试验</td>
+            <td colspan="2">试验方法及要求</td>
+            <td colspan="2">试验结果</td>
+            <td rowspan="2"><input type="text"></td>
+            <td rowspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div class="hehe displayText">
+                风机在额定转速下进行淋雨试验，时间不少于10分钟，确认主变流柜冷却塔前后面板、风机上下端面及风道侧面各处密封良好，无漏水现象。
+            </div>
+                <button class="btn">详细信息</button>
+            </td>
+            <td colspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>装车检查</td>
+            <td colspan="2"><div class="hehe displayText">
+                确认柜内清洁良好, 无异物残留、电气线路绑扎良好，无碰磨、水泵无漏液现象、柜内电气连接及部件紧固标识线清晰、铭牌安装及日期、位置正确、柜门及盖板安装可靠。
+            </div>
+                <button class="btn">详细信息</button></td>
+            <td colspan="2"><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>质检</td>
+            <td colspan="3"><input type="text"></td>
+            <td>验收员</td>
+            <td colspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td>备注</td>
+            <td colspan="7"><input type="text"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div style="text-align: center">注：1.“★”为关键项点（质检员必检项）；2.“☆”为特殊过程；3.“※”处为质检人员复测，并填写，测量结果以质检为准。</div>
+</div>
+<script src="../../lib/jquery-1.11.3/jquery.min.js"></script>
+<script src="../../lib/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+            var btn = $('.btn');
+            btn.on("click", function () {
+                $(this).prev().toggleClass('hehe')
+            })
+        }
+    )
+</script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>检修日报</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../lib/bootstrap-datepicker-master/css/bootstrap-datepicker.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/production/DailyMaintenance.css"/>
+    <!--[if lt IE 9]>
+    <script src="../lib/html5shiv/html5shiv.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <![endif]-->
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <script src="../lib/selectivizr.js"></script>
+    <![endif]-->
+    <script src='../lib/jquery-1.11.3/jquery.min.js'></script>
+
+</head>
+<body>
+<div class="Daily">
+    <!-- 一、需要关注的信息 -->
+    <div class="information">
+        <h3>一、需要关注的信息
+            <input type="submit" value="生成word文档"/>
+        </h3>
+        <div class="info_content">
+            <textarea name="info" id="DailyInfo" cols="30" rows="5"></textarea>
+        </div>
+    </div>
+    <!--二、模块检修进度-->
+    <div class="moduleRepair">
+        <h3>二、模块检修进度</h3>
+        <div class="module_content">
+            <table border="1" class="table table-hover">
+                <thead>
+                <tr>
+                    <th rowspan="2">序号</th>
+                    <th rowspan="2">模块编号</th>
+                    <th rowspan="2">装车车号</th>
+                    <th rowspan="2">开工时间</th>
+                    <th rowspan="2">计划完工时间</th>
+                    <th rowspan="2">检测时间</th>
+                    <th rowspan="2">验收时间</th>
+                    <th rowspan="2">实际完工时间</th>
+                    <th colspan="8">检修状态"■"表示已完成 &nbsp; "□"表示明日完成</th>
+                    <th rowspan="2">异常情状态记录</th>
+                    <th rowspan="2">责任人/班组</th>
+                    <th rowspan="2">备注</th>
+                </tr>
+                <tr>
+                    <th>拆卸</th>
+                    <th>清洁</th>
+                    <th>部件</th>
+                    <th>IGBT</th>
+                    <th>布线</th>
+                    <th>模块</th>
+                    <th>检测</th>
+                    <th>验收</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="text" value="1"/></td>
+                    <td><input type="text" value="SOD1609000"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value="9/24/AM"/></td>
+                    <td><input type="text" value="9/26/AM"/></td>
+                    <td><input type="text" value="9/24/PM"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><div class="slidePlay"><span></span></div></td>
+                    <td><div class="slidePlay"><span></span></div></td>
+                    <td><div class="slidePlay"><span></span></div></td>
+                    <td><div class="slidePlay"><span></span></div></td>
+                    <td><div class="slidePlay"><span></span></div></td>
+                    <td><div class="slidePlay"><span></span></div></td>
+                    <td><div class="slidePlay"><span></span></div></td>
+                    <td><div class="slidePlay"><span></span></div></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="2"/></td>
+                    <td><input type="text" value="SOD1609000"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value="9/24/AM"/></td>
+                    <td><input type="text" value="9/26/AM"/></td>
+                    <td><input type="text" value="9/24/PM"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--三、检修进度-->
+    <div class="repair">
+        <h3>三、检修进度</h3>
+        <div class="repair_content">
+            <table border="1" class="table table-hover">
+                <thead>
+                <tr>
+                    <th rowspan="2">序号</th>
+                    <th rowspan="2">机车车号</th>
+                    <th rowspan="2">部件名称</th>
+                    <th rowspan="2">下车编号</th>
+                    <th rowspan="2">下车时间</th>
+                    <th rowspan="2">计划交付时间</th>
+                    <th rowspan="2">验收时间</th>
+                    <th rowspan="2">实际交付时间</th>
+                    <th colspan="8">检修状态"■"表示已完成 &nbsp; "□"表示明日完成</th>
+                    <th rowspan="2">异常情状态记录</th>
+                    <th rowspan="2">责任人/班组</th>
+                    <th rowspan="2">备注</th>
+                </tr>
+                <tr>
+                    <th>拆卸</th>
+                    <th>清洁</th>
+                    <th>部件</th>
+                    <th>IGBT</th>
+                    <th>布线</th>
+                    <th>模块</th>
+                    <th>检测</th>
+                    <th>验收</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>HXD1D-0108</td>
+                    <td>变流器1</td>
+                    <td>02593114</td>
+                    <td>9/24/AM</td>
+                    <td>9/26/AM</td>
+                    <td>9/26/PM</td>
+                    <td>9/26/PM</td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>HXD1D-0108</td>
+                    <td>变流器2</td>
+                    <td>02593114</td>
+                    <td>9/24/AM</td>
+                    <td>9/26/AM</td>
+                    <td>9/26/PM</td>
+                    <td>9/26/PM</td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--四、现场周转件检修状态-->
+    <div class="turnover">
+        <h3>四、现场周转件检修状态</h3>
+        <div class="turnover_content">
+            <table border="1" class="table table-hover">
+                <thead>
+                <tr>
+                    <th rowspan="2">配件名</th>
+                    <th rowspan="2">序号</th>
+                    <th rowspan="2">编号</th>
+                    <th rowspan="2">厂家</th>
+                    <th rowspan="2">修程</th>
+                    <th rowspan="2">下车车号</th>
+                    <th rowspan="2">上车车号</th>
+                    <th colspan="7">检修状态"■"表示已完成 &nbsp; "□"表示明日完成</th>
+                    <th rowspan="2">实际交付</th>
+                    <th rowspan="2">配件状态</th>
+                    <th rowspan="2">影响交付停时原因</th>
+                    <th rowspan="2">责任人/班组</th>
+                    <th rowspan="2">备注</th>
+                </tr>
+                <tr>
+                    <th>拆卸</th>
+                    <th>除尘</th>
+                    <th>清洁</th>
+                    <th>检测</th>
+                    <th>组装</th>
+                    <th>整备</th>
+                    <th>交付</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td rowspan="100"><input type="text" value="列供柜"/></td>
+                    <td><input type="text" value="1"/></td>
+                    <td><input type="text" value="2014235"/></td>
+                    <td><input type="text" value="征原"/></td>
+                    <td><input type="text" value="C4"/></td>
+                    <td><input type="text" value="未知"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value="摔坏"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="2"/></td>
+                    <td><input type="text" value="2014235"/></td>
+                    <td><input type="text" value="征原"/></td>
+                    <td><input type="text" value="C4"/></td>
+                    <td><input type="text" value="3C-0681"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value="待验收"/></td>
+                    <td><input type="text" value="故障已解决"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value="插针缩针已解决"/></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="3"/></td>
+                    <td><input type="text" value="2014235"/></td>
+                    <td><input type="text" value="征原"/></td>
+                    <td><input type="text" value="C4"/></td>
+                    <td><input type="text" value="3C-0675"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input checked type="checkbox" value="■"/></td>
+                    <td><input type="checkbox" value="□"/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--五、年度检修信息统计-->
+    <div class="statistics">
+        <h3>五、年度检修信息统计</h3>
+        <div class="statistics_content">
+            <table border="1" class="table table-hover">
+                <thead>
+                <tr>
+                    <th colspan="2">月份</th>
+                    <th class="th_width">1月</th>
+                    <th class="th_width">2月</th>
+                    <th class="th_width">3月</th>
+                    <th class="th_width">4月</th>
+                    <th class="th_width">5月</th>
+                    <th class="th_width">6月</th>
+                    <th class="th_width">7月</th>
+                    <th class="th_width">8月</th>
+                    <th class="th_width">9月</th>
+                    <th class="th_width">10月</th>
+                    <th class="th_width">11月</th>
+                    <th class="th_width">12月</th>
+                    <th class="th_width">合计</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td rowspan="3">HXD2B C4修</td>
+                    <td>计划</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>实际</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>车号</td>
+                    <td>0217、0173、0225</td>
+                    <td>0215、0079、0211、0019</td>
+                    <td>0216、0208、0226、0107、0222</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="../lib/bootstrap-3.2.0/js/bootstrap.js"></script>
+<script src="../lib/bootstrap-datepicker-master/js/bootstrap-datepicker.js"></script>
+<script src="../lib/bootstrap-datepicker-master/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="../js/production/DailyMaintenance.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <link rel="stylesheet" href="../lib/jquery-data/daterangepicker.min.css">
+    <link rel="stylesheet" href="../css/aftermarket/Treasury.css">
+</head>
+<body>
+<div class="box">
+    <!--上方提示-->
+    <form action="">
+        <div class="Prompt">
+            <!--搜索-->
+            <div class="sousuo">
+                <label class="control-label">要查询的时间段:</label>
+                <input type="text" class="sj" placeholder="2017/1/13" id="date-range13-1">
+                <span>-</span>
+                <input type="text" class="sj" placeholder="2017/1/13" id="date-range13-2">
+            </div>
+            <!--搜索2-->
+            <div class="sousuo">
+                <label class="control-label">要查询的仓库:</label>
+                <input type="text" class="sj2" placeholder="上海">
+
+            </div>
+            <div class="Prompt_right">
+                <i></i>未完成
+                <i style="background:#3f903f;"></i>进行中
+                <i style="background:#f0ad4e;"></i>已完成
+            </div>
+        </div>
+
+        <div class="bs-example box1">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>申请仓库</th>
+                    <th>流程状态图</th>
+                    <th>结束时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="active">
+                    <td>1</td>
+                    <td>无锡</td>
+                    <!--流程控制-->
+                    <td>
+                        <div class="process">
+                            <span class="iconfont icon-kaishi iconsize"></span>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <!--改变类名：process_one_a的background-->
+                                <a href="#" class="process_one_a" title="点击进入调拨申请单">
+                                    调拨申请单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_b" title="点击进入申请单审批">
+                                    申请单审批
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_c" title="点击进入发货装箱单" id="process_one_f">
+                                    发货装箱单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_c" title="点击进入收货装箱单" id="process_one_d">
+                                    收货装箱单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <span class="iconfont icon-jieshu iconsize"></span>
+                        </div>
+                    </td>
+                    <td>2017/1/11</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>上海</td>
+                    <!--流程控制-->
+                    <td>
+                        <div class="process">
+                            <span class="iconfont icon-kaishi iconsize"></span>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <!--改变类名：process_one_a的background-->
+                                <a href="#" class="process_one_a" title="点击进入调拨申请单">
+                                    调拨申请单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_a" title="点击进入申请单审批">
+                                    申请单审批
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_b" title="点击进入发货装箱单">
+                                    发货装箱单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_c" title="点击进入收货装箱单">
+                                    收货装箱单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <span class="iconfont icon-jieshu iconsize"></span>
+                        </div>
+                    </td>
+                    <td>2017/1/11</td>
+                </tr>
+                <tr class="success">
+                    <td>3</td>
+                    <td>无锡</td>
+                    <!--流程控制-->
+                    <td>
+                        <div class="process">
+                            <span class="iconfont icon-kaishi iconsize"></span>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <!--改变类名：process_one_a的background-->
+                                <a href="#" class="process_one_a" title="点击进入调拨申请单">
+                                    调拨申请单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_a" title="点击进入申请单审批">
+                                    申请单审批
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_a" title="点击进入发货装箱单">
+                                    发货装箱单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_b" title="点击进入收货装箱单">
+                                    收货装箱单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <span class="iconfont icon-jieshu iconsize"></span>
+                        </div>
+                    </td>
+                    <td>2017/1/11</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>无锡</td>
+                    <!--流程控制-->
+                    <td>
+                        <div class="process">
+                            <span class="iconfont icon-kaishi iconsize"></span>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <!--改变类名：process_one_a的background-->
+                                <a href="#" class="process_one_a" title="点击进入调拨申请单">
+                                    调拨申请单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_a" title="点击进入申请单审批">
+                                    申请单审批
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_a" title="点击进入发货装箱单">
+                                    发货装箱单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_c" title="点击进入收货装箱单">
+                                    收货装箱单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <span class="iconfont icon-jieshu iconsize"></span>
+                        </div>
+                    </td>
+                    <td>2017/1/11</td>
+                </tr>
+                <tr class="danger">
+                    <td>5</td>
+                    <td>无锡</td>
+                    <!--流程控制-->
+                    <td>
+                        <div class="process">
+                            <span class="iconfont icon-kaishi iconsize"></span>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <!--改变类名：process_one_a的background-->
+                                <a href="#" class="process_one_a" title="点击进入调拨申请单">
+                                    调拨申请单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_a" title="点击进入申请单审批">
+                                    申请单审批
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_b" title="点击进入发货装箱单">
+                                    发货装箱单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <div class="process_one">
+                                <a href="#" class="process_one_c" title="点击进入收货装箱单">
+                                    收货装箱单
+                                </a>
+                            </div>
+                            <span class="iconfont icon-jiantouyou iconsize2"></span>
+                            <span class="iconfont icon-jieshu iconsize"></span>
+                        </div>
+                    </td>
+                    <td>2017/1/11</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--下分页-->
+        <!--class="active"赋值给需要的地方-->
+        <div class="paging">
+            <ul class="pagination">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li  class="active"><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">末页</a></li>
+            </ul>
+        </div>
+    </form>
+    <!--<a href="Treasury2.html">备件调配申请单</a>-->
+    <!--<a href="Treasury3.html">配件装箱单</a>-->
+</div>
+</body>
+<script type="text/javascript" src="../lib/jquery-data/moment.min.js"></script>
+<script src="../lib/jquery-1.11.3/jquery.min.js"></script>
+<script src="../lib/layer-v3.0.1/layer/layer.js"></script>
+<script type="text/javascript" src="../lib/jquery-data/jquery.daterangepicker.min.js"></script>
+<script src="../js/aftermarket/Treasury.js"></script>
+<script>
+    $(function () {
+        $(".paging li").on("click",function () {
+            alert($(this).index())
+        })
+    })
+</script>
+</html>

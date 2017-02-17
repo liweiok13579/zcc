@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/jqueryfenye/paging.css">
+    <link rel="stylesheet" href="../css/aftermarket/Refund.css">
+</head>
+<body>
+<div class="box">
+    <!--suosuo-->
+    <div class="Prompt">
+        <!--搜索-->
+        <div class="sousuo">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">要查询的配件名称:</label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="HXD22222">
+                </div>
+            </div>
+        </div>
+        <!--搜索2-->
+        <div class="sousuo">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">要查询的快递单号:</label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="106882584">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bs-example"></div>
+    <script src="../lib/jquery-1.11.3/jquery.min.js"></script>
+    <script src="../lib/artTemplate/template.js"></script>
+    <script id="test" type="text/html">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>配件名称</th>
+                    <th>物流公司</th>
+                    <th>快递单号</th>
+                    <th>发货人</th>
+                    <th>发货时间</th>
+                    <th>收货人</th>
+                    <th>收货时间</th>
+                    <th>物料齐全</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{ each model }}
+                <tr class="active">
+                    <td>{{$value.id}}</td>
+                    <td>{{$value.ppLogistics}}</td>
+                    <td>{{$value.ppLogistics}}</td>
+                    <td>{{$value.ppExpress}}</td>
+                    <td>{{$value.ppExpress1}}</td>
+                    <td>{{$value.ppSendtime}}</td>
+                    <td>{{$value.ppConsignee}}</td>
+                    <td>{{$value.ppFull}}</td>
+                    <td><input type="checkbox"></td>
+                    <td>
+                        <button type="button" class="btn btn-primary asb">查看详情</button>
+                    </td>
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+    </script>
+    <!--下分页-->
+    <div class="paging">
+        <div id="pageTool"></div>
+        <div id="pageToolbar"></div>
+    </div>
+    <div class="tuiku">
+        <button type="button" class="btn btn-danger tuiku1">我要退库</button>
+    </div>
+</div>
+<script src="../lib/jqueryfenye/query.js"></script>
+<script src="../lib/jqueryfenye/paging.js"></script>
+<script src="../lib/layer-v3.0.1/layer/layer.js"></script>
+<script src="../js/aftermarket/Refund.js"></script>
+<script>
+    //        模板引擎
+    var tabList = [{
+        "id": "序号1",
+        "spName": "配件名称",
+        "ppLogistics": "物流公司",
+        "ppExpress": "快递单号",
+        "ppExpress1": "发货人",
+        "ppSendtime": "发货时间",
+        "ppConsignee": "收货人",
+        "pp_rectime": "收货时间",
+        "ppFull": "物料齐全"
+    },
+        {
+            "id": "序号1",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号2",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号3",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号4",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号5",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号6",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号7",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号8",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号9",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号10",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号11",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号12",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        },
+        {
+            "id": "序号13",
+            "spName": "配件名称",
+            "ppLogistics": "物流公司",
+            "ppExpress": "快递单号",
+            "ppExpress1": "发货人",
+            "ppSendtime": "发货时间",
+            "ppConsignee": "收货人",
+            "pp_rectime": "收货时间",
+            "ppFull": "物料齐全"
+        }]
+//   分页插件
+    var tbodyHtml = template("test", {
+        model: tabList
+    });
+    $(".bs-example").html(tbodyHtml);
+    $('#pageTool').Paging({
+        pagesize: 10, count: 100, callback: function (page, size, count) {
+            //            console.log  一个数组  F12自己看 page(this) size(每页X条) count（总页数，自动转换，详情对照count）
+//            注意一个count 这个是走的用户请求的数据num，list或者模板记得改变json或者加大渲染力度为count条
+//            首页默认为1  末页默认为最后，点击时会自动给传输的值变为1或者末位 ，跳转几给你传几
+//            $.ajax({
+//                url:"",
+//                type:"post",
+//                dataType:"json",
+//                contentType:"application/json",
+//                success:function(data){
+                    //    模板引擎
+                    var tbodyHtml = template("test", {
+                        model: tabList
+                    });
+                    $(".bs-example").html(tbodyHtml);
+//                },error:function(data){
+//                    alert("shibaile");
+//                }
+//            });
+        }, toolbar: true
+    });
+</script>
+</body>
+</html>

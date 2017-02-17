@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>检修日报</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/aftermarket/fault（2-5）.css"/>
+    <!--[if lt IE 9]>
+    <script src="../lib/html5shiv/html5shiv.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <![endif]-->
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <script src="../lib/selectivizr.js"></script>
+    <![endif]-->
+    <script src='../lib/jquery-1.11.3/jquery.min.js'></script>
+</head>
+<body>
+<div class="carGrade">
+    <div class="carGrade_box">
+        <form action="">
+            <table border="0" class="table table-hover">
+                <thead>
+                <tr class="th_one">
+                    <th>机车配属段</th>
+                    <th>车型车号</th>
+                    <th>修程</th>
+                    <th>修后走行公里</th>
+                    <th>修程日期</th>
+                    <th>总走形公里</th>
+                </tr>
+                <tr>
+                    <th><input type="text" value="C4"/></th>
+                    <th><input type="text" value="SOD1609000"/></th>
+                    <th><input type="text" value=""/></th>
+                    <th><input type="text" value=""/></th>
+                    <th><input type="text" value=""/></th>
+                    <th><input type="text" value=""/></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="td_one">
+                    <td>故障日期</td>
+                    <td>故障地点</td>
+                    <td>故障部件</td>
+                    <td>现场处理人员</td>
+                    <td>责任单位</td>
+                    <td>属性</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                    <td><input type="text" value=""/></td>
+                </tr>
+
+                </tbody>
+            </table>
+            <!-- 一、过程描述 -->
+            <div class="procedure">
+                <h3>一、过程描述</h3>
+                <div class="info_content">
+                    <textarea name="info" id="procedure" cols="30" rows="2"></textarea>
+                </div>
+            </div>
+            <!-- 二、故障影响 -->
+            <div class="influence">
+                <h3>二、故障影响</h3>
+                <div class="info_content">
+                    <textarea name="info" id="influence" cols="30" rows="2"></textarea>
+                </div>
+            </div>
+            <!-- 三、机车故障检查情况 -->
+            <div class="Inspection">
+                <h3>三、机车故障检查情况</h3>
+                <div class="info_content">
+                    <textarea name="info" id="Inspection" cols="30" rows="2"></textarea>
+                </div>
+            </div>
+            <!-- 四、原因分析 -->
+            <div class=" cause">
+                <h3>四、原因分析</h3>
+                <div class="info_content">
+                    <textarea name="info" id="cause" cols="30" rows="2"></textarea>
+                </div>
+            </div>
+            <!-- 五、故障处理 -->
+            <div class="dispose">
+                <h3>五、故障处理</h3>
+                <div class="info_content">
+                    <textarea name="info" id="dispose" cols="30" rows="2"></textarea>
+                </div>
+            </div>
+            <!-- 六、纠正措施 -->
+            <div class="correct">
+                <h3>六、纠正措施</h3>
+                <div class="info_content">
+                    <textarea name="info" id="correct" cols="30" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="submit">
+                <button >提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="../lib/bootstrap-3.2.0/js/bootstrap.js"></script>
+<script>
+    $(function () {
+        //点击关闭
+        $(".carGrade_box .submit button").on("click", function () {
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.layer.close(index);
+        })
+    })
+</script>
+</body>
+</html>

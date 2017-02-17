@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>调查问卷管理</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../lib/webuploader-0.1.5/webuploader.css"/>
+    <!--[if lt IE 9]>
+    <script src="./lib/html5shiv/html5shiv.js"></script>
+    <script src="./lib/respond/respond.js"></script>
+    <![endif]-->
+    <style>
+        /*上传调查问卷管理信息*/
+        .Upload {
+            width: 700px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px auto;
+            font-size: 15px;
+            font-family: "Microsoft YaHei";
+        }
+        .font14{
+            font-size:12px;
+        }
+        .Upload form {
+            width: 100%;
+            margin: 0px auto;
+        }
+
+        form h3 {
+            text-align: center;
+            border-radius: 5px;
+            line-height: 35px;
+            margin: 0;
+            background-color: #deedf7;
+        }
+
+        form .section {
+            width: 100%;
+            height: 30px;
+            line-height: 35px;
+            margin: 5px 0px;
+        }
+        .section span {
+            float: left;
+            width: 15%;
+            text-align: right;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .section select {
+            float: left;
+            width: 70%;
+            margin-top: 3px;
+        }
+
+        form .Photograph {
+            width: 100%;
+            min-height: 300px;
+            margin: 15px 0px;
+            border-top: 1px solid #ccc;
+
+        }
+        .Photograph span {
+            float: left;
+            width: 15%;
+            text-align: right;
+            font-weight: bold;
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+        .Photograph .uploader{
+            float: left;
+            width: 75%;
+        }
+
+        .submit {
+            text-align: center;
+            padding:5px 0px;
+            border-top:1px solid #ccc;
+        }
+        .submit button {
+            width: 100px;
+            padding: 4px;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #428bca;
+        }
+    </style>
+</head>
+<body>
+
+<!--上传调查问卷管理信息-->
+<div class="Upload ">
+    <form class="clearfix" action="提交后台地址" enctype="multipart/form-data">
+        <h3>调查问卷</h3>
+            <!--问卷区段-->
+            <div class="section clearfix">
+                <span>问卷区段:</span>
+                <select class="form-control">
+                    <option>南京段</option>
+                    <option>上海段</option>
+                    <option>徐州段</option>
+                </select>
+            </div>
+            <!--拍照上传-->
+            <div class="Photograph clearfix">
+                <span>附件:</span>
+                <!--dom结构部分-->
+                <div id="uploader-demo" class="uploader">
+                    <!--用来存放item-->
+                    <div id="fileList" class="uploader-list clearfix"></div>
+                    <div id="filePicker">选择图片</div>
+                </div>
+            </div>
+        <div class='submit clearfix'>
+            <button>提交</button>
+        </div>
+    </form>
+</div>
+
+<script src='../lib/jquery-1.11.3/jquery.min.js'></script>
+<script src="../lib/bootstrap-3.2.0/js/bootstrap.js"></script>
+<script src="../lib/webuploader-0.1.5/webuploader.min.js"></script>
+<script>
+    $(function () {
+        // 多选上传图片
+        var $list = $("#fileList");   //这几个初始化全局的百度文档上没说明，好蛋疼。
+        var thumbnailWidth = 80;   //缩略图高度和宽度 （单位是像素），当宽高度是0~1的时候，是按照百分比计算，具体可以看api文档
+        var thumbnailHeight = 80;
+
+        // 初始化Web Uploader
+        var uploader = WebUploader.create({
+            // 选完文件后，是否自动上传。
+            auto: true,
+            // swf文件路径
+            swf: 'webuploader-0.1.5/Uploader.swf',
+            // 文件接收服务端。
+            server: 'http://webuploader.duapp.com/server/fileupload.php',
+            // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: '#filePicker',
+            // 只允许选择图片文件。
+            accept: {
+                title: 'Images',
+                extensions: 'gif,jpg,jpeg,bmp,png',
+                mimeTypes: 'image/jpg,image/jpeg,image/png'
+            },
+            method: 'POST'
+        });
+        // 当有文件添加进来的时候
+        uploader.on('fileQueued', function (file) {
+            var $li = $(
+                            '<div id="' + file.id + '" class="file-item thumbnail fl font14">' +
+                            '<img>' +
+                            '<div class="info">' + file.name + '</div>' +
+                            '</div>'
+                    ),
+                    $img = $li.find('img');
+            // $list为容器jQuery实例
+            $list.append($li);
+
+            // 创建缩略图
+            // 如果为非图片文件，可以不用调用此方法。
+            // thumbnailWidth x thumbnailHeight 为 100 x 100
+            uploader.makeThumb(file, function (error, src) {
+                if (error) {
+                    $img.replaceWith('<span>不能预览</span>');
+                    return;
+                }
+
+                $img.attr('src', src);
+            }, thumbnailWidth, thumbnailHeight);
+        });
+        // 文件上传过程中创建进度条实时显示。
+        uploader.on('uploadProgress', function (file, percentage) {
+            var $li = $('#' + file.id),
+                    $percent = $li.find('.progress span');
+
+            // 避免重复创建
+            if (!$percent.length) {
+                $percent = $('<p class="progress"><span></span></p>')
+                        .appendTo($li)
+                        .find('span');
+            }
+
+            $percent.css('width', percentage * 100 + '%');
+        });
+
+        // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+        uploader.on('uploadSuccess', function (file) {
+            $('#' + file.id).addClass('upload-state-done');
+        });
+
+        // 文件上传失败，显示上传出错。
+        uploader.on('uploadError', function (file) {
+            var $li = $('#' + file.id),
+                    $error = $li.find('div.error');
+
+            // 避免重复创建
+            if (!$error.length) {
+                $error = $('<div class="error"></div>').appendTo($li);
+            }
+
+            $error.text('上传失败');
+        });
+
+        // 完成上传完了，成功或者失败，先删除进度条。
+        uploader.on('uploadComplete', function (file) {
+            $('#' + file.id).find('.progress').remove();
+        });
+
+
+        //点击关闭
+        $(".submit button").on("click", function () {
+//            var index = parent.layer.getFrameIndex(window.name);
+//            parent.layer.close(index);
+        })
+
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+.xkf{
+    width: 100%;
+    height:100%;
+}
+.xk{
+    width:16.666%;
+    height:100%;
+    border-right:1px solid #ccc;
+    float: left;
+}
+.xk1{
+    border: none;
+}
+.gxk{
+    width:8.333%;
+    height:100%;
+    float: left;
+    border-right:1px solid #ccc;
+}
+input {
+    width:50%;
+}
+h3 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+table td {
+    height: 20px;
+    /*padding: 5px 15px;*/
+}
+
+table .titel td h3 {
+    font-weight: bold;
+}
+
+table input {
+    border: 0;
+    padding-left: 10px;
+}
+
+.hehe {
+    width: 200px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis; /* Opera */
+    text-overflow: ellipsis; /* IE, Safari (WebKit) */
+}
+
+.table-condensed > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    vertical-align: middle !important;
+}
+
+ul {
+    width: 100%;
+    height: 48px;
+    margin-top: 10px;
+    padding: 0 3%;
+}
+
+ul li {
+    float: left;
+    width: 25%;
+    line-height: 40px;
+    border: 2px solid #fff;
+    background-color: #eee;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    list-style: none;
+}
+
+.active {
+    background-color: #deedf7;
+}
+
+ul li a {
+    width: 100%;
+    height: 40px;
+}
+.teshu{
+    font-weight:bold;
+    font-size: 19px;
+}
+.teshu2{
+    font-size: 17px;
+    font-weight:bold;
+}
+.san{
+    width: 33.33%;
+    height:100%;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+.san1{
+    border: none;
+}
+.jiu{
+    width: 11.111%;
+    height:100%;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+.jiu1{
+    border: none;
+}
+.fourtb{
+    width:25%;
+    height:100%;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+.fourtb1{
+    border: none;
+}
+.Seven{
+    width: 14.285%;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+.Seven1{
+    border: none;
+}
+.two{
+    width:50%;
+    height:100%;
+    float: left;
+    border-right: 1px solid #ccc;
+    line-height: 3;
+
+}
+.two1{
+    border: none;
+}
+.radioInp input {
+    width: 10%;
+    height: 15px;
+    outline: none;
+    border: 0;
+    padding-left: 10px;
+    text-align: center;
+}

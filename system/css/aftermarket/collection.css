@@ -1,0 +1,222 @@
+/* 故障信息输入 fault 2-3 S  */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.fault {
+    margin: 15px;
+    border: 1px solid #ccc;
+}
+.fault_con {
+    padding-bottom:20px;
+}
+.program_center_title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: left;
+    background-color: #deedf7;
+    border: 1px solid #ccc;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    color: #444141;
+}
+
+.repair_con {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.logistics {
+    padding-top: 15px;
+    padding-left: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.repair_con > select {
+    width: 125px;
+    display: inline-block;
+    height: 30px;
+    margin: 10px 0;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+.repair_con > input {
+    width: 155px;
+    height: 30px;
+    display: inline-block;
+    /*padding: 5px;*/
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.tbodyHtml > .original > .repair_con > input {
+    width: 158px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.col {
+    background-color: #deedf7;
+    font-weight: 700;
+}
+
+.widHei {
+    width: 125px;
+    padding: 6px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.wid {
+    display: inline-block;
+    width: 155px;
+    vertical-align: middle;
+    padding: 5px;
+    height: 30px;
+}
+
+.tbodyHtml > .repair_con {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.tbodyHtml > .repair_con > .widHei {
+    width: 120px;
+    padding: 5px;
+}
+
+.tbodyHtml > .original > input {
+    width: 155px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.tbodyHtml > .original > .repair_con > .widHei {
+    width: 120px;
+    padding: 5px;
+}
+
+.tbodyHtml > .original > .repair_con > .ced {
+    width: 20px;
+}
+
+.tbodyHtml > .repair_con > .selects1 {
+    width: 156px;
+}
+
+.repair_con > .selec {
+    width: 155px;
+    vertical-align: middle;
+}
+
+
+.selectsa {
+    width: 50px;
+    height: 28px;
+    border-radius: 5px;
+    margin-right: 20px;
+    vertical-align: middle;
+
+}
+
+.btn2 {
+    float: right;
+}
+.textWid {
+    width:100%;
+}
+.wids {
+    width:45%;
+    height:200px;;
+}
+.wids > textarea {
+    width:100%;
+    resize: none;
+    height: 280px;
+}
+.adminPo {
+    display: inline-block;
+    width: 155px;
+    text-align: center;
+    margin-top: 10px;
+}
+/* 故障信息输入 fault 2-3 E  */
+ body {
+     font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+ }
+.display {
+    text-align: center !important;
+}
+.collection1 {
+    padding:15px;
+}
+.collection {
+    height: 70px;
+    background-color: #eee;
+}
+
+.collection > .collection_form, input {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: top;
+    margin: 0 0 0 20%;
+}
+
+.collection_form {
+    width: 50%;
+    height: 68px;
+}
+
+.file {
+    float: left;
+    width: 45%;
+    padding: 10px 0 0 0;
+    display: inline-block;
+}
+
+.files {
+    width: 100%;
+    margin: 10px;
+}
+
+.templateDownload {
+    float: left;
+    height: 30px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    color: #428bca !important;
+    letter-spacing: 4px;
+    margin-left: 50px;
+}
+
+.templateDownload:hover {
+    text-decoration: none;
+    border-bottom: 3px solid #428bca;
+}
+
+.collection_sub {
+    float: left;
+    display: inline-block;
+    margin-top: 19px;
+    letter-spacing: 4px;
+}
+.displays {
+    margin-top:50px;
+}
+

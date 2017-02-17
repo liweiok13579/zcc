@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>维修方案查询</title>
+    <link rel="stylesheet" href="../lib/jquery.dataTables/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../css/aftermarket/program.css">
+    <script src="../lib/jquery-1.11.3/jquery.min.js"></script>
+    <script src="../lib/jquery.dataTables/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<div class="program_center">
+    <!-- 标题 -->
+    <div class="program_center_title">
+        维修方案查询
+    </div>
+    <div class="dataTable">
+        <table border="0" cellspacing="5" cellpadding="5" style="margin: auto;">
+            <tbody>
+            <tr style="float: left;width:  450px;">
+                <td>输入查询开始时间:
+                <td>
+                    <input type="text" id="min" name="min">
+                </td>
+            </tr>
+            <tr style="float: left;width:  450px;">
+                <td>输入查询结束时间:</td>
+                <td>
+                    <input type="text" id="max" name="max">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table id="program" class="display" cellspacing="0" width="100%">
+            <thead>
+            <tr style="background-color: #deedf7;">
+                <th>序号</th>
+                <th>开始日期</th>
+                <th>结束日期</th>
+                <th>车型-车号</th>
+                <th>配属段</th>
+                <th>更换部件分类</th>
+                <th>更换部件名称</th>
+                <th>数量</th>
+                <th>故障现象描述</th>
+                <th>处理过程</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#program').DataTable({
+            "ajax": "./objects.txt",
+            "oLanguage": { // 国际化配置
+                "sProcessing": "正在获取数据，请稍后...",
+                "sLengthMenu": "显示 _MENU_ 条",
+                "sZeroRecords": "没有找到数据",
+                "sInfo": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                "sInfoEmpty": "记录数为0",
+                "sInfoFiltered": "(全部记录数 _MAX_ 条)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "第一页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "最后一页"
+                }
+            },
+
+            "columns": [
+                {"data": "name"},
+                {"data": "position"},
+                {"data": "salary"},
+                {"data": "start_date"},
+                {"data": "start_da"},
+                {"data": "start_dat"},
+                {"data": "office"},
+                {"data": "office"},
+                {"data": "office"},
+                {"data": "extn"}
+            ]
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>中车管理系统登录页面</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./system/css/homepage/L-ie8.css">
+    <link href="./system/lib/bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./system/css/homepage/L-index(2).css">
+</head>
+
+<body onContextMenu="return false;">
+    <script>
+    //IE6-9
+    document.body.onselectstart = document.body.ondrag = function() {
+        return false;
+    }
+    </script>
+    <div class="box">
+        <!--导航-->
+        <div class="one">
+            <div class="logo">
+                <img src="./system/img/logo.png" alt="">
+            </div>
+        </div>
+        <!--主体-->
+        <div class="two">
+            <!--遮罩-->
+            <div class="zhezhao"></div>
+            <img src="./system/img/1.jpg" alt="" class="img1">
+            <!--后台看这里-->
+            <div class="right">
+                <div class="right_con">
+                    <span>登录请注意安全</span>
+                    <img src="./system/img/erweima.png" alt="">
+                    <form name="frm" action="./system/index.html" method="get">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">账号</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="账号" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">密码</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码" value="">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 记住我
+                                <!--后台瞄准这里，错误信息往这里扔-->
+                                <div class="cuowu">账号或密码不符,请重新输入</div>
+                            </label>
+                            <button type="button" class="btn btn-primary tijiao" onclick="a();">提交</button>
+                        </div>
+                    </form>
+                    <a href="#">温馨提示：请保管好自己的密码</a>
+                </div>
+            </div>
+        </div>
+        <!--底侧导航-->
+        <div class="three">
+            <img src="./system/img/gs.png" alt="">
+        </div>
+    </div>
+    <script src="./system/lib/jquery-1.11.3/jquery.min.js"></script>
+    <script src="./system/js/homepage/prettify.js"></script>
+    <script src="./system/js/homepage/spin.min.js"></script>
+    <script src="./system/js/homepage/L-index.js"></script>
+    <!--延迟加载-->
+    <div class="delay">
+        <div id="preview"></div>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            $(document).keyup(function(event){
+                if(event.keyCode ==13){
+                    $(".tijiao").trigger("click");
+                }
+            });
+        });
+        function a() {
+        var val = $(".form-control")[0].value;
+        var val1 = $(".form-control")[1].value;
+        var cuowu = $(".cuowu")
+        var delay = $(".delay")
+        if (val == "admin" && val1 == "Admin123") {
+            delay.css("display", "block")
+                //    KFQ瞄准 T
+            setTimeout(function() {
+                delay.css("display", "none")
+                           frm.submit();
+            }, 1000);
+        } else {
+            cuowu.css("display", "block")
+        }
+        return true;
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+/* 	font-size: 12px; */
+	font-family: "Microsoft YaHei \5FAE\8F6F\96C5\9ED1";
+	color: #3f3f3f;
+}
+a{
+	text-decoration: none;
+	color: #3f3f3f;
+}
+a:hover{
+	text-decoration:none;
+	color: #E5004F;
+}
+img{
+	border: none;
+}

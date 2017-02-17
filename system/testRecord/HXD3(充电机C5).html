@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>HXD3型机车充电机C5修试验记录单</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        .HXD3 {
+            width: 100%;
+            padding:20px;
+            min-width: 900px;
+        }
+        .HXD3 table{
+            width: 100%;
+            text-align: center;
+        }
+        table td{
+            height:20px;
+            padding:5px 15px;
+        }
+        table .titel td{
+            padding:15px 0px;
+            background-color: #deedf7;
+        }
+        table .titel td h3{
+            font-weight:bold;
+        }
+        table input{
+            width: 100%;
+            outline: none;
+            border:0;
+            padding-left:10px;
+        }
+        /*提交*/
+        .HXD3 .submit{
+            width: 100%;
+            text-align: center;
+            margin:10px;
+        }
+        .submit button{
+            width: 80px;
+            background-color: #428bca;
+            color: #fff;
+            border-radius: 5px;
+            font: 700 16px/22px "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+<div class="HXD3">
+    <form action="提交给后台地址">
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tbody>
+        <!--rowspan=""行 colspan=""列-->
+        <tr class="titel">
+            <td colspan="6">
+                <h3>HXD3C型机车充电机C4修试验记录单</h3>
+            </td>
+        </tr>
+        <tr>
+            <td width="120px">检修单位</td>
+            <td width="150px">上海中车轨道交通科技有限公司</td>
+            <td>车号</td>
+            <td><input type="text"/></td>
+            <td>试验日期</td>
+            <td width="120px"><input type="text" /></td>
+        </tr>
+        <tr>
+            <td>产品序号</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+        </tr>
+        <tr>
+            <td>试验项目</td>
+            <td colspan="4">试验要求</td>
+            <td>结果</td>
+        </tr>
+        <!--输入接触器及单元切换试验 -->
+       <tr>
+           <td>输入接触器及单元切换试验</td>
+           <td colspan="4" style="text-align: left;">
+               当Ug电压值在77V-137.5V范围内时，闭合K5，单元2CTTI动作；断开K5，单元1 CTTI动作,；当Ug电压值在77V-137.5V范围内时，
+               闭合K6，单元1 CTT动作，424上有等于Ug的电压输出，断开K6，单元2CTT动作，423上有等于Ug的电压输出。
+           </td>
+           <td>
+               <input type="radio" name="qualified" class="qualified">合格
+               <br>
+               <input type="radio" name="qualified"  class="qualified">不合格
+           </td>
+       </tr>
+        <!--常规性能试验 -->
+        <tr>
+            <td rowspan="2">常规性能试验</td>
+            <td>单元1</td>
+            <td rowspan="2" colspan="3" style="text-align: left;">
+                给定控制电压为77V-137.5V，主电压为675V、750V、825V，电流小于55A时，输出电压应在110±1.1V。
+            </td>
+            <td> <input type="text" class="voltage"/> V</td>
+
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td> <input type="text" class="voltage"/> V</td>
+        </tr>
+        <!--单元重启试验 -->
+        <tr>
+            <td rowspan="2">单元重启试验</td>
+            <td>单元1</td>
+            <td rowspan="2" colspan="3" style="text-align: left;">
+                给定控制电压为110V，主电压为750V，电阻设定值为2.2欧姆，输出电压为110V左右时。断开KM1、KM2，单元关闭，2S闭合KM1、KM2，单元重新启动。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格
+            </td>
+            </td>
+        </tr>
+        <!--欠压保护试验-->
+        <tr>
+            <td rowspan="2">欠压保护试验</td>
+            <td>单元1</td>
+            <td rowspan="2" colspan="3" style="text-align: left;">
+                当Ug电压值在77V-137.5V范围内时，输入电压Ui=750V，输出电压110±1.1V。调节输入电压值在589V-651V范围内，此时单元欠压关闭保护，
+                需断开输入接触器。调节输出电压至618V-682V接通输入接触器，单元重新启动。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格
+            </td>
+        </tr>
+        <!--过压保护试验-->
+        <tr>
+            <td rowspan="2">过压保护试验</td>
+            <td>单元1</td>
+            <td rowspan="2" colspan="3" style="text-align: left;">
+                当Ug电压值在77V-137.5V范围内时，输入电压Ui=750V，输出电压110±1.1V。调节输入电压至855V-945V范围时，此时单元过压关闭保护。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格
+            </td>
+        </tr>
+        <!--单元负载限流试验-->
+        <tr>
+            <td rowspan="2">单元负载限流试验</td>
+            <td>单元1</td>
+            <td rowspan="2" colspan="3" style="text-align: left;">
+                （1）当Ug电压值在77V-137.5V范围内时，给定主回路电压750V，观测输出电流 I0在0A-50±3A之间，计算效率值，应≥90%。调节负载，当输出电流I0=55A±3A时，单元进行过流限制。<br/>
+                （2）当Ug电压值在77V-137.5V范围内时，给定主回路电压675V，观测输出电流 I0在0A-50±3A之间，计算效率值，应≥90%。调节负载，当输出电流I0=55A±3A时，单元进行过流限制。<br/>
+                （3）当Ug电压值在77V-137.5V范围内时，给定主回路电压825V，观测输出电流 I0在0A-50±3A之间，计算效率值，应≥90%。调节负载，当输出电流I0=55A±3A时，单元进行过流限制。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格
+            </td>
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格
+            </td>
+        </tr>
+        <!--放电试验-->
+        <tr>
+            <td rowspan="2">放电试验</td>
+            <td>单元1</td>
+            <td rowspan="2" colspan="3" style="text-align: left;">
+                系统稳定运行2min后，断开750V主电源、110V控制电源，用万用表测量输出电压，1min内下降到24V以下。
+            </td>
+            <td>
+                <input type="text" class="voltage"/> V
+            </td>
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td>
+                <input type="text" class="voltage"/> V
+            </td>
+        </tr>
+
+
+        <!--调试员-->
+        <tr style="height:50px">
+            <td colspan="2">
+                调试员:
+                <input class="voltage" type="text"/>
+            </td>
+            <td colspan="2">
+               出厂检查员:
+                <input class="voltage" type="text"/>
+            </td>
+            <td colspan="3">
+                验收员:
+                <input class="voltage" type="text"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="submit">
+        <button>提交</button>
+    </div>
+    </form>
+</div>
+</body>
+</html>

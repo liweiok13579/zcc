@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>关键部件调试单</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.2.0/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../lib/bootstrap-datepicker-master/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="../css/production/keyPosition(zhu).css"/>
+
+    <!--[if lt IE 9]>
+    <script src="../lib/html5shiv/html5shiv.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <![endif]-->
+
+    <script src='../lib/jquery-1.11.3/jquery.min.js'></script>
+</head>
+<body>
+<div class="keyPosition">
+    <ul>
+        <li onclick="javascript:location.href='keyPosition(fu).html'"><a href="javascript:void(0);"> 辅变柜</a></li>
+        <li class="active"><a href="javascript:void(0);"> 主变柜</a></li>
+    </ul>
+    <!--主变柜模块-->
+    <form action="后台提交地址">
+        <div class="keyPosition_box">
+            <table border="0" class="table table-hover">
+                <thead>
+                <tr class="th_one">
+                    <th colspan="4">HXD2B-0221 主变柜出厂关键部件记录表(C4修)</th>
+                </tr>
+                <tr class="th_two">
+                    <th colspan="4" >
+                        <input name="radio" type="radio"/><span>Ⅰ柜</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input name="radio" type="radio"/><span>Ⅱ柜</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input name="radio" type="radio"/><span>Ⅱ柜</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span>柜体编号 :</span><input class="number" type="text"/>
+                    </th>
+                </tr>
+                <tr class="th_two">
+                    <th>序号</th>
+                    <th>名称</th>
+                    <th><input class="number" type="text"/>轴序列号 </th>
+                    <th><input class="number" type="text"/>轴序列号 </th>
+                </tr>
+                </thead>
+                <tbody class="tbodyHtml" >
+                <tr>
+                    <td>1</td>
+                    <td>放电电阻R-H</td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>预充电电阻R(PC)PMCF</td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>主接触器CI(IS)PMCF</td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>预充电接触器C(PC)PMCF </td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>电压传感器CA(U)OND</td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>功率模块CVE</td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>功率模块ODN-H</td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>二次滤波电容CAP1-2F</td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>直流支撑电容CAP-CVE</td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>直流支撑电容CAP-OND-H</td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>直流支撑电容CAP-OND</td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>直流支撑电容CAP-OND-H</td>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="notes">
+                <p>备注:</p>
+                <textarea name="notes" id="" cols="30" rows="5"></textarea>
+            </div>
+            <div class="recorder">
+                <div>
+                    <span>日期:</span>
+                    <input type="text" class="datepicker"/>
+                </div>
+                <div>
+                    <span>记录者:</span>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="submit">
+                <button>提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../lib/bootstrap-3.2.0/js/bootstrap.js"></script>
+<script src="../lib/bootstrap-datepicker-master/js/bootstrap-datepicker.js"></script>
+<script src="../lib/bootstrap-datepicker-master/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script>
+    $(function () {
+        setdatepicker()
+        // 日期选择
+        function setdatepicker() {
+            $(".datepicker").datepicker({
+                language: "zh-CN",
+                autoclose: true,//选中之后自动隐藏日期选择框
+                clearBtn: true,//清除按钮
+                format: "yyyy-mm-dd"//日期格式
+            });
+        }
+    })
+</script>
+</body>
+</html>

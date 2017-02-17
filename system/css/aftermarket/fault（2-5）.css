@@ -1,0 +1,79 @@
+.carGrade {
+    width: 800px;
+    font-size:15px ;
+    font-family: "Microsoft YaHei";
+    margin:5px auto;
+}
+.carGrade_box {
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+.carGrade_box h3 {
+    font:700 15px/20px "Microsoft YaHei";
+    background-color: #deedf7;
+    padding-left:10px;
+    margin-bottom: 3px;
+    border-radius: 3px;
+}
+.carGrade_box table{
+    width: 100%;
+    margin-bottom:0px;
+}
+table > thead > tr > th,
+table > tbody > tr > td{
+    padding:2px !important;
+    text-align: center;
+}
+table > thead > tr.th_one th,
+table > tbody > tr.td_one td{
+    background-color: #deedf7;
+    font: 700 15px/20px "Microsoft YaHei";
+}
+table > thead > tr > th> input,
+table > tbody > tr > td> input{
+    width: 100%;
+    outline: none;
+    text-align: center;
+    border:0;
+    border-bottom:1px solid #ccc;
+    margin-bottom: 2px;
+}
+/*公共样式*/
+.carGrade_box .procedure,
+.carGrade_box .influence,
+.carGrade_box .Inspection,
+.carGrade_box .cause,
+.carGrade_box .dispose,
+.carGrade_box .correct{
+    width: 100%;
+    border-radius:5px;
+    margin-bottom:5px
+}
+.procedure .info_content,
+.influence .info_content,
+.Inspection .info_content,
+.cause .info_content,
+.dispose .info_content,
+.correct .info_content{
+    width: 100%;
+}
+/*textarea 模块部分*/
+.info_content textarea{
+    width: 100%;
+    overflow: auto;
+    outline: none;
+    margin:0;
+}
+/*提交部分*/
+.carGrade_box .submit{
+    width: 100%;
+    text-align: center;
+    margin-bottom:20px;
+}
+.submit button{
+    width: 80px;
+    border-radius:5px;
+    background-color: #428bca;
+    color:#fff;
+    font-size:16px;
+}

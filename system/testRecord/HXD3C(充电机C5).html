@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>HXD3C型机车充电机C5修试验记录单</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        .HXD3C {
+            width: 100%;
+            padding:20px;
+            min-width: 900px;
+        }
+        .HXD3C ul{
+            width: 100%;
+            height: 40px;
+            border:2px solid #ccc;
+            border-radius:5px 5px 0 0;
+        }
+        ul li{
+            float: left;
+            width: 20%;
+            line-height: 40px;
+            border:2px solid #fff;
+            background-color: #eee;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        li.active{
+            background-color: #deedf7;
+        }
+        .HXD3C table{
+            width: 100%;
+            text-align: center;
+        }
+        table td{
+            height:20px;
+            padding:5px 15px;
+        }
+        table .titel td{
+            padding:15px 0px;
+            background-color: #deedf7;
+        }
+        table .titel td h3{
+            font-weight:bold;
+        }
+        table input{
+            width: 100%;
+            outline: none;
+            border:0;
+            padding-left:10px;
+        }
+        /*提交*/
+        .HXD3C .submit{
+            width: 100%;
+            text-align: center;
+            margin:10px;
+        }
+        .submit button{
+            width: 80px;
+            background-color: #428bca;
+            color: #fff;
+            border-radius: 5px;
+            font: 700 16px/22px "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+<div class="HXD3C">
+    <ul>
+        <li class="active"><a href="javascript:void(0);"> 充电机</a></li>
+        <li onclick="javascript:location.href='HXD3C(时代电气TGF60B)C5.html'"><a href="javascript:void(0);"> (时代电气)供电柜</a></li>
+        <li onclick="javascript:location.href='HXD3C(时代电气TGF60B)C5控制箱.html'"><a href="javascript:void(0);"> (时代电气)供电柜控制箱</a></li>
+        <li onclick="javascript:location.href='HXD3C(武汉征原)C5.html'"><a href="javascript:void(0);"> (武汉征原)供电柜</a></li>
+        <li onclick="javascript:location.href='HXD3C(武汉征原)C5控制箱.html'"><a href="javascript:void(0);"> (武汉征原)供电柜控制箱</a></li>
+    </ul>
+    <form action="提交给后台地址">
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tbody>
+        <!--rowspan=""行 colspan=""列-->
+        <tr class="titel">
+            <td colspan="6">
+                <h3>HXD3C型机车充电机C5修试验记录单</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>检修单位</td>
+            <td>上海中车轨道交通科技有限公司</td>
+            <td>车号</td>
+            <td><input type="text"/></td>
+            <td>试验日期</td>
+            <td><input type="text" /></td>
+        </tr>
+        <tr>
+            <td>产品序号</td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+        </tr>
+        <tr>
+            <td>试验项目</td>
+            <td colspan="4">试验要求</td>
+            <td>结果</td>
+        </tr>
+        <!--风扇确认 -->
+       <tr>
+           <td>风扇确认</td>
+           <td colspan="4" style="text-align: left;">
+               接通AC220电源，观察充电机风扇运行是否正常，转动自由灵活无卡滞，无特别噪音。风扇风向向上。
+           </td>
+           <td>
+               <input type="radio" name="qualified" class="qualified">合格
+               <br>
+               <input type="radio" name="qualified"  class="qualified">不合格</td>
+           </td>
+       </tr>
+        <!--风扇确认 -->
+       <tr>
+           <td>风扇确认</td>
+           <td colspan="4" style="text-align: left;">
+               接通AC220电源，观察充电机风扇运行是否正常，转动自由灵活无卡滞，无特别噪音。风扇风向向上。
+           </td>
+           <td>
+               <input type="radio" name="qualified" class="qualified">合格
+               <br>
+               <input type="radio" name="qualified"  class="qualified">不合格</td>
+           </td>
+       </tr>
+        <!--输入接触器及单元切换试验 -->
+       <tr>
+           <td>输入接触器及单元切换试验</td>
+           <td colspan="4" style="text-align: left;">
+               接通控制电源DC110V，CTTI1动作吸合，闭合K5，RY3继电器线圈通电吸合，CTTI2动作吸合；断开K5，RY3继电器、CTTI2断开，CTTI1动作吸合。
+           </td>
+           <td>
+               <input type="radio" name="qualified" class="qualified">合格
+               <br>
+               <input type="radio" name="qualified"  class="qualified">不合格</td>
+           </td>
+       </tr>
+        <!--单元重启与接触器动作试验 -->
+       <tr>
+           <td>单元重启与接触器动作试验</td>
+           <td colspan="4" style="text-align: left;">
+               1. 给定控制电压为77V-137.5V，将SW1万转开关置“单元1”位，闭合750V直流电源，继电器RY1得电吸合，CTT1得电吸合，CTTF失电断开；423指示灯亮。<br/>
+               2. 给定控制电压为77V-137.5V，将SW1万转开关置“单元2”位，闭合750V直流电源，继电器RY2得电吸合，CTT2得电吸合，CTTF得电吸合；424指示灯亮。<br/>
+               3. 给定控制电压为77V-137.5V，将SW1万转开关置“自动”位，闭合750V直流电源，继电器RY1、RY2得电吸合，CTT1、CTT2得电吸合，CTTF失电断开；423、424指示灯亮。
+           </td>
+           <td>
+               <input type="radio" name="qualified" class="qualified">合格
+               <br>
+               <input type="radio" name="qualified"  class="qualified">不合格</td>
+           </td>
+       </tr>
+        <!--双针表检测试验 -->
+       <tr>
+           <td>双针表检测试验</td>
+           <td colspan="4" style="text-align: left;">
+               当给定控制电压DC 110V时，给定主电源750V，确认双针表电压电流误差符合本身精度要求、背光正常。
+           </td>
+           <td>
+               <input type="radio" name="qualified" class="qualified">合格
+               <br>
+               <input type="radio" name="qualified"  class="qualified">不合格</td>
+           </td>
+       </tr>
+        <!--输出电压检测试验-->
+        <tr>
+            <td rowspan="2">输出电压检测试验</td>
+            <td>单元1</td>
+            <td rowspan="2" colspan="3" style="text-align: left;">给定控制电压为77V-137.5V，调节输入电压675V-825V，输出电压稳定在DC110V±1.1V。</td>
+            <td> <input type="text" class="voltage"/> V</td>
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td> <input type="text" class="voltage"/> V</td>
+        </tr>
+       </tr>
+        <!--欠压保护试验-->
+        <tr>
+            <td rowspan="2">欠压保护试验</td>
+            <td>单元1</td>
+            <td rowspan="2" colspan="3" style="text-align: left;">
+                给定控制电压DC110V时，调节输入电压至610V±10V，此时单元欠压关闭保护，需断开输入接触器。调节输出电压至750V±10V接通输入接触器，单元重新启动。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <!--过压保护试验-->
+        <tr>
+            <td rowspan="2">过压保护试验</td>
+            <td>单元1</td>
+            <td rowspan="2" colspan="3" style="text-align: left;">
+                给定控制电压DC110V时，调节输入电压至900V±10V，此时单元欠压关闭保护。单元重新启动2次后锁死。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <!--单元负载限流试验-->
+        <tr>
+            <td rowspan="2">单元负载限流试验</td>
+            <td>单元1</td>
+            <td rowspan="2" colspan="3" style="text-align: left;">
+                （1）给定控制电压DC110V，输入电压750V±10V，调节充电负载使输出电流Io充在20A±3A范围内时，单元进行过流限制，输出电压开始下降。<br/>
+                （2）给定控制电压DC110V，输入电压750V±10V，设定充电负载电阻为40Ω，调节供电负载，使输出电流Io供在20A±3A之间，单元进行过流限制，输出电压开始下降。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <!--效率计算-->
+        <tr>
+            <td rowspan="2">效率计算</td>
+            <td>单元1</td>
+            <td colspan="3" style="text-align: left;">
+                给定控制电压DC110V，输入电压750V±10V，调节供电负载，使输出电流Io供在25A±3A之间，输出电压=108V±1.08V，计算效率值应≥90%。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td colspan="3" style="text-align: left;">
+                给定控制电压DC110V，输入电压750V±10V，调节供电负载，使输出电流Io供在25A±3A之间，输出电压=110V±1.1V，计算效率值应≥90%。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+
+        <!--放电试验-->
+        <tr>
+            <td rowspan="2">放电试验</td>
+            <td>单元1</td>
+            <td rowspan="2" colspan="3" style="text-align: left;">
+                系统稳定运行2min后，断开750V主电源、110V控制电源，用万用表测量输出电压，1min内下降到24V以下。
+            </td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+        <tr>
+            <td>单元2</td>
+            <td>
+                <input type="radio" name="qualified" class="qualified">合格
+                <br>
+                <input type="radio" name="qualified"  class="qualified">不合格</td>
+            </td>
+        </tr>
+
+
+        <!--调试员-->
+        <tr style="height:50px">
+            <td colspan="2">
+                调试员:
+                <input class="voltage" type="text"/>
+            </td>
+            <td colspan="2">
+               出厂检查员:
+                <input class="voltage" type="text"/>
+            </td>
+            <td colspan="3">
+                验收员:
+                <input class="voltage" type="text"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+        <div class="submit">
+            <button>提交</button>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>
