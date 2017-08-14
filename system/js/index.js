@@ -104,7 +104,17 @@ $(function() {
     $("#four_one").click(function() {
         $("#zc_iframe").attr("src", "./warehouse/materiel.html");
     });
-
-
-
+    //    用户模块
+    $("#three_Seven").click(function() {
+        $("#zc_iframe").attr("src", "./management/user.html");
+    });
+    $("#three_Seven").click(function() {
+        $("#zc_iframe").attr("src", "./management/role.html");
+    });
+    $("#three_Seven").click(function() {
+        $("#zc_iframe").attr("src", "./management/Userrole.html");
+    })
+    $("#three_Seven").click(function() {
+        $("#zc_iframe").attr("src", "./management/Jurisdiction.html");
+    })
 })

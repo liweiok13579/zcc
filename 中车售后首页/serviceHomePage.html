@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="jquery.dataTables/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/serviceHomePage.css">
+</head>
+<body>
+<div class="box">
+    <!--top-->
+    <div class="top">
+        <div class="top_left">售后主页</div>
+    </div>
+    <!--计划-->
+    <div class="bottom">
+        <!--1-->
+        <div class="two" style="margin-top: 40px;border-top:none;">
+            <div class="two_top">
+                <span class="schedule">每日售后故障信息</span>
+                <a href="#">查看更多</a>
+            </div>
+            <div class="asf">
+                <table id="example1" class="display" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>车型车号</th>
+                        <th>配属段</th>
+                        <th>修程</th>
+                        <th>故障发生日期</th>
+                        <th>状态</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="checkbox_color"> <!--颜色标识-->
+                <i class="span_blue"></i><span>&nbsp;等待完成</span>&nbsp;&nbsp;
+            </div>
+        </div>
+        <!--2-->
+        <div class="two1" style="margin-top: 40px;border-top:none;">
+            <div class="two_top">
+                <span class="schedule">未闭环的故障处理</span>
+                <a href="#">查看更多</a>
+            </div>
+            <div class="asf">
+                <table id="example2" class="display" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>车型车号</th>
+                        <th>配属段</th>
+                        <th>修程</th>
+                        <th>故障发生日期</th>
+                        <th>状态</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="checkbox_color"> <!--颜色标识-->
+                <i class="span_blue"></i><span>&nbsp;等待完成</span>&nbsp;&nbsp;
+            </div>
+        </div>
+        <!--3-->
+        <div class="two">
+            <div class="two_top">
+                <span class="schedule">合肥售后服务点仓库预警</span>
+                <a href="#">查看更多</a>
+            </div>
+            <div class="asf">
+                <table id="example3" class="display" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>物料名称</th>
+                        <th>物料编码</th>
+                        <th>当前数量</th>
+                        <th>预警差值</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!--4-->
+        <div class="two1">
+            <div class="two_top">
+                <span class="schedule">南京售后服务点仓库预警</span>
+                <a href="#">查看更多</a>
+            </div>
+            <div class="asf">
+                <table id="example4" class="display" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>物料名称</th>
+                        <th>物料编码</th>
+                        <th>当前数量</th>
+                        <th>预警差值</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!--5-->
+        <div class="two">
+            <div class="two_top">
+                <span class="schedule">徐州售后服务点仓库预警</span>
+                <a href="#">查看更多</a>
+            </div>
+            <div class="asf">
+                <table id="example5" class="display" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>物料名称</th>
+                        <th>物料编码</th>
+                        <th>当前数量</th>
+                        <th>预警差值</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!--6-->
+        <div class="two1">
+            <div class="two_top">
+                <span class="schedule">杭州售后服务点仓库预警</span>
+                <a href="#">查看更多</a>
+            </div>
+            <div class="asf">
+                <table id="example6" class="display" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>物料名称</th>
+                        <th>物料编码</th>
+                        <th>当前数量</th>
+                        <th>预警差值</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="jquery.dataTables/jquery.dataTables.min.js"></script>
+<!--script src="js/homePage.js"></script>-->
+<script>
+    $(function () {
+        //每日售后故障信息
+        $('#example1').DataTable({
+            "paging": false,
+            "bFilter": false,
+            "scrollY": "200px",
+            "scrollCollapse": true,
+            "bLengthChange": false,
+            "ajax": {
+                "url": "./Questionnaire(2-5).txt",
+            },
+            "oLanguage": { // 国际化配置
+                "sProcessing": "正在获取数据，请稍后...",
+                "sLengthMenu": "显示 _MENU_ 条",
+                "sZeroRecords": "没有找到数据",
+                "sInfo": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                "sInfoFiltered": "(全部记录数 _MAX_ 条)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "第一页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "最后一页"
+                }
+            },
+            "columns": [{
+                "data": "name"
+            }, {
+                "data": "position"
+            }, {
+                "data": "salary"
+            },
+                {
+                    "data": "one"
+                },
+                {
+                    "data": "two"
+                }, {
+                    "data": null
+                }],
+            columnDefs: [{
+                "targets": -1,
+                "data": null,
+                "defaultContent": "<div class='unfinished'>等待录入</div>"
+            }]
+        });
+        //售后调拨进度
+        $('#example2').DataTable({
+            "paging": false,
+            "bFilter": false,
+            "scrollY": "200px",
+            "scrollCollapse": true,
+            "bLengthChange": false,
+            "ajax": {
+                "url": "./Questionnaire(2-5).txt",
+            },
+            "oLanguage": { // 国际化配置
+                "sProcessing": "正在获取数据，请稍后...",
+                "sLengthMenu": "显示 _MENU_ 条",
+                "sZeroRecords": "没有找到数据",
+                "sInfo": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                "sInfoFiltered": "(全部记录数 _MAX_ 条)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "第一页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "最后一页"
+                }
+            },
+            "columns": [{
+                "data": "name"
+            }, {
+                "data": "position"
+            }, {
+                "data": "salary"
+            },
+                {
+                    "data": "one"
+                },
+                {
+                    "data": "two"
+                }, {
+                    "data": null
+                }],
+            columnDefs: [{
+                "targets": -1,
+                "data": null,
+                "defaultContent": "<div class='unfinished'>正在处理</div>"
+//                状态分为两种，一种为正在处理，一种为处理完成
+            }]
+        });
+        console.log($(".unfinished"))
+        //合肥售后服务点仓库预警
+        $('#example3').DataTable({
+            "paging": false,
+            "bFilter": false,
+            "scrollY": "200px",
+            "scrollCollapse": true,
+            "bLengthChange": false,
+            "ajax": {
+                "url": "./Questionnaire(2-3).txt",
+            },
+            "oLanguage": { // 国际化配置
+                "sProcessing": "正在获取数据，请稍后...",
+                "sLengthMenu": "显示 _MENU_ 条",
+                "sZeroRecords": "没有找到数据",
+                "sInfo": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                "sInfoFiltered": "(全部记录数 _MAX_ 条)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "第一页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "最后一页"
+                }
+            },
+            "columns": [{
+                "data": "name"
+            }, {
+                "data": "position"
+            }, {
+                "data": "salary"
+            },
+                {
+                    "data": "one"
+                }, {
+                    "data": "two"
+                }]
+        });
+        //南京售后服务点仓库预警
+        $('#example4').DataTable({
+            "paging": false,
+            "bFilter": false,
+            "scrollY": "200px",
+            "scrollCollapse": true,
+            "bLengthChange": false,
+            "ajax": {
+                "url": "./Questionnaire(2-3).txt",
+            },
+            "oLanguage": { // 国际化配置
+                "sProcessing": "正在获取数据，请稍后...",
+                "sLengthMenu": "显示 _MENU_ 条",
+                "sZeroRecords": "没有找到数据",
+                "sInfo": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                "sInfoFiltered": "(全部记录数 _MAX_ 条)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "第一页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "最后一页"
+                }
+            },
+            "columns": [{
+                "data": "name"
+            }, {
+                "data": "position"
+            }, {
+                "data": "salary"
+            },
+                {
+                    "data": "one"
+                }, {
+                    "data": "two"
+                }]
+        });
+        //徐州售后服务点仓库预警
+        $('#example5').DataTable({
+            "paging": false,
+            "bFilter": false,
+            "scrollY": "200px",
+            "scrollCollapse": true,
+            "bLengthChange": false,
+            "ajax": {
+                "url": "./Questionnaire(2-3).txt",
+            },
+            "oLanguage": { // 国际化配置
+                "sProcessing": "正在获取数据，请稍后...",
+                "sLengthMenu": "显示 _MENU_ 条",
+                "sZeroRecords": "没有找到数据",
+                "sInfo": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                "sInfoFiltered": "(全部记录数 _MAX_ 条)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "第一页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "最后一页"
+                }
+            },
+            "columns": [{
+                "data": "name"
+            }, {
+                "data": "position"
+            }, {
+                "data": "salary"
+            },
+                {
+                    "data": "one"
+                }, {
+                    "data": "two"
+                }]
+        });
+        //杭州售后服务点仓库预警
+        $('#example6').DataTable({
+            "paging": false,
+            "bFilter": false,
+            "scrollY": "200px",
+            "scrollCollapse": true,
+            "bLengthChange": false,
+            "ajax": {
+                "url": "./Questionnaire(2-3).txt",
+            },
+            "oLanguage": { // 国际化配置
+                "sProcessing": "正在获取数据，请稍后...",
+                "sLengthMenu": "显示 _MENU_ 条",
+                "sZeroRecords": "没有找到数据",
+                "sInfo": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                "sInfoFiltered": "(全部记录数 _MAX_ 条)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "第一页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "最后一页"
+                }
+            },
+            "columns": [{
+                "data": "name"
+            }, {
+                "data": "position"
+            }, {
+                "data": "salary"
+            },
+                {
+                    "data": "one"
+                }, {
+                    "data": "two"
+                }]
+        });
+        $("#example_previous").css("display", "none");
+        $("#example_next").css("display", "none");
+        $("#example_info").css("display", "none");
+        $("#example1_info").css("display", "none");
+        $("#example2_info").css("display", "none");
+        $("#example4_info").css("display", "none");
+        $("#example3_info").css("display", "none");
+        $("#example5_info").css("display", "none");
+        $("#example6_info").css("display", "none");
+    })
+
+</script>
+</body>
+</html>

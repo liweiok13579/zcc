@@ -1,0 +1,22 @@
+﻿{
+    "data": [
+        {
+            "name": "1",
+            "position": "HXD1B-1234",
+            "salary": "C4",
+            "one": "2017-08-03"
+        },
+        {
+            "name": "1",
+            "position": "HXD1B-1234",
+            "salary": "C4",
+            "one": "2017-08-03"
+        },
+        {
+            "name": "1",
+            "position": "HXD1B-1234",
+            "salary": "C4",
+            "one": "2017-08-03"
+        }
+    ]
+}
